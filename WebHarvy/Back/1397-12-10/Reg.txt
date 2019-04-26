@@ -1,0 +1,55 @@
+﻿\b(?!\bword\b)\w+\b   --> all statment except "word"
+\b(?!\b(word|to|http)\b)\w+\b  -->  all statment except word, to, http
+\b(?!\b(اندازه متن|Aa Aa)\b)\w+\b 
+
+------------------------------------------------------------
+src="([^"]*) --> correct for all image
+src="(.*jpg|.*png)"  --> correct for jpg & png
+src="(.*png|.*jpg)"  --> correct for jpg & png
+src="(.*mp4)"
+
+
+------------------------------
+Product Details
+Price: 99$
+This product comes with absolutely no warranty . . 
+view rawSample Product Details Text hosted with ❤ by GitHub
+The RegEx string to be used is : 
+
+Price: (.*)
+-------------------------------------
+
+<address>
+  356, Street Name, City, Country
+</address>
+view rawSample HTML hosted with ❤ by GitHub
+The RegEx string to be used is :
+
+<address>([\s\S]*?)</address>
+The portion ([\s\S]*?) matches all characters between <address> and </address>.
+------------------------------------------------------------------------------
+JS code to click on the email icon and open the email form :
+
+document.getElementsByClassName("ui_icon email")[0].click();
+
+RegEx String used :
+
+value="([^"]*)
+----------------------------------------------------------------
+https://www.youtube.com/watch?v=VFKM5nBZxlA
+
+RegEx for extracting images : 
+
+(http:\/\/[^&]*)
+
+JS code for setting the URL of the page as the Text :
+
+document.body.innerText=document.URL;
+
+RegEx Codes for Lat and Long :
+
+/@([^,]*)
+
+/@[^,]*,([^,]*)
+
+-----------------------------------------------------------------------

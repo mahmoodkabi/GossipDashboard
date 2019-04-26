@@ -1,0 +1,4 @@
+﻿
+select DATEADD(MONTH, DATEDIFF(MONTH, 0, ModifyDate), 0), count(*) CountPost, sum(Views) Views from post 
+GROUP BY DATEADD(MONTH, DATEDIFF(MONTH, 0, ModifyDate), 0)
+order    BY DATEADD(MONTH, DATEDIFF(MONTH, 0, ModifyDate),0)

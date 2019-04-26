@@ -1,0 +1,11 @@
+﻿<div class="imgwrapper">
+
+    @using (Html.BeginForm("SaveImage", "Post", FormMethod.Post, new { enctype = "multipart/form-data", id = "myUploadForm" }))
+    {
+
+        @Html.Upload("UploadFile")
+        <br>
+        <input type="submit" class="btn btn-primary btn-lg" value="بارگذاري تصوير" id="btnUploadFile">
+
+    }
+</div>

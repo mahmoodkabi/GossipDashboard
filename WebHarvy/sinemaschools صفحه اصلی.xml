@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>http://cinemaschools.ir/</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog  pace-done]\MAIN[3][container]\DIV[0][row main]\DIV[0][col-md-9 col-xs-12 pcol]\DIV[0][theiaStickySidebar]\DIV[2][art-con]\DIV[0][col-sm-4 col-xs-6 pcon]\A[0][vi-img-res-box]\DIV[0][product]\DIV[1][col-xs-12]\DIV[0][col-xs-10 prod-name pt-name]\H2[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Url</type>
+            <name>SourceSiteUrl</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog  pace-done]\MAIN[3][container]\DIV[0][row main]\DIV[0][col-md-9 col-xs-12 pcol]\DIV[0][theiaStickySidebar]\DIV[2][art-con]\DIV[0][col-sm-4 col-xs-6 pcon]\A[0][vi-img-res-box]\DIV[0][product]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Follow</type>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog  pace-done]\MAIN[3][container]\DIV[0][row main]\DIV[0][col-md-9 col-xs-12 pcol]\DIV[0][theiaStickySidebar]\DIV[2][art-con]\DIV[0][col-sm-4 col-xs-6 pcon]\A[0][vi-img-res-box]\DIV[0][product]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl download-template-default single single-download postid-940  pace-done]\MAIN[3][container]\DIV[0][row main]\DIV[0][col-md-9 col-xs-12 pcol]\DIV[0][theiaStickySidebar]\ARTICLE[1][ ]\DIV[2][col-xs-12 scon]\DIV[0][s-product]\DIV[4][col-xs-12 down-con]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>HTML</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl download-template-default single single-download postid-940  pace-done]\MAIN[3][container]\DIV[0][row main]\DIV[0][col-md-9 col-xs-12 pcol]\DIV[0][theiaStickySidebar]\ARTICLE[1][ ]\DIV[2][col-xs-12 scon]\DIV[0][s-product]\DIV[4][col-xs-12 down-con]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SubSubject1_1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl download-template-default single single-download postid-940  pace-done]\MAIN[3][container]\DIV[0][row main]\DIV[0][col-md-9 col-xs-12 pcol]\DIV[0][theiaStickySidebar]\ARTICLE[1][ ]\DIV[2][col-xs-12 scon]\DIV[0][s-product]\DIV[4][col-xs-12 down-con]\DIV[0][single-text]\P[9][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Back</type>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

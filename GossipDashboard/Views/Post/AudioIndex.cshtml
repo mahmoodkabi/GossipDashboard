@@ -1,0 +1,197 @@
+﻿<link href="~/Content/CSS/index-style.css" rel="stylesheet" />
+<link href="~/Content/CSS/ajibtarin.css" rel="stylesheet" />
+
+@model GossipDashboard.ViewModel.VM_Post
+
+@{
+    if (Model != null && Model.Subject1 != null)
+    {
+        ViewBag.Title = "ردفان -" + @Html.DisplayFor(modelItem => modelItem.Subject1);
+    }
+}
+
+<input type="hidden" id="postIDHidden" value="@Html.DisplayFor(modelItem => modelItem.PostID)" />
+<div class="col-md-12 content-area" style="direction:rtl; text-align: justify;">
+    <article class="post-box ">
+        <div class="entry-cover">
+            @{
+                if (Model != null && Model.UrlMP3 != null)
+                {
+
+                    <div class="audio-container">
+                        <a href="@Html.DisplayFor(modelItem => modelItem.Url)" class="single-post-image">
+                            <img src="@Html.DisplayFor(modelItem => modelItem.Image1_1)" />
+                        </a>
+                        <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+                        <audio class="wp-audio-shortcode" id="audio-429-1" preload="none" style="width: 100%;" controls="controls">
+                            <source type="audio/mpeg" src="@Html.DisplayFor(modelItem => modelItem.UrlMP3)" />
+                            <a href="@Html.DisplayFor(modelItem => modelItem.UrlMP3)">"@Html.DisplayFor(modelItem => modelItem.UrlMP3)"</a>
+                        </audio>
+                    </div>
+                }
+
+            }
+        </div>
+        <div class="entry-content">
+            @{
+                if (Model != null)
+                {
+                    if (Model.JalaliModifyDate != null && Model.JalaliModifyDate != "")
+                    {
+                        <p id="JalaliModifyDate" style="display:inline-block">
+                            تاریخ :  @Html.DisplayFor(modelItem => modelItem.JalaliModifyDate)
+                        </p>
+                    }
+
+                    if (Model.Subject1 != null && Model.Subject1 != "")
+                    {
+                        <h2 class="post-single-title" id="Subject2" style="margin-bottom: 25px; margin-top: 15px;">
+
+                            @Html.DisplayFor(modelItem => modelItem.Subject1)
+                        </h2>
+                    }
+
+                    if (Model.SubSubject1_1 != null && Model.SubSubject1_1.Trim() != "")
+                    {
+                        <p id="SubSubject1_1" style="background-color: darkslategray; color: white; padding-right: 20px; padding-left: 20px; padding-top: 10px;padding-bottom: 10px;">@Html.DisplayFor(modelItem => modelItem.SubSubject1_1)</p>
+                    }
+
+                    if (Model.SubSubject1_2 != null && Model.SubSubject1_2 != "")
+                    {
+                        <p id="SubSubject1_2">@Html.DisplayFor(modelItem => modelItem.SubSubject1_2)</p>
+                    }
+
+
+                    if (Model.SubSubject1_2 != null && Model.SubSubject1_2 != "")
+                    {
+                        <p id="SubSubject1_2">@Html.DisplayFor(modelItem => modelItem.SubSubject1_2)</p>
+                    }
+
+
+                    @*if (Model.ContentHTML != null && Model.ContentHTML != "")
+                        {
+                            <div id="ContentHTML">
+                                @Html.Raw(Model.ContentHTML)
+                            </div>
+                        }*@
+
+
+
+                    <div class="heateorSssClear"></div>
+                    <div class="heateorSssClear"></div>
+                    <div class="entry-meta row">
+                        <div class="col-md-12">
+                            <ul class="common-meta">
+                                <li>
+                                    <i class="fa fa-user"></i>
+                                    <a href="@Url.Action("Index", "Admin")" title="ايجاد شده توسط @Html.DisplayFor(modelItem => modelItem.Fullname)" rel="author">@Html.DisplayFor(modelItem => modelItem.Fullname)</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-comment"></i>
+                                    <a href="@Url.Action("Index", "Comment")"> @Html.DisplayFor(modelItem => modelItem.CommentCount)</a>
+                                </li>
+                                <li class="post-like">
+                                    <a href="#"><i class="fa fa-eye"></i> @Html.DisplayFor(modelItem => modelItem.Views)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    if (Model.SourceSiteNameFa != null && Model.SourceSiteNameFa != "")
+                    {
+                        <div id="SourceSiteNameFa" class="source-link-gossip">
+                            <div style="display:inline-block">سایت مرجع:&nbsp;</div>
+                            <a href="@Model.SourceSiteUrl" target="_blank">@Model.SourceSiteNameFa</a>
+                        </div>
+                    }
+                }
+                <div class="tag-block">
+
+                    @{
+                        if (Model != null && Model.PostCategory != null)
+                        {
+                            foreach (var item in Model.PostCategory.ToList())
+                            {
+                                <span class="tags-caption">@item.NameFa</span>
+                            }
+                        }
+
+                        if (Model != null && Model.keyWords != null)
+                        {
+                            var arrKeyWord = Model.keyWords.Split(',');
+
+                            int i = 1;
+                            foreach (var item in arrKeyWord)
+                            {
+                                <span id='keyword_@i' class='tags-caption'>@item</span>
+                                i = i + 1;
+                            }
+
+                        }
+                    }
+
+
+                </div>
+            }
+        </div>
+    </article>
+
+    <!-- Include author box -->
+    <div class="author-box">
+        <div class="panel">
+            <div class="panel-body">
+                <div class="author-avatar">
+                    <a href="#"><img alt="@Html.DisplayFor(modelItem => modelItem.Fullname)" src="@Html.DisplayFor(modelItem => modelItem.ImageUrl)" srcset="" class="media-object avatar-90 photo" ></a>
+                </div>
+                <div class="author-info">
+                    <h4 class="heading-single"><span>درباره نويسنده - <a href="#" title="وب سايت نويسنده" rel="author external">@Html.DisplayFor(modelItem => modelItem.Fullname)</a></span></h4>
+                    <p>@Html.DisplayFor(modelItem => modelItem.AboutUser)</p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="author-social">
+                    <ul class="social-icons social-small icon-circle list-inline">
+                        <li>
+                            <a class="tooltip-on white" title="Facebook" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-on white" title="Twitter" href="#">
+                                <div class="icon-wrapper icon-full-radius bg-color-info">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-on white" title="Google Plus" href="#">
+                                <div class="icon-wrapper icon-full-radius bg-color-danger">
+                                    <i class="fa fa-google-plus"></i>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-on white" title="Linkedin" href="#">
+                                <div class="icon-wrapper icon-full-radius bg-color-default linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Show comments -->
+    @Html.Partial("~/Views/Post/_Comment.cshtml")
+
+    <!-- Show related posts -->
+    <div id="related-tab">
+        <h3 class="related-posts-title">مطالب مشابه</h3>
+        <div class="related-posts row">
+            @Html.Partial("~/Views/Post/_RelatedPost.cshtml")
+        </div>
+    </div>
+</div>

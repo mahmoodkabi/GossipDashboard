@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>https://donyak.com/مهارت-های-زندگی/</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl page-template-default page page-id-58757 is-percent-width wrapper-has-shadow block-head-4 magazine1 is-lazyload is-thumb-overlay-disabled is-desktop is-header-layout-1 has-builder]\DIV[1][background-overlay]\DIV[0][site tie-container]\DIV[0][ ]\DIV[2][section-wrapper container-full without-background has-title]\DIV[0][section-item sidebar-left has-sidebar]\DIV[1][container]\DIV[0][tie-row main-content-row]\DIV[0][main-content tie-col-md-8 tie-col-xs-12]\DIV[0][mag-box wide-post-box timeline-box]\DIV[0][container-wrapper]\DIV[1][mag-box-container clearfix]\UL[0][posts-items posts-list-container]\LI[0][post-item  tie-standard]\DIV[3][post-item-inner]\DIV[1][post-details]\H3[1][post-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Url</type>
+            <name>SourceSiteUrl</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl page-template-default page page-id-58757 is-percent-width wrapper-has-shadow block-head-4 magazine1 is-lazyload is-thumb-overlay-disabled is-desktop is-header-layout-1 has-builder]\DIV[1][background-overlay]\DIV[0][site tie-container]\DIV[0][ ]\DIV[2][section-wrapper container-full without-background has-title]\DIV[0][section-item sidebar-left has-sidebar]\DIV[1][container]\DIV[0][tie-row main-content-row]\DIV[0][main-content tie-col-md-8 tie-col-xs-12]\DIV[0][mag-box wide-post-box timeline-box]\DIV[0][container-wrapper]\DIV[1][mag-box-container clearfix]\UL[0][posts-items posts-list-container]\LI[0][post-item  tie-standard]\DIV[3][post-item-inner]\DIV[1][post-details]\H3[1][post-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Follow</type>
+            <xpath>HTML[0][ ]\BODY[1][rtl page-template-default page page-id-58757 is-percent-width wrapper-has-shadow block-head-4 magazine1 is-lazyload is-thumb-overlay-disabled is-desktop is-header-layout-1 has-builder]\DIV[1][background-overlay]\DIV[0][site tie-container]\DIV[0][ ]\DIV[2][section-wrapper container-full without-background has-title]\DIV[0][section-item sidebar-left has-sidebar]\DIV[1][container]\DIV[0][tie-row main-content-row]\DIV[0][main-content tie-col-md-8 tie-col-xs-12]\DIV[0][mag-box wide-post-box timeline-box]\DIV[0][container-wrapper]\DIV[1][mag-box-container clearfix]\UL[0][posts-items posts-list-container]\LI[0][post-item  tie-standard]\DIV[3][post-item-inner]\DIV[1][post-details]\H3[1][post-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceDateTimePost</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-89541 single-format-standard is-percent-width wrapper-has-shadow block-head-4 magazine1 is-lazyload is-thumb-overlay-disabled is-desktop is-header-layout-1 sidebar-left has-sidebar post-layout-3 wide-title-narrow-media is-standard-format]\DIV[1][background-overlay]\DIV[0][site tie-container]\DIV[0][ ]\DIV[1][container]\DIV[0][container-wrapper fullwidth-entry-title]\HEADER[0][entry-header-outer]\DIV[1][entry-header]\DIV[1][post-meta]\SPAN[0][date meta-item]\SPAN[1][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SubSubject1_1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-89541 single-format-standard is-percent-width wrapper-has-shadow block-head-4 magazine1 is-lazyload is-thumb-overlay-disabled is-desktop is-header-layout-1 sidebar-left has-sidebar post-layout-3 wide-title-narrow-media is-standard-format]\DIV[1][background-overlay]\DIV[0][site tie-container]\DIV[0][ ]\DIV[2][site-content container]\DIV[0][tie-row main-content-row]\DIV[0][main-content tie-col-md-8 tie-col-xs-12]\ARTICLE[1][container-wrapper post-content tie-standard]\DIV[1][entry-content entry clearfix]\P[0][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-89541 single-format-standard is-percent-width wrapper-has-shadow block-head-4 magazine1 is-lazyload is-thumb-overlay-disabled is-desktop is-header-layout-1 sidebar-left has-sidebar post-layout-3 wide-title-narrow-media is-standard-format]\DIV[1][background-overlay]\DIV[0][site tie-container]\DIV[0][ ]\DIV[2][site-content container]\DIV[0][tie-row main-content-row]\DIV[0][main-content tie-col-md-8 tie-col-xs-12]\ARTICLE[1][container-wrapper post-content tie-standard]\DIV[1][entry-content entry clearfix]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>HTML</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-89541 single-format-standard is-percent-width wrapper-has-shadow block-head-4 magazine1 is-lazyload is-thumb-overlay-disabled is-desktop is-header-layout-1 sidebar-left has-sidebar post-layout-3 wide-title-narrow-media is-standard-format]\DIV[1][background-overlay]\DIV[0][site tie-container]\DIV[0][ ]\DIV[2][site-content container]\DIV[0][tie-row main-content-row]\DIV[0][main-content tie-col-md-8 tie-col-xs-12]\ARTICLE[1][container-wrapper post-content tie-standard]\DIV[1][entry-content entry clearfix]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>ContentHTMLText</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-89541 single-format-standard is-percent-width wrapper-has-shadow block-head-4 magazine1 is-lazyload is-thumb-overlay-disabled is-desktop is-header-layout-1 sidebar-left has-sidebar post-layout-3 wide-title-narrow-media is-standard-format]\DIV[1][background-overlay]\DIV[0][site tie-container]\DIV[0][ ]\DIV[2][site-content container]\DIV[0][tie-row main-content-row]\DIV[0][main-content tie-col-md-8 tie-col-xs-12]\ARTICLE[1][container-wrapper post-content tie-standard]\DIV[1][entry-content entry clearfix]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Image_URL</type>
+            <name>Image1_1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-89541 single-format-standard is-percent-width wrapper-has-shadow block-head-4 magazine1 is-lazyload is-thumb-overlay-disabled is-desktop is-header-layout-1 sidebar-left has-sidebar post-layout-3 wide-title-narrow-media is-standard-format]\DIV[1][background-overlay]\DIV[0][site tie-container]\DIV[0][ ]\DIV[2][site-content container]\DIV[0][tie-row main-content-row]\DIV[0][main-content tie-col-md-8 tie-col-xs-12]\ARTICLE[1][container-wrapper post-content tie-standard]\DIV[0][featured-area]\DIV[0][featured-area-inner]\FIGURE[0][single-featured-image]\IMG[0][attachment-jannah-image-post size-jannah-image-post lazy-img wp-post-image]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Back</type>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <URLList />
+    <CategoryLinkPaths />
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

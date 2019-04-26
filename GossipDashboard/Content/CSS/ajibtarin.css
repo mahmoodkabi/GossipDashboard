@@ -1,0 +1,39 @@
+﻿.number-one-to-ten {
+    clear: both;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+    background-color: #444;
+    width: 100%;
+    border-radius: 7px
+}
+
+    .number-one-to-ten .number {
+        margin: 0 10px 0 0;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        color: #fff;
+        background-color: #cd0000;
+        font-size: 52px;
+        float: right;
+        text-align: center;
+        font-family: 'Impact Web' !important;
+        display: inline-block;
+        text-shadow: none !important
+    }
+
+    .number-one-to-ten .text {
+        color: #ffc107;
+        font-size: 40px;
+        font-weight: bolder;
+        margin-top: 0;
+        line-height: 56px;
+        padding: 0 20px 0 10px;
+        display: inline-block;
+        width: 79%
+    }
+
+h2.number-one-to-ten {
+    display: flex
+}

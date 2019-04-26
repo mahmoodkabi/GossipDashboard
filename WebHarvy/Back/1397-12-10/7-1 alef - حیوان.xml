@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>https://www.alef.ir/news/search.html?key=حیوان</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[2][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-12 col-md-9 col-lg-9 advanced-search-result]\UL[0][media-list]\LI[0][media gap-null gap-xl-bottom]\DIV[1][media-body text-justify]\H1[0][media-heading post-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceDateTimePost</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[2][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-12 col-md-9 col-lg-9 advanced-search-result]\UL[0][media-list]\LI[0][media gap-null gap-xl-bottom]\DIV[1][media-body text-justify]\SPAN[1][ ]\TIME[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceSiteAuthor</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[2][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-12 col-md-9 col-lg-9 advanced-search-result]\UL[0][media-list]\LI[0][media gap-null gap-xl-bottom]\DIV[1][media-body text-justify]\SPAN[1][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Url</type>
+            <name>SourceSiteUrl</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[2][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-12 col-md-9 col-lg-9 advanced-search-result]\UL[0][media-list]\LI[0][media gap-null gap-xl-bottom]\DIV[1][media-body text-justify]\H1[0][media-heading post-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Follow</type>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[2][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-12 col-md-9 col-lg-9 advanced-search-result]\UL[0][media-list]\LI[0][media gap-null gap-xl-bottom]\DIV[1][media-body text-justify]\H1[0][media-heading post-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+         
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>SubSubject1_1</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[1][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-9 col-md-7 col-lg-7]\ARTICLE[1][ ]\Header[0][ ]\P[3][post-lead without-image gap-md-bottom]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[1][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-9 col-md-7 col-lg-7]\ARTICLE[1][ ]\DIV[1][post-content clearfix gap-lg-bottom]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+                <DATAFIELD>
+            <type>Text</type>
+            <name>ContentHTMLText</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[1][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-9 col-md-7 col-lg-7]\ARTICLE[1][ ]\DIV[1][post-content clearfix gap-lg-bottom]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>HTML</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[1][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-9 col-md-7 col-lg-7]\ARTICLE[1][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Tag1</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[1][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-9 col-md-7 col-lg-7]\ARTICLE[1][ ]\FOOTER[2][hidden-print]\DIV[0][clearfix gap-md-bottom]\H6[1][post-tag]\A[0][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Tag2</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[1][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-9 col-md-7 col-lg-7]\ARTICLE[1][ ]\FOOTER[2][hidden-print]\DIV[0][clearfix gap-md-bottom]\H6[2][post-tag]\A[0][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Tag3</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[1][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-9 col-md-7 col-lg-7]\ARTICLE[1][ ]\FOOTER[2][hidden-print]\DIV[0][clearfix gap-md-bottom]\H6[3][post-tag]\A[0][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Back</type>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

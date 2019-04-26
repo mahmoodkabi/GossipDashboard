@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>https://iliadmag.com/fa/magazine/science</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Url</type>
+            <name>SourceSiteUrl</name>
+            <xpath>HTML[0][fa-events-icons-ready]\BODY[1][ ]\DIV[1][ ]\DIV[0][wmax]\DIV[0][ ]\ARTICLE[0][ ]\DIV[0][ ]\DIV[1][magazine_container_div]\DIV[4][magazine_body_div]\A[1][magazine_article_box_a all_magazine_theme_color3]\DIV[1][magazine_box_title]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Follow</type>
+            <xpath>HTML[0][fa-events-icons-ready]\BODY[1][ ]\DIV[1][ ]\DIV[0][wmax]\DIV[0][ ]\ARTICLE[0][ ]\DIV[0][ ]\DIV[1][magazine_container_div]\DIV[4][magazine_body_div]\A[1][magazine_article_box_a all_magazine_theme_color3]\DIV[1][magazine_box_title]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][fa-events-icons-ready]\BODY[1][ ]\DIV[1][ ]\DIV[0][wmax]\DIV[0][ ]\ARTICLE[0][ ]\DIV[0][ ]\DIV[1][magazine_container_div]\DIV[4][magazine_body_div]\DIV[1][magazine_article_text]\H1[2][magazine_article_title all_magazine_theme_color4]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][fa-events-icons-ready]\BODY[1][ ]\DIV[1][ ]\DIV[0][wmax]\DIV[0][ ]\ARTICLE[0][ ]\DIV[0][ ]\DIV[1][magazine_container_div]\DIV[4][magazine_body_div]\DIV[1][magazine_article_text]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>HTML</name>
+			<xpath>HTML[0][fa-events-icons-ready]\BODY[1][ ]\DIV[1][ ]\DIV[0][wmax]\DIV[0][ ]\ARTICLE[0][ ]\DIV[0][ ]\DIV[1][magazine_container_div]\DIV[4][magazine_body_div]\DIV[1][magazine_article_text]\</xpath>
+            <regex />
+        </DATAFIELD>
+		<DATAFIELD>
+            <type>Text</type>
+            <name>ContentHTMLText</name>
+            <xpath>HTML[0][fa-events-icons-ready]\BODY[1][ ]\DIV[1][ ]\DIV[0][wmax]\DIV[0][ ]\ARTICLE[0][ ]\DIV[0][ ]\DIV[1][magazine_container_div]\DIV[4][magazine_body_div]\DIV[1][magazine_article_text]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+		<DATAFIELD>
+            <type>Image_URL</type>
+            <name>Image1_1</name>
+            <xpath>HTML[0][fa-events-icons-ready]\BODY[1][ ]\DIV[1][ ]\DIV[0][wmax]\DIV[0][ ]\ARTICLE[0][ ]\DIV[0][ ]\DIV[1][magazine_container_div]\DIV[4][magazine_body_div]\DIV[1][magazine_article_text]\DIV[3][ ]\DIV[0][image_container]\IMG[0][photo_box_thumb]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Back</type>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

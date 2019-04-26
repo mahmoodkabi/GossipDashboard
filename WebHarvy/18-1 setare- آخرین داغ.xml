@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>https://setare.com/</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[6][container main_page]\DIV[0][row]\DIV[0][col-lg-32 col-md-31 col-sm-36 col-xs-36 no-padd]\SECTION[1][row1 no-padd]\DIV[0][col-lg-24 col-md-23 col-sm-24 col-xs-36 padding_main_col_home]\DIV[1][no-padd tab_tarin]\DIV[1][tab-content]\SECTION[0][tab-pane fade in active]\DIV[0][row akhv_body relative]\DIV[0][c]\DIV[0][akhbar_home_tab]\H3[1][htags]\A[0][akhv_title]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SubSubject1_1</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[6][container main_page]\DIV[0][row]\DIV[0][col-lg-32 col-md-31 col-sm-36 col-xs-36 no-padd]\SECTION[1][row1 no-padd]\DIV[0][col-lg-24 col-md-23 col-sm-24 col-xs-36 padding_main_col_home]\DIV[1][no-padd tab_tarin]\DIV[1][tab-content]\SECTION[0][tab-pane fade in active]\DIV[0][row akhv_body relative]\DIV[0][c]\DIV[0][akhbar_home_tab]\DIV[2][akhv_lead_akhbar]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Url</type>
+            <name>SourceSiteUrl</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[6][container main_page]\DIV[0][row]\DIV[0][col-lg-32 col-md-31 col-sm-36 col-xs-36 no-padd]\SECTION[1][row1 no-padd]\DIV[0][col-lg-24 col-md-23 col-sm-24 col-xs-36 padding_main_col_home]\DIV[1][no-padd tab_tarin]\DIV[1][tab-content]\SECTION[0][tab-pane fade in active]\DIV[0][row akhv_body relative]\DIV[0][c]\DIV[0][akhbar_home_tab]\H3[1][htags]\A[0][akhv_title]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Follow</type>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[6][container main_page]\DIV[0][row]\DIV[0][col-lg-32 col-md-31 col-sm-36 col-xs-36 no-padd]\SECTION[1][row1 no-padd]\DIV[0][col-lg-24 col-md-23 col-sm-24 col-xs-36 padding_main_col_home]\DIV[1][no-padd tab_tarin]\DIV[1][tab-content]\SECTION[0][tab-pane fade in active]\DIV[0][row akhv_body relative]\DIV[0][c]\DIV[0][akhbar_home_tab]\H3[1][htags]\A[0][akhv_title]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[5][container main_page news_container]\DIV[0][row]\DIV[0][col-md-22 col-sm-30 col-xs-36 no-padd-r no-padd-l-sm news_center_col]\DIV[0][content_page_news]\DIV[0][ ]\DIV[3][news_body]\DIV[1][news_inner]\DIV[0][news_contents]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>HTML</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[5][container main_page news_container]\DIV[0][row]\DIV[0][col-md-22 col-sm-30 col-xs-36 no-padd-r no-padd-l-sm news_center_col]\DIV[0][content_page_news]\DIV[0][ ]\DIV[3][news_body]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceDateTimePost</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[5][container main_page news_container]\DIV[0][row]\DIV[0][col-md-22 col-sm-30 col-xs-36 no-padd-r no-padd-l-sm news_center_col]\DIV[0][content_page_news]\DIV[0][ ]\DIV[3][news_body]\DIV[0][news_toolbar row]\DIV[0][news_nav news_pdate_c col-sm-14 col-ms-18 col-xs-36 no-padd]\SPAN[1][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Back</type>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

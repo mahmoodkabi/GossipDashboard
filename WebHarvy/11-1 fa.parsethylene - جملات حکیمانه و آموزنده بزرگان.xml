@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>http://fa.parsethylene-kish.com/spparsekish/default.aspx?page=Document&amp;app=Documents&amp;docId=20234&amp;docParId=12243</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\FORM[1][ ]\DIV[5][ ]\DIV[1][container]\DIV[2][row]\DIV[1][col-lg-10 col-md-10 col-sm-10 col-xs-10 equal]\DIV[0][contentcolumn myitem myitem-g1 col-lg-7 col-md-7 col-md-push-3 col-sm-9  col-xs-12]\DIV[2][p-2 col-12 responsive]\DIV[0][responsive]\DIV[0][responsive]\TABLE[3][responsive tablelayout]\TBODY[0][ ]\TR[0][responsive]\TD[0][responsive]\P[2][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Status</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\FORM[1][ ]\DIV[5][ ]\DIV[1][container]\DIV[2][row]\DIV[1][col-lg-10 col-md-10 col-sm-10 col-xs-10 equal]\DIV[0][contentcolumn myitem myitem-g1 col-lg-7 col-md-7 col-md-push-3 col-sm-9  col-xs-12]\DIV[2][p-2 col-12 responsive]\DIV[0][responsive]\DIV[0][responsive]\TABLE[3][responsive tablelayout]\TBODY[0][ ]\TR[0][responsive]\TD[0][responsive]\P[2][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+		<DATAFIELD>
+<<<<<<< HEAD
+            <type>HTML</type>
+=======
+            <type>Text</type>
+>>>>>>> 9457575f... رفع ایراد صفحه عجیب و غریب . در یو آر ال نباید نقطه باشد
+            <name>HTML</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\FORM[1][ ]\DIV[5][ ]\DIV[1][container]\DIV[2][row]\DIV[1][col-lg-10 col-md-10 col-sm-10 col-xs-10 equal]\DIV[0][contentcolumn myitem myitem-g1 col-lg-7 col-md-7 col-md-push-3 col-sm-9  col-xs-12]\DIV[2][p-2 col-12 responsive]\DIV[0][responsive]\DIV[0][responsive]\TABLE[3][responsive tablelayout]\TBODY[0][ ]\TR[0][responsive]\TD[0][responsive]\P[2][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+<<<<<<< HEAD
+        		<DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\FORM[1][ ]\DIV[5][ ]\DIV[1][container]\DIV[2][row]\DIV[1][col-lg-10 col-md-10 col-sm-10 col-xs-10 equal]\DIV[0][contentcolumn myitem myitem-g1 col-lg-7 col-md-7 col-md-push-3 col-sm-9  col-xs-12]\DIV[2][p-2 col-12 responsive]\DIV[0][responsive]\DIV[0][responsive]\TABLE[3][responsive tablelayout]\TBODY[0][ ]\TR[0][responsive]\TD[0][responsive]\P[2][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+		<DATAFIELD>
+            <type>Text</type>
+            <name>ContentHTMLText</name>
+=======
+		<DATAFIELD>
+            <type>Text</type>
+            <name>ContentHTML</name>
+>>>>>>> 9457575f... رفع ایراد صفحه عجیب و غریب . در یو آر ال نباید نقطه باشد
+            <xpath>HTML[0][ ]\BODY[1][ ]\FORM[1][ ]\DIV[5][ ]\DIV[1][container]\DIV[2][row]\DIV[1][col-lg-10 col-md-10 col-sm-10 col-xs-10 equal]\DIV[0][contentcolumn myitem myitem-g1 col-lg-7 col-md-7 col-md-push-3 col-sm-9  col-xs-12]\DIV[2][p-2 col-12 responsive]\DIV[0][responsive]\DIV[0][responsive]\TABLE[3][responsive tablelayout]\TBODY[0][ ]\TR[0][responsive]\TD[0][responsive]\P[2][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

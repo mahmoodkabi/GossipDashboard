@@ -1,0 +1,661 @@
+<?xml version="1.0"?>
+<MineParams
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<StartURL>
+		<url>http://www.bartarinha.ir/</url>
+	</StartURL>
+	<FieldList>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[4][container]\DIV[0][row]\DIV[0][col-md-31 gutter_xs]\DIV[0][row]\DIV[1][col-md-30 gutter_main]\DIV[3][row]\DIV[1][col-sm-23 padd_main_l fr_pull]\DIV[29][panel col-xs-36]\DIV[1][panel_c]\DIV[0][row]\DIV[0][col-xs-36]\H2[0][Htag]\A[0][title8]\</xpath>
+			<pattern>true</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Link_Follow</type>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[4][container]\DIV[0][row]\DIV[0][col-md-31 gutter_xs]\DIV[0][row]\DIV[1][col-md-30 gutter_main]\DIV[3][row]\DIV[1][col-sm-23 padd_main_l fr_pull]\DIV[29][panel col-xs-36]\DIV[1][panel_c]\DIV[0][row]\DIV[0][col-xs-36]\H2[0][Htag]\A[0][title8]\</xpath>
+			<pattern>true</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>SubSubject1_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[3][row]\DIV[0][col-md-36]\DIV[1][subtitle]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost1_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost1_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[1][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost1_3</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[2][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost1_4</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[3][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost1_5</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[4][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost1_6</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[5][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost1_7</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[6][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[7][ ]\STRONG[0][ ]\SPAN[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image2_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[8][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost2_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[9][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost2_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[10][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost2_3</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[11][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject3</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[13][ ]\STRONG[0][ ]\SPAN[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image3_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[14][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+			<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost3_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[15][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost3_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[16][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject4</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[18][ ]\SPAN[0][ ]\STRONG[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image4_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[19][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+			<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost4_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[20][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost4_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[21][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject5</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[23][ ]\STRONG[0][ ]\SPAN[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image5_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[24][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost5_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[25][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost5_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[26][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject6</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[28][ ]\SPAN[0][ ]\STRONG[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image6_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[29][ ]\SPAN[0][ ]\STRONG[0][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost6_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[30][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject7</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[32][ ]\STRONG[0][ ]\SPAN[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image7_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[33][ ]\STRONG[0][ ]\SPAN[0][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+			<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost7_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[34][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost7_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[35][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject8</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[37][ ]\STRONG[0][ ]\SPAN[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image8_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[38][ ]\STRONG[0][ ]\SPAN[0][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+			<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost8_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[39][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost8_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[40][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject9</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[42][ ]\SPAN[0][ ]\STRONG[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image9_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[43][ ]\SPAN[0][ ]\STRONG[0][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+			<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost9_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[44][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost9_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[45][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject10</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[47][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image10_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[48][ ]\SPAN[0][ ]\STRONG[0][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+			<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost10_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[49][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost10_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[50][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject11</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[52][ ]\STRONG[0][ ]\SPAN[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image11_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[53][ ]\STRONG[0][ ]\SPAN[0][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+			<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost11_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[54][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject12</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[56][ ]\STRONG[0][ ]\SPAN[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image12_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[57][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost12_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[58][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost12_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[59][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject13</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[61][ ]\SPAN[0][ ]\STRONG[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image13_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[62][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+			<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost13_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[63][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost13_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[64][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject14</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[66][ ]\STRONG[0][ ]\SPAN[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image14_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[67][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost14_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[68][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost14_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[69][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost14_3</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[70][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject15</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[72][ ]\SPAN[0][ ]\STRONG[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image15_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[73][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+			<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost15_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[73][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost15_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[74][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject16</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[76][ ]\STRONG[0][ ]\SPAN[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image16_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[77][ ]\STRONG[0][ ]\SPAN[0][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost16_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[78][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost16_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[79][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject17</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[81][ ]\SPAN[0][ ]\STRONG[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image17_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[82][ ]\SPAN[0][ ]\STRONG[0][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost17_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[83][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost17_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[84][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject18</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[86][ ]\SPAN[0][ ]\STRONG[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image18_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[87][ ]\SPAN[0][ ]\STRONG[0][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost18_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[88][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost18_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[89][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Subject19</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[91][ ]\SPAN[0][ ]\STRONG[0][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>HTML</type>
+			<name>Image19_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[92][ ]\IMG[0][image_btn img-responsive-news]\</xpath>
+			<pattern>false</pattern>
+			<regex>src="([^"]*)</regex>
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost19_1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[93][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost19_2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[94][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>ContentPost19_3</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[4][body body_media_content_show]\P[95][ ]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Tag1</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[10][tags_container]\DIV[0][tags_title]\DIV[1][col-xs-34 col-sm-31 col-md-31 col-lg-32]\DIV[0][title_tag_2]\A[0][tags_item]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Tag2</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[10][tags_container]\DIV[0][tags_title]\DIV[1][col-xs-34 col-sm-31 col-md-31 col-lg-32]\DIV[0][title_tag_2]\A[1][tags_item]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Tag3</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[10][tags_container]\DIV[0][tags_title]\DIV[1][col-xs-34 col-sm-31 col-md-31 col-lg-32]\DIV[0][title_tag_2]\A[2][tags_item]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Tag4</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[10][tags_container]\DIV[0][tags_title]\DIV[1][col-xs-34 col-sm-31 col-md-31 col-lg-32]\DIV[0][title_tag_2]\A[3][tags_item]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Tag5</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[10][tags_container]\DIV[0][tags_title]\DIV[1][col-xs-34 col-sm-31 col-md-31 col-lg-32]\DIV[0][title_tag_2]\A[4][tags_item]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Tag7</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[10][tags_container]\DIV[0][tags_title]\DIV[1][col-xs-34 col-sm-31 col-md-31 col-lg-32]\DIV[0][title_tag_2]\A[5][tags_item]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>FootCategory</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[23][row panel]\DIV[1][col-md-36]\DIV[0][news_path]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>DateTimePost</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[0][sar_news_body]\DIV[0][row padd_news_gutter]\DIV[1][col-lg-11 col-sm-13 col-ms-15 col-xs-19]\DIV[0][news_nav news_pdate_c]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Text</type>
+			<name>Views</name>
+			<xpath>HTML[0][ ]\BODY[1][ ]\DIV[3][container]\DIV[0][row]\DIV[1][col-md-24]\DIV[24][panel]\DIV[0][sar_news_body]\DIV[0][row padd_news_gutter]\DIV[2][col-md-5 col-sm-5 col-xs-8]\DIV[0][news_nav news_hits]\</xpath>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+		<DATAFIELD>
+			<type>Link_Back</type>
+			<pattern>false</pattern>
+			<regex />
+		</DATAFIELD>
+	</FieldList>
+	<KeywordList />
+	<KeywordFileList />
+	<FileAnchorKWList />
+</MineParams>

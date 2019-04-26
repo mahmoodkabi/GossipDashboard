@@ -1,0 +1,1532 @@
+{
+    "result": "ok",
+    "tuc": [
+        {
+            "phrase": {
+                "text": "خانه",
+                "language": "fa"
+            },
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "childhood or parental home"
+                },
+                {
+                    "language": "en",
+                    "text": "A place where one lives; a residence."
+                },
+                {
+                    "language": "en",
+                    "text": "house or structure in which someone lives"
+                },
+                {
+                    "language": "en",
+                    "text": "The abode of a human being, their place of residence."
+                }
+            ],
+            "meaningId": -669025921461054800,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "منزل",
+                "language": "fa"
+            },
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "at home"
+                },
+                {
+                    "language": "en",
+                    "text": "at home ( <i>adverb</i> )"
+                }
+            ],
+            "meaningId": 6739136373084540000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "میهن",
+                "language": "fa"
+            },
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "someone’s native land"
+                }
+            ],
+            "meaningId": 210644028580425920,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "در منزل",
+                "language": "fa"
+            },
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "at home"
+                },
+                {
+                    "language": "en",
+                    "text": "at home ( <i>adverb</i> )"
+                }
+            ],
+            "meaningId": 4594022103398573600,
+            "authors": [
+                90508
+            ]
+        },
+        {
+            "phrase": {
+                "text": "وطن",
+                "language": "fa"
+            },
+            "meaningId": 3607795734024472000,
+            "authors": [
+                92056
+            ]
+        },
+        {
+            "phrase": {
+                "text": "خانگی",
+                "language": "fa"
+            },
+            "meaningId": 2596791870006109700,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "خانِه",
+                "language": "fa"
+            },
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "The abode of a human being, their place of residence."
+                }
+            ],
+            "meaningId": 3945783411689945000,
+            "authors": [
+                60172
+            ]
+        },
+        {
+            "phrase": {
+                "text": "(بیس بال) پلایت 0",
+                "language": "fa"
+            },
+            "meaningId": -3713854757721282600,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "(جانور و گیاه) زیست بوم",
+                "language": "fa"
+            },
+            "meaningId": -4328670552745120000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "(خانه ی یتیم ها یا کهنسالان یا مستمندان و غیره) - خانه",
+                "language": "fa"
+            },
+            "meaningId": 7567975039314132000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "(در برخی بازی های ورزشی) دروازه",
+                "language": "fa"
+            },
+            "meaningId": -6540980881882050000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "(مجازی) خانواده",
+                "language": "fa"
+            },
+            "meaningId": -5386785137941410000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "(محله یا شهر یا ناحیه ی محل زیست شخص) ماوا",
+                "language": "fa"
+            },
+            "meaningId": -6883723866749765000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "(مسابقه ی ورزشی) در محل اصلی تیم",
+                "language": "fa"
+            },
+            "meaningId": 3326427838436683300,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "اجرا شدنی در زیستگاه ورزشکار(ان)",
+                "language": "fa"
+            },
+            "meaningId": -501017409565365400,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "اصلی",
+                "language": "fa"
+            },
+            "meaningId": -7437698960010692000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "اهل بیت",
+                "language": "fa"
+            },
+            "meaningId": -7383135176741157000,
+            "authors": [
+                84500
+            ]
+        },
+        {
+            "phrase": {
+                "text": "بخانه فرستادن",
+                "language": "fa"
+            },
+            "meaningId": 4784621242837518000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "بسوی خانه",
+                "language": "fa"
+            },
+            "meaningId": 9023937425278343000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "بطرف وطن",
+                "language": "fa"
+            },
+            "meaningId": -4189620722819893000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "بموقع",
+                "language": "fa"
+            },
+            "meaningId": 1686449993852339200,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "به خانه یا کاشانه ی خود رفتن",
+                "language": "fa"
+            },
+            "meaningId": 2622932005925233000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "به سرمنزل رسیدن 8",
+                "language": "fa"
+            },
+            "meaningId": 1970503814899881500,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "به سرمنزل مقصود 7",
+                "language": "fa"
+            },
+            "meaningId": 338661017940459500,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "به لانه رفتن",
+                "language": "fa"
+            },
+            "meaningId": -147431677094042100,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "به مقصد",
+                "language": "fa"
+            },
+            "meaningId": 1044068015942449000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "به مقصد فرستادن",
+                "language": "fa"
+            },
+            "meaningId": -3306643011861837300,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "به هدف",
+                "language": "fa"
+            },
+            "meaningId": -1010934580139016200,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "بگاه",
+                "language": "fa"
+            },
+            "meaningId": -7212266867834511000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "خاستگاه",
+                "language": "fa"
+            },
+            "meaningId": -4780383987843916000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "خانمان",
+                "language": "fa"
+            },
+            "meaningId": 5281482827330604000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "خانه دادن",
+                "language": "fa"
+            },
+            "meaningId": 7885934330740130000,
+            "authors": [
+                84500
+            ]
+        },
+        {
+            "phrase": {
+                "text": "خانه دار کردن",
+                "language": "fa"
+            },
+            "meaningId": -5587455539621936000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "خانه داشتن",
+                "language": "fa"
+            },
+            "meaningId": -1989250630051446500,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "خانه ی",
+                "language": "fa"
+            },
+            "meaningId": -7694967606608250000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "خانواده",
+                "language": "fa"
+            },
+            "meaningId": 1198005047251237600,
+            "authors": [
+                84500
+            ]
+        },
+        {
+            "phrase": {
+                "text": "خانوادگی 1",
+                "language": "fa"
+            },
+            "meaningId": 4428704822572975000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "داخلی (در برابر : خارجی یا بیگانه foreign) 2",
+                "language": "fa"
+            },
+            "meaningId": 9008268578052402000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "در خانه",
+                "language": "fa"
+            },
+            "meaningId": -1221656728990084900,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "در خانه قرار دادن",
+                "language": "fa"
+            },
+            "meaningId": 4756997765928366000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "در شهر خود تیم 5",
+                "language": "fa"
+            },
+            "meaningId": -4905777760697420000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "در میهن 6",
+                "language": "fa"
+            },
+            "meaningId": -1285801950042844200,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "رک و بی پرده 4",
+                "language": "fa"
+            },
+            "meaningId": -5801303853750008000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "زادگاه",
+                "language": "fa"
+            },
+            "meaningId": 5609292960257413000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "زیستگاه",
+                "language": "fa"
+            },
+            "meaningId": 6030115636984883000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "سرمنزل",
+                "language": "fa"
+            },
+            "meaningId": -1535894258621438500,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "سرچشمه",
+                "language": "fa"
+            },
+            "meaningId": -6469536470502504000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "شهر",
+                "language": "fa"
+            },
+            "meaningId": -5870105404469726000,
+            "authors": [
+                25018
+            ]
+        },
+        {
+            "phrase": {
+                "text": "قبر",
+                "language": "fa"
+            },
+            "meaningId": -5746076539877313000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "لانه داشتن 9",
+                "language": "fa"
+            },
+            "meaningId": 7986909184868742000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "مبدا",
+                "language": "fa"
+            },
+            "meaningId": -5432201912081171000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "مبدا 3",
+                "language": "fa"
+            },
+            "meaningId": 7326818193755753000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "مرکزی",
+                "language": "fa"
+            },
+            "meaningId": -4438219364703978500,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "مستخدمین خانه",
+                "language": "fa"
+            },
+            "meaningId": -4031335500237944000,
+            "authors": [
+                84500
+            ]
+        },
+        {
+            "phrase": {
+                "text": "مسکن",
+                "language": "fa"
+            },
+            "meaningId": 4828063345498784000,
+            "authors": [
+                83089
+            ]
+        },
+        {
+            "phrase": {
+                "text": "مقر",
+                "language": "fa"
+            },
+            "meaningId": -369386405184893200,
+            "authors": [
+                84500
+            ]
+        },
+        {
+            "phrase": {
+                "text": "منزلگاه",
+                "language": "fa"
+            },
+            "meaningId": 3217287445672061400,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "موثر",
+                "language": "fa"
+            },
+            "meaningId": -6680246971268753000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "موطن",
+                "language": "fa"
+            },
+            "meaningId": 5778748097511430000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "میهنی",
+                "language": "fa"
+            },
+            "meaningId": 1824218901315923000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "وابسته به خانه و کاشانه",
+                "language": "fa"
+            },
+            "meaningId": 8244169589030080000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "وابسته به میهن",
+                "language": "fa"
+            },
+            "meaningId": 1121355969264920800,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "وطنی",
+                "language": "fa"
+            },
+            "meaningId": -2982317743655915500,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "پایگاه",
+                "language": "fa"
+            },
+            "meaningId": 6250457870636325000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "کانون خانوادگی",
+                "language": "fa"
+            },
+            "meaningId": 913955947181033000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "کد",
+                "language": "fa"
+            },
+            "meaningId": 1113053108968314000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "گل",
+                "language": "fa"
+            },
+            "meaningId": -613393842952745300,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "phrase": {
+                "text": "گور",
+                "language": "fa"
+            },
+            "meaningId": 8027329218480200000,
+            "authors": [
+                61706
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "fa",
+                    "text": "[[خانه"
+                }
+            ],
+            "meaningId": -5986013694571459000,
+            "authors": [
+                83083
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "to the fullest extent; to the heart; &quot;drove the nail home&quot;; &quot;drove his point home&quot;; &quot;his comments hit home&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "To one’s home or country."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                91945
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "Area where you are and feel at home and in which you are comfortable; usually, but not neccesssarily, the area in which you grow up."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                60172
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "A group of persons sharing a home or living space, who aggregate and share their incomes, as evidenced by the fact that they regularly take meals together."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                60172
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "(UK, soccer) Into the goal."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "an institution where people are cared for; &quot;a home for the elderly&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "The place where something began and flourished."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                60172
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "(baseball) base consisting of a rubber slab where the batter stands; it must be touched by a base runner in order to score; &quot;he ruled that the runner failed to touch home&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "To the home page."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                91945
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "To the own house or to the own domicile."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                60172
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "homewards <i>(adverb)</i>"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "(gaming) In various games, the ultimate point aimed at in a progress; the goal."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "<i>(usually with &quot;in on&quot;)</i> To seek or aim for something."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                91945
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "Close; closely."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "place where something began and flourished; &quot;the United States is the home of basketball&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "<i>A dwelling.</i>"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                91945
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "an environment offering affection and security; &quot;home is where the heart is&quot;; &quot;he grew up in a good Christian home&quot;; &quot;there&#39;s no place like home&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "provide with, or send to, a home"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "(baseball) Home plate."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "home (e.g. of the tiger)"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                2736
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "( <i>computing</i>) <i>Short for [i]home directory</i>[/i]."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                91945
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "(one’s) household"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                2736
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "Relating to or being where one lives or where one&#39;s roots are."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                60172
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "One’s native land; the place or country in which one dwells; the place where one’s ancestors dwell or dwelt."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "One’s own dwelling place; the house or structure in which one lives; especially the house in which one lives with his family; the habitual abode of one’s family; also, one’s birthplace."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "A place of refuge and rest; an asylum; as, a home for outcasts; a home for the blind; hence, especially, the grave; the final rest; also, the native and eternal dwelling place of the soul."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "goal (sports)"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "The locality where a thing is usually found, or was first found, or where it is naturally abundant; habitat; seat."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "on or to the point aimed at; &quot;the arrow struck home&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "(one’s parents’) home"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                2736
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "In one&#39;s place of residence or one&#39;s customary or official location; at home"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "<i>Shortened form of</i> <b>homeboy</b>."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                91945
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "<i>A focus point.</i>"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                91945
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "where you live at a particular time; &quot;deliver the package to my home&quot;; &quot;he doesn&#39;t have a home to go to&quot;; &quot;your place or mine?&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "(parents’) home"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                2736
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "Close; personal; pointed; as, a home thrust."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "Of or pertaining to one’s dwelling or country; domestic; not foreign; as home manufactures; home comforts."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "To one’s home or country"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "One’s own dwelling place; the house or structure in which one lives; especially the house in which one lives with his family."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                60172
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "relating to or being where one lives or where one&#39;s roots are; &quot;my home town&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "place of refuge or rest"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "place of the affections"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "Into the goal."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                91945
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "An environment offering affection and security."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                60172
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "In one&#39;s place of residence or one&#39;s customary or official location; at home."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                91945
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "The place where a person was raised; Childhood or parental home; home of one’s parents or guardian."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "a social unit living together; &quot;he moved his family to Virginia&quot;; &quot;It was a good Christian household&quot;; &quot;I waited until the whole house was asleep&quot;; &quot;the teacher asked how many people made up his home&quot;; &quot;the family refused to accept his will&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "The abiding place of the affections, especially of the domestic affections."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "return home accurately from a long distance; &quot;homing pigeons&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "habitat"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "(usually with &quot;in on&quot;) To seek or aim for something."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "(Internet) The landing page of a website; the site&#39;s <b>home</b> page"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "the country or state or city where you live; &quot;Canadian tariffs enabled United States lumber companies to raise prices at home&quot;; &quot;his home is New Jersey&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "To the place where it belongs; to the end of a course; to the full length."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "to home (&quot;in on&quot;)"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "housing that someone is living in; &quot;he built a modest dwelling near the pond&quot;; &quot;they raise money to provide homes for the homeless&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "at or to or in the direction of one&#39;s home or family; &quot;He stays home on weekends&quot;; &quot;after the game the children brought friends home for supper&quot;; &quot;I&#39;ll be home tomorrow&quot;; &quot;came riding home in style&quot;; &quot;I hope you will come home for Christmas&quot;; &quot;I&#39;ll take her home&quot;; &quot;don&#39;t forget to write home&quot;"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "(lacrosse) The place of a player in front of an opponent’s goal; also, the player."
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                1
+            ]
+        },
+        {
+            "meanings": [
+                {
+                    "language": "en",
+                    "text": "the place where you are stationed and from which missions start and end"
+                }
+            ],
+            "meaningId": null,
+            "authors": [
+                93369
+            ]
+        }
+    ],
+    "phrase": "home",
+    "from": "en",
+    "dest": "fa",
+    "authors": {
+        "1": {
+            "U": "http://en.wiktionary.org",
+            "id": 1,
+            "N": "en.wiktionary.org",
+            "url": "https://glosbe.com/source/1"
+        },
+        "2736": {
+            "U": "http://www.csse.monash.edu.au/~jwb/j_jmdict.html",
+            "id": 2736,
+            "N": "JMdict-Japanese-Multilingual-Dictio...",
+            "url": "https://glosbe.com/source/2736"
+        },
+        "25018": {
+            "U": "http://glosbe.com",
+            "id": 25018,
+            "N": "GlosbeResearch",
+            "url": "https://glosbe.com/source/25018"
+        },
+        "60172": {
+            "U": "http://www.omegawiki.org/",
+            "id": 60172,
+            "N": "omegawiki",
+            "url": "https://glosbe.com/source/60172"
+        },
+        "61706": {
+            "U": "http://farsilookup.com",
+            "id": 61706,
+            "N": "farsilookup.com",
+            "url": "https://glosbe.com/source/61706"
+        },
+        "83083": {
+            "U": "",
+            "id": 83083,
+            "N": "Dbnary: Wiktionary as Linguistic Linked Open Data",
+            "url": "https://glosbe.com/source/83083"
+        },
+        "83089": {
+            "U": "",
+            "id": 83089,
+            "N": "Dbnary: Wiktionary as Linguistic Linked Open Data",
+            "url": "https://glosbe.com/source/83089"
+        },
+        "84500": {
+            "U": "",
+            "id": 84500,
+            "N": "Open Multilingual Wordnet",
+            "url": "https://glosbe.com/source/84500"
+        },
+        "90508": {
+            "U": "",
+            "id": 90508,
+            "N": "en.wiktionary2016",
+            "url": "https://glosbe.com/source/90508"
+        },
+        "91945": {
+            "U": "https://en.wiktionary.org",
+            "id": 91945,
+            "N": "en.wiktionary.2016",
+            "url": "https://glosbe.com/source/91945"
+        },
+        "92056": {
+            "U": "",
+            "id": 92056,
+            "N": "TraverseGPAware",
+            "url": "https://glosbe.com/source/92056"
+        },
+        "93369": {
+            "U": "http://plwordnet.pwr.wroc.pl/wordnet/",
+            "id": 93369,
+            "N": "plwordnet-defs",
+            "url": "https://glosbe.com/source/93369"
+        }
+    }
+}

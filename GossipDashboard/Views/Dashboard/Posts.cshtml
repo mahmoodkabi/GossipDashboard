@@ -1,0 +1,113 @@
+﻿@using Kendo.Mvc.UI
+@using GossipDashboard.ViewModel;
+
+
+@{
+    ViewBag.Title = "پست ها";
+    Layout = "~/Views/Shared/_LayotDashboard.cshtml";
+}
+
+
+<!-- Website Overview -->
+<div class="panel panel-default">
+    <div class="panel-heading main-color-bg">
+        <h3 class="panel-title">Posts</h3>
+    </div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item active" >
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="panel-body k-rtl" ">
+                @(Html.Kendo().Grid<VM_PostManage>
+    ().Name("PostGrid")
+    .Columns(columns =>
+    {
+        columns.Command(command => { command.Edit().Text("ویرایش"); command.Destroy().Text("حذف"); }).Width(180);
+
+        columns.Bound(c => c.PostID).Width(90);
+        columns.ForeignKey(c => c.PostCategoryID, (System.Collections.IEnumerable)ViewData["PostCategory"], "PubBaseID", "NameFa").EditorTemplateName("DropDown").Width(150);
+        columns.ForeignKey(c => c.PostFormatID, (System.Collections.IEnumerable)ViewData["PostFormat"], "PubBaseID", "NameFa").EditorTemplateName("DropDown").Width(150);
+        columns.ForeignKey(c => c.PostColID, (System.Collections.IEnumerable)ViewData["PostCol"], "PubBaseID", "NameFa").EditorTemplateName("DropDown").Width(150);
+
+        columns.Bound(c => c.ContentHTML).Width(400).HtmlAttributes(new { style = "font-size: 2px;" });
+
+        columns.Bound(c => c.UrlMP3).Width(300);
+        columns.Bound(c => c.UrlVideo).Width(300);
+        columns.Bound(c => c.ScriptAparat).Width(400);
+
+        columns.Bound(c => c.Subject1).Width(300).HtmlAttributes(new { style = "font-size: xx-small;" });
+        columns.Bound(c => c.SubSubject1_1).Width(500).HtmlAttributes(new { style = "font-size: xx-small;" });
+        columns.Bound(c => c.ContentPost1_1).Width(500).HtmlAttributes(new { style = "font-size: xx-small;" });
+        columns.Bound(c => c.ContentPost1_2).Width(500).HtmlAttributes(new { style = "font-size: xx-small;" });
+        columns.Bound(c => c.ContentPost1_3).Width(500).HtmlAttributes(new { style = "font-size: xx-small;" });
+        columns.Bound(c => c.Image1_1).Width(300);
+        columns.Bound(c => c.Image1_2).Width(300);
+        columns.Bound(c => c.Image1_3).Width(300);
+
+        columns.Bound(c => c.SourceSiteName).Width(150);
+        columns.Bound(c => c.SourceSiteUrl).Width(500).HtmlAttributes(new { style = "font-size: 7px;" });
+        columns.Bound(c => c.BackgroundColor).Width(150);
+
+    })
+    .Pageable(pageable => pageable
+    .Refresh(true)
+    .PageSizes(true)
+    .ButtonCount(8))
+    .Editable(editable => editable.Mode(GridEditMode.InLine))
+    .Selectable(s => s.Type(GridSelectionType.Row).Mode(GridSelectionMode.Single))
+    .Filterable().Navigatable()
+    .AllowCopy(true)
+    .Resizable(resizable => resizable.Columns(true))
+    .Sortable(sortable => sortable.SortMode(GridSortMode.SingleColumn))
+    .Scrollable(scrollable => scrollable.Virtual(true).Height(350))
+    .Excel(e => e.FileName(string.Format("Posts {0} {1}.xlsx", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString())).Filterable(true).AllPages(true))
+    .ToolBar(toolbar =>
+    {
+        toolbar.Create().Text("ایجاد");
+        toolbar.Excel().Text("اکسل");
+    })
+    .Groupable(g => g.Enabled(true).ShowFooter(false)).ColumnMenu()
+    .HtmlAttributes(new { style = "height: 550px" })
+    .Events(events => events.Change("postGrid_onChange"))
+    .DataSource(dataSource => dataSource.Ajax().Batch(false)
+    .ServerOperation(true).PageSize(10)
+    .Model(model => model.Id(p => p.PostID))
+    .Read(read => read.Action("ReadPost", "Dashboard"))
+    .Create(read => read.Action("CreatePost", "Dashboard"))
+    .Update(read => read.Action("UpdatePost", "Dashboard"))
+    .Destroy(read => read.Action("DestroyPost", "Dashboard"))
+    .Events(events => events.RequestEnd("onRequestEnd"))
+    ))
+</div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+        </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<script>
+    function onRequestEnd() {
+
+    }
+
+    function postGrid_onChange() {
+
+    }
+</script>

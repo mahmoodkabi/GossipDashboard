@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b8c95f9bbc5940e38e5fd1a51d2e359c" Name="Diagram1">
+        <EntityTypeShape EntityType="GossipSiteModel.BlackList" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GossipSiteModel.FrequencyWord" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="GossipSiteModel.Log" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GossipSiteModel.LogError" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="GossipSiteModel.Post" Width="1.5" PointX="0.75" PointY="3.375" />
+        <EntityTypeShape EntityType="GossipSiteModel.PostAnswer" Width="1.5" PointX="5.25" PointY="26.375" />
+        <EntityTypeShape EntityType="GossipSiteModel.PostAttribute" Width="1.5" PointX="3" PointY="29.125" />
+        <EntityTypeShape EntityType="GossipSiteModel.PostComment" Width="1.5" PointX="3" PointY="34.875" />
+        <EntityTypeShape EntityType="GossipSiteModel.PostQuestion" Width="1.5" PointX="3" PointY="26.25" />
+        <EntityTypeShape EntityType="GossipSiteModel.PostTemperory" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GossipSiteModel.PubBase" Width="1.5" PointX="0.75" PointY="56.375" />
+        <EntityTypeShape EntityType="GossipSiteModel.Subscriber" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="GossipSiteModel.User" Width="1.5" PointX="3.75" PointY="21.375" />
+        <EntityTypeShape EntityType="GossipSiteModel.UserPost" Width="1.5" PointX="6" PointY="28.875" />
+        <AssociationConnector Association="GossipSiteModel.FK_PostAttribute_Post" />
+        <AssociationConnector Association="GossipSiteModel.FK_PostComment_Post" />
+        <AssociationConnector Association="GossipSiteModel.FK_PostQuestion_Post" />
+        <AssociationConnector Association="GossipSiteModel.FK_UserPost_Post" />
+        <AssociationConnector Association="GossipSiteModel.FK_PostAnswer_PostQuestion" />
+        <AssociationConnector Association="GossipSiteModel.FK_PostCategory_PubBase" />
+        <AssociationConnector Association="GossipSiteModel.FK_UserPost_User" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

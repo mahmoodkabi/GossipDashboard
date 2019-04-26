@@ -1,0 +1,62 @@
+<div id="resKeyword"></div>
+<div id="resTrans"></div>
+
+<script src="jquery-3.3.1.js"></script>
+
+<script>
+    var str = 'Ayatollah Ahmad Jannati, chairman of the Assembly of Experts, on the occasion of the 40th anniversary of Ayatollah Khomeini\'s visit to Iran on February 12, 1357, described the state of the US to Afou and said that today, even Tramp\'s allies are not listening to him and are not afraid of him. And we should not be afraid of America.' +
+        'Speaking to the Assembly of Experts on Leadership at the ceremony held Friday in Ayatollah Khomeini\'s Chapel, he praised Ayatollah Khomeini and said: "The Imam showed to Muslims that Islam can manage and rule. Our immense Imam was the power of the specimen in the world. Today, 40 years after the victory of our revolution, in these 40 years the whole world tried to destroy the Islamic state. This government was unknown to the powers of the world. They believed that Islam should be limited in mosques. "' +
+        'The secretary of the Guardian Council, pointing out that all the powers of the world believed that the Islamic state would not last for one more two years, said: "During these 40 years, the United States and all the powers tried to break this government but failed, this government is a model for other nations. Is Muslim. "' +
+        'Ahmad Jannati added that "Unfortunately, some officials today are thinking more about thinking or thinking about themselves or not providing management and solving problems," he said, emphasizing that the Iranian people have proven hunger tolerance but do not tolerate the failure of the revolution. Today, we see that worldliness has overcome many officials. Damn these misconceptions that some officials feel are Americans and Westerners who can solve our problems. "' +
+        'The secretary of the Guardian Council also criticized the lack of oversight over cyberspace and said: "Why should cyberspace be so open that young people can easily learn lobalism and immorality, cyberspace should serve the system and revolution?"';
+
+    //extract keyword
+    $.ajax({
+        url: "http://api.cortical.io:80/rest/text/keywords?retina_name=en_associative",
+        type: "post",
+        data: {
+            'api-key': '8de16930-26ef-11e9-bb65-69ed2d3c7927',
+            'retina_name': 'en_associative',
+            'body': str
+        },
+        success: function (res) {
+            var elementDiv = document.getElementById("resKeyword");
+            for (i = 0; i < res.length; i++) {
+                elementDiv.innerHTML += res[i] + "-";
+            }
+
+
+            //translate to persian
+            $.ajax({
+                url: "https://glosbe.com/gapi/translate?from=eng&dest=fa&format=json&phrase="+res[1]+"&=true",
+                type: "get",
+                success: function (resTranslate) {
+                    var transDiv = document.getElementById("resTrans");
+                    for (i = 0; i < res.length; i++) {
+                        transDiv.innerHTML += resTranslate[i] + "-";
+                    }
+
+
+                    //translate to persian
+                },
+                error: function (e) {
+
+                }
+
+            });
+
+
+
+
+
+
+
+
+
+        },
+        error: function (e) {
+
+        }
+
+    });
+</script>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>https://vavmusic.com/</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Url</type>
+            <name>SourceSiteUrl</name>
+            <xpath>HTML[0][no-js]\BODY[1][ js pace-done]\DIV[2][allbox]\ARTICLE[4][linebox withbig]\UL[1][ ]\DIV[1][maxwidth tino mCustomScrollbar _mCS_3]\DIV[0][mCustomScrollBox mCS-dark-thin mCSB_horizontal mCSB_inside]\DIV[0][mCSB_container]\DIV[0][tinobox]\UL[0][scrollbar_thumbs]\LI[0][thumbnailpost thumb_small postcenter]\DIV[0][thumbnailimg]\A[0][ ]\DIV[0][thumbnaildetails topdet]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceSiteView</name>
+            <xpath>HTML[0][no-js]\BODY[1][ js pace-done]\DIV[2][allbox]\ARTICLE[4][linebox withbig]\UL[1][ ]\DIV[1][maxwidth tino mCustomScrollbar _mCS_3]\DIV[0][mCustomScrollBox mCS-dark-thin mCSB_horizontal mCSB_inside]\DIV[0][mCSB_container]\DIV[0][tinobox]\UL[0][scrollbar_thumbs]\LI[0][thumbnailpost thumb_small postcenter]\DIV[0][thumbnailimg]\A[0][ ]\DIV[1][thumbnaildetails bottomdet]\SMALL[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Follow</type>
+            <xpath>HTML[0][no-js]\BODY[1][ js pace-done]\DIV[2][allbox]\ARTICLE[4][linebox withbig]\UL[1][ ]\DIV[1][maxwidth tino mCustomScrollbar _mCS_3]\DIV[0][mCustomScrollBox mCS-dark-thin mCSB_horizontal mCSB_inside]\DIV[0][mCSB_container]\DIV[0][tinobox]\UL[0][scrollbar_thumbs]\LI[0][thumbnailpost thumb_small postcenter]\DIV[0][thumbnailimg]\A[0][ ]\IMG[2][lazy attachment-thumb_156 size-thumb_156 wp-post-image lazy-loaded mCS_img_loaded]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][no-js]\BODY[1][ js pace-done]\DIV[2][allbox]\ARTICLE[4][linebox single_track appmodesingle]\DIV[0][container]\DIV[0][col-sm-offset-0 col-xs-12 col-sm-12 col-md-12]\DIV[0][titleb stitle whitborder nosmall]\H1[0][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>ContentHTMLText</name>
+            <xpath>HTML[0][no-js]\BODY[1][ js pace-done]\DIV[2][allbox]\ARTICLE[4][linebox single_track appmodesingle]\DIV[0][container]\DIV[0][col-sm-offset-0 col-xs-12 col-sm-12 col-md-12]\DIV[0][titleb stitle whitborder nosmall]\H1[0][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][no-js]\BODY[1][ js pace-done]\DIV[2][allbox]\ARTICLE[4][linebox single_track appmodesingle]\DIV[0][container]\DIV[0][col-sm-offset-0 col-xs-12 col-sm-12 col-md-12]\DIV[2][download_box]\DIV[1][single_player_box]\DIV[0][audio_single_player]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>HTML</name>
+            <xpath>HTML[0][no-js]\BODY[1][ js pace-done]\DIV[2][allbox]\ARTICLE[4][linebox single_track appmodesingle]\DIV[0][container]\DIV[0][col-sm-offset-0 col-xs-12 col-sm-12 col-md-12]\DIV[2][download_box]\DIV[1][single_player_box]\DIV[0][audio_single_player]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Click</type>
+            <xpath>HTML[0][no-js]\BODY[1][ js pace-done]\DIV[5][ ]\DIV[0][ ]\DIV[2][_hj-f5b2a1eb-9b07_widget _hj-f5b2a1eb-9b07_rtl _hj-f5b2a1eb-9b07_skin_dark _hj-f5b2a1eb-9b07_position_right _hj-f5b2a1eb-9b07_widget_open]\A[0][_hj-f5b2a1eb-9b07_widget_open_close _hj-f5b2a1eb-9b07_action_toggle_widget]\SPAN[0][_hj-f5b2a1eb-9b07_widget_icon]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Image_RegEx</type>
+            <name>Image1_1</name>
+            <xpath>HTML[0][no-js]\BODY[1][ js pace-done]\DIV[2][allbox]\ARTICLE[4][linebox single_track appmodesingle]\DIV[0][container]\DIV[0][col-sm-offset-0 col-xs-12 col-sm-12 col-md-12]\DIV[1][thumbnail_cover_pic]\</xpath>
+            <pattern>false</pattern>
+            <regex>"([A-Za-z\-_0-9\/\:\.]*.(?:png|PNG|jpg|JPG|jpeg|JPEG))</regex>
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceSiteLike</name>
+            <xpath>HTML[0][no-js]\BODY[1][ js   pace-done]\DIV[2][allbox]\ARTICLE[4][linebox single_track appmodesingle]\DIV[0][container]\DIV[0][col-sm-offset-0 col-xs-12 col-sm-12 col-md-12]\DIV[2][download_box]\DIV[0][more-post-details]\DIV[0][wpulike wpulike-default]\DIV[0][counter]\SPAN[1][count-box]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Back</type>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <URLList />
+    <CategoryLinkPaths />
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

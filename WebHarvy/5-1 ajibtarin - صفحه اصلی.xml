@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>https://www.ajibtarin.com/</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Click</type>
+            <xpath>HTML[0][js]\BODY[1][rtl home blog wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide gecko chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\DIV[1][sidebar s1]\DIV[1][sidebar-content]\DIV[4][widget widget_hu_tabs]\UL[1][alx-tabs-nav group tab-count-4]\LI[1][alx-tab tab-recent]\A[0][ ]\I[0][fa fa-clock-o]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Click</type>
+            <xpath>HTML[0][js]\BODY[1][rtl home blog wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide gecko chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\DIV[1][sidebar s1]\DIV[1][sidebar-content]\DIV[4][widget widget_hu_tabs]\UL[1][alx-tabs-nav group tab-count-4]\LI[1][alx-tab tab-recent]\A[0][ ]\I[0][fa fa-clock-o]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Click</type>
+            <xpath>HTML[0][js]\BODY[1][rtl home blog wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide gecko chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\DIV[1][sidebar s1]\DIV[1][sidebar-content]\DIV[4][widget widget_hu_tabs]\UL[1][alx-tabs-nav group tab-count-4]\LI[1][alx-tab tab-recent]\A[0][ ]\I[0][fa fa-clock-o]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Back</type>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Click</type>
+            <xpath>HTML[0][js]\BODY[1][rtl home blog wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide gecko chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\DIV[1][sidebar s1]\DIV[1][sidebar-content]\DIV[4][widget widget_hu_tabs]\UL[1][alx-tabs-nav group tab-count-4]\LI[1][alx-tab tab-recent]\A[0][ ]\I[0][fa fa-clock-o]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Click</type>
+            <xpath>HTML[0][js]\BODY[1][rtl home blog wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide gecko chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\DIV[1][sidebar s1]\DIV[1][sidebar-content]\DIV[4][widget widget_hu_tabs]\UL[1][alx-tabs-nav group tab-count-4]\LI[1][alx-tab tab-recent]\A[0][ ]\I[0][fa fa-clock-o]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][js]\BODY[1][rtl home blog wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide gecko chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\SECTION[0][content]\DIV[1][pad group]\ARTICLE[0][group post-standard grid-item post-12395 post type-post status-publish format-standard has-post-thumbnail hentry category-strange-technology tag-129]\DIV[0][post-inner post-hover]\DIV[1][post-content]\H2[1][post-title entry-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Url</type>
+            <name>SourceSiteUrl</name>
+            <xpath>HTML[0][js]\BODY[1][rtl home blog wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide gecko chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\SECTION[0][content]\DIV[1][pad group]\ARTICLE[0][group post-standard grid-item post-12395 post type-post status-publish format-standard has-post-thumbnail hentry category-strange-technology tag-129]\DIV[0][post-inner post-hover]\DIV[1][post-content]\H2[1][post-title entry-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SubSubject1_1</name>
+            <xpath>HTML[0][js]\BODY[1][rtl home blog wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide gecko chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\SECTION[0][content]\DIV[1][pad group]\ARTICLE[0][group post-standard grid-item post-12395 post type-post status-publish format-standard has-post-thumbnail hentry category-strange-technology tag-129]\DIV[0][post-inner post-hover]\DIV[1][post-content]\DIV[2][entry excerpt entry-summary]\P[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceDateTimePost</name>
+            <xpath>HTML[0][js]\BODY[1][rtl home blog wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide gecko chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\SECTION[0][content]\DIV[1][pad group]\ARTICLE[0][group post-standard grid-item post-12395 post type-post status-publish format-standard has-post-thumbnail hentry category-strange-technology tag-129]\DIV[0][post-inner post-hover]\DIV[1][post-content]\DIV[0][post-meta group]\P[1][post-date]\TIME[0][published updated]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Follow</type>
+            <xpath>HTML[0][js]\BODY[1][rtl home blog wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide gecko chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\SECTION[0][content]\DIV[1][pad group]\ARTICLE[0][group post-standard grid-item post-12395 post type-post status-publish format-standard has-post-thumbnail hentry category-strange-technology tag-129]\DIV[0][post-inner post-hover]\DIV[1][post-content]\H2[1][post-title entry-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>HTML</name>
+            <xpath>HTML[0][js]\BODY[1][rtl post-template-default single single-post postid-12395 single-format-standard wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide unknown wpdiscuz_5.1.2 chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\SECTION[0][content]\DIV[0][pad group smart_scroll_container]\DIV[0][ff]\DIV[0][wppe-wrap]\ARTICLE[2][post-12395 post type-post status-publish format-standard has-post-thumbnail hentry category-strange-technology tag-129]\DIV[0][post-inner group]\DIV[3][entry themeform]\DIV[0][entry-inner]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][js]\BODY[1][rtl post-template-default single single-post postid-12395 single-format-standard wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide unknown wpdiscuz_5.1.2 chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\SECTION[0][content]\DIV[0][pad group smart_scroll_container]\DIV[0][ff]\DIV[0][wppe-wrap]\ARTICLE[2][post-12395 post type-post status-publish format-standard has-post-thumbnail hentry category-strange-technology tag-129]\DIV[0][post-inner group]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>ContentHTMLText</name>
+            <xpath>HTML[0][js]\BODY[1][rtl post-template-default single single-post postid-12395 single-format-standard wp-custom-logo wccp-no-classes woocommerce-js col-3cm boxed topbar-enabled mobile-sidebar-hide unknown wpdiscuz_5.1.2 chrome hu-smoothscroll s1-collapse s2-collapse]\DIV[1][ ]\DIV[1][container]\DIV[0][container-inner]\DIV[0][main]\DIV[0][main-inner group]\SECTION[0][content]\DIV[0][pad group smart_scroll_container]\DIV[0][ff]\DIV[0][wppe-wrap]\ARTICLE[2][post-12395 post type-post status-publish format-standard has-post-thumbnail hentry category-strange-technology tag-129]\DIV[0][post-inner group]\DIV[3][entry themeform]\DIV[0][entry-inner]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

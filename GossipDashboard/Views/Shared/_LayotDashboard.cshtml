@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>میزکار | مدیر</title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <script src="~/Scripts/ckeditor.js"></script>
+
+
+    <link href="~/Content/kendo/2018.2.516/kendo.common-bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/kendo/2018.2.516/kendo.bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/kendo/2018.2.516/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/kendo/2018.2.516/kendo.rtl.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/kendo/2018.2.516/kendo.Fiori.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/kendo/2018.2.516/jszip.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/kendo/2018.2.516/kendo.all.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/kendo/2018.2.516/kendo.aspnetmvc.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/kendo/2018.2.516/cultures/kendo.culture.fa-IR.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/kendo/2018.2.516/messages/kendo.messages.fa-IR.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/kendo/2018.2.516/kendo.modernizr.custom.js" type="text/javascript"></script>
+</head>
+<body class="persianumber">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">شایعه</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="@Url.Action("Index","Dashboard")">میزکار</a></li>
+                    <li><a href="@Url.Action("Pages","Dashboard")">صفحه</a></li>
+                    <li><a href="@Url.Action("Posts","Dashboard")">پست</a></li>
+                    <li><a href="@Url.Action("Users","Dashboard")">کاربر</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">@User.Identity.Name</a></li>
+                    <li><a href="@Url.Action("Index","Dashboard")">خروج</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <header id="header" style="margin:2px; padding:2px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <h1 style="font-size:xx-large"> داشبورد <small>مدیریت سایت </small><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></h1>
+                </div>
+                <div class="col-md-2">
+                    <div class="dropdown create">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            ایجاد محتوا
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a type="button" data-toggle="modal" data-target="#addPage">صفحه</a></li>
+                            <li><a href="@Url.Action("Posts","Dashboard")">پست</a></li>
+                            <li><a href="@Url.Action("Users","Dashboard")">کاربر</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="active">میزکار</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="index.html" class="list-group-item active main-color-bg">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> میزکار
+                        </a>
+                        <a href="@Url.Action("Pages","Dashboard")" class="list-group-item"> صفحه <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> <span class="badge">12</span></a>
+                        <a href="@Url.Action("Posts","Dashboard")" class="list-group-item"> پست <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="badge">33</span></a>
+                        <a href="@Url.Action("Users","Dashboard")" class="list-group-item"> کاربر <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="badge">203</span></a>
+                        <a href="@Url.Action("CreateIndex","Dashboard")" class="list-group-item"> به روزرسانی سایت <span class="glyphicon glyphicon-pawn" aria-hidden="true"></span><span class="badge">203</span></a>
+                        <a href="@Url.Action("FindKeyWords","Dashboard")" class="list-group-item"> پردارش کلمات کلیدی<span class="glyphicon glyphicon-cog" aria-hidden="true"></span><span class="badge">203</span></a>
+                    </div>
+
+                    <div class="well">
+                        <h4>درصد میران بازدید </h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                60%
+                            </div>
+                        </div>
+                        <h4>درصد جذب تبلیغات </h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                40%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p style="margin:0px;">Kabi, &copy; @DateTime.Now.Year</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/persianumber.min.js"></script>
+</body>
+</html>
+
+<script>
+        $(document).ready(function () {
+          //  $('.persianumber').persiaNumber();
+        });
+</script>

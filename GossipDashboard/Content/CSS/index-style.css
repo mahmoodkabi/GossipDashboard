@@ -1,0 +1,22 @@
+﻿.source-link-gossip {
+    display: inline-block;
+    color: #fff;
+    margin: 5px 0 10px;
+    background-color: grey;
+}
+
+    .source-link-gossip div {
+        background: #ff5252;
+        padding: 3px 8px;
+        display: inline-block;
+        line-height: 30px;
+        margin-right: 0;
+        font-size: 12px;
+    }
+
+    .source-link-gossip a {
+        color: #fffffb;
+        text-decoration: none;
+        padding-left: 5px;
+        padding-right: 5px;
+    }

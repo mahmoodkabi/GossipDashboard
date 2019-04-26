@@ -1,0 +1,90 @@
+.category-amazing .post-box .post-category a, .category-amazing:hover .special-rm-arrow {
+    background-color: #00109e;
+    color: #fff !important
+}
+
+.category-amazing .post-category {
+    border-top-color: #00109e
+}
+
+.postslider a.post-cat.cat-amazing, .bloglist-posts a.post-cat.cat-amazing, .post-object a.post-cat.cat-amazing {
+    background-color: #00109e;
+    color: #fff !important
+}
+
+.category-bizarre .post-box .post-category a, .category-bizarre:hover .special-rm-arrow {
+    background-color: #82b8f5;
+    color: #fff !important
+}
+
+.category-bizarre .post-category {
+    border-top-color: #82b8f5
+}
+
+.postslider a.post-cat.cat-bizarre, .bloglist-posts a.post-cat.cat-bizarre, .post-object a.post-cat.cat-bizarre {
+    background-color: #82b8f5;
+    color: #fff !important
+}
+
+.category-cute .post-box .post-category a, .category-cute:hover .special-rm-arrow {
+    background-color: #EE1D63;
+    color: #fff !important
+}
+
+.category-cute .post-category {
+    border-top-color: #EE1D63
+}
+
+.postslider a.post-cat.cat-cute, .bloglist-posts a.post-cat.cat-cute, .post-object a.post-cat.cat-cute {
+    background-color: #EE1D63;
+    color: #fff !important
+}
+
+.category-funny .post-box .post-category a, .category-funny:hover .special-rm-arrow {
+    background-color: #fcc02f;
+    color: #fff !important
+}
+
+.category-funny .post-category {
+    border-top-color: #fcc02f
+}
+
+.postslider a.post-cat.cat-funny, .bloglist-posts a.post-cat.cat-funny, .post-object a.post-cat.cat-funny {
+    background-color: #fcc02f;
+    color: #fff !important
+}
+
+.category-quiz .post-box .post-category a, .category-quiz:hover .special-rm-arrow {
+    background-color: #FF3D00;
+    color: #fff !important
+}
+
+.category-quiz .post-category {
+    border-top-color: #FF3D00
+}
+
+.postslider a.post-cat.cat-quiz, .bloglist-posts a.post-cat.cat-quiz, .post-object a.post-cat.cat-quiz {
+    background-color: #FF3D00;
+    color: #fff !important
+}
+
+/*Add by Mahmood*/
+.category-entertainment .post-box .post-category a, .category-entertainment:hover .special-rm-arrow {
+    background-color: #ff0000;
+    color: #fff !important
+}
+
+.category-entertainment .post-category {
+    border-top-color: #ff0000
+}
+
+.postslider a.post-cat.cat-entertainment, .bloglist-posts a.post-cat.cat-entertainment, .post-object a.post-cat.cat-entertainment {
+    background-color: #ff0000;
+    color: #fff !important
+}
+
+@media screen and (min-width:768px) {
+    .main-menu .navbar-nav {
+        margin-right: 55px
+    }
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>http://gadgetnews.net/</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[3][content-wrap]\DIV[0][content]\SECTION[0][cat-box recent-box]\DIV[1][cat-box-content]\ARTICLE[0][item-list recent-post1 recent-post-blog]\H2[0][post-box-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SubSubject1_1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[3][content-wrap]\DIV[0][content]\SECTION[0][cat-box recent-box]\DIV[1][cat-box-content]\ARTICLE[0][item-list recent-post1 recent-post-blog]\DIV[3][entry]\P[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceSiteAuthor</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[3][content-wrap]\DIV[0][content]\SECTION[0][cat-box recent-box]\DIV[1][cat-box-content]\ARTICLE[0][item-list recent-post1 recent-post-blog]\P[1][post-meta]\SPAN[0][post-meta-author]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceDateTimePost</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[3][content-wrap]\DIV[0][content]\SECTION[0][cat-box recent-box]\DIV[1][cat-box-content]\ARTICLE[0][item-list recent-post1 recent-post-blog]\P[1][post-meta]\SPAN[1][tie-date]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Url</type>
+            <name>SourceSiteUrl</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[3][content-wrap]\DIV[0][content]\SECTION[0][cat-box recent-box]\DIV[1][cat-box-content]\ARTICLE[0][item-list recent-post1 recent-post-blog]\H2[0][post-box-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Follow</type>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[3][content-wrap]\DIV[0][content]\SECTION[0][cat-box recent-box]\DIV[1][cat-box-content]\ARTICLE[0][item-list recent-post1 recent-post-blog]\H2[0][post-box-title]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-317820 single-format-standard]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[0][content-wrap]\DIV[0][content]\ARTICLE[1][post-listing post-317820 post type-post status-publish format-standard has-post-thumbnail hentry category-samsung category-mobile tag----10-]\DIV[1][post-inner]\DIV[3][entry]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+             <DATAFIELD>
+            <type>Text</type>
+            <name>ContentHTMLText</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-317820 single-format-standard]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[0][content-wrap]\DIV[0][content]\ARTICLE[1][post-listing post-317820 post type-post status-publish format-standard has-post-thumbnail hentry category-samsung category-mobile tag----10-]\DIV[1][post-inner]\DIV[3][entry]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>HTML</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-317820 single-format-standard]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[0][content-wrap]\DIV[0][content]\ARTICLE[1][post-listing post-317820 post type-post status-publish format-standard has-post-thumbnail hentry category-samsung category-mobile tag----10-]\DIV[1][post-inner]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Tag1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-317820 single-format-standard]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[0][content-wrap]\DIV[0][content]\P[2][post-tag]\A[1][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Back</type>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_NextPage</type>
+            <name>2</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[1][wrapper]\DIV[1][container]\DIV[1][container fade-in animated3 sidebar-narrow-right]\DIV[3][content-wrap]\DIV[0][content]\DIV[1][recent-box-pagination]\DIV[0][pagination]\A[2][page]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

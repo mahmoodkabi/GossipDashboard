@@ -1,0 +1,171 @@
+﻿@model IEnumerable<GossipDashboard.ViewModel.VM_Post>
+
+@{
+    ViewBag.Title = "View1";
+}
+
+<h2>View1</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PostID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContentPost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Views)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LikePost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DislikePost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifyUserID_fk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifyDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublishCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifyUserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID_fk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuotedFrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrlMP3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrlVideo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BackgroundColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image4)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContentPost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Views)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LikePost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DislikePost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifyUserID_fk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifyDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Url)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublishCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifyUserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID_fk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fullname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommentCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuotedFrom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrlMP3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrlVideo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BackgroundColor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image4)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>https://tarikhema.org/travel/33978/در-بهار-از-کجا-دیدن-کنیم؟/</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceSiteAuthor</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-33978 single-format-standard active-light-box active-top-line close-rh page-layout-3-col-3 full-width main-menu-sticky single-prim-cat-24703 single-cat-24703  bs-show-ha bs-show-ha-a wpb-js-composer js-comp-ver-5.4.5 vc_responsive bs-ll-d wpdiscuz_5.3.1]\DIV[2][main-wrap content-main-wrap]\DIV[3][content-wrap]\MAIN[0][content-container]\DIV[0][container layout-3-col layout-3-col-3 container layout-bc-before post-template-11]\DIV[0][row main-section]\DIV[0][col-sm-7 content-column]\DIV[0][single-container]\SECTION[1][post-author clearfix]\DIV[1][author-title heading-typo]\A[0][post-author-url]\SPAN[0][post-author-name]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

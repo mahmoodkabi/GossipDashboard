@@ -1,0 +1,78 @@
+﻿@model IEnumerable<GossipDashboard.ViewModel.VM_SearchResult>
+@{
+    ViewBag.Title = "ردفان - نتیجه جستجو";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div class="container col-xs-12 col-md-12">
+        <div class="page-title">
+            <div class="row">
+                <div class="col-md-6">
+
+                    @{ if (Model != null && Model.FirstOrDefault() != null)
+                        {
+                             <h3>نتیجه جستجو برای "@Model.FirstOrDefault().SearchValue"</h3>
+                        }
+                        else
+                        {
+                                <h3> جستجوی شما نتیجه‌ای در بر نداشت</h3>
+                            }
+                        }
+
+                </div>
+                @*<div class="col-md-6 pull-right">
+                        <ol class="breadcrumb ">
+                            <li><a href='@Url.Action("index","home")'>خانه</a></li>
+                            <li class="active">حیرت آور </li>
+                        </ol>
+                    </div>*@
+            </div><!-- Container /- -->
+        </div>
+    </div>
+
+    <div class="col-md-12 content-area">
+        <div class="author-page">
+            <div class="row">
+                <div class="author-grid" id="author-grid" style="position: relative; height: 725.032px;">
+                    @foreach (var item in Model)
+                    {
+                         @Html.Raw(item.Article)
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@*<script type="text/javascript">
+                        //searchbox-icon
+                        jQuery("#search").on("keyup", function (e) {
+                            e.preventDefault();
+                            if (e.which == "13") {
+                                var search = "";
+                                search = jQuery("#search").val();
+
+                                if (search == null && search == "")
+                                    return;
+
+                                var divAuthorGrid = document.getElementById("author-grid");
+                                divAuthorGrid.innerHTML = "";
+
+                                jQuery.ajax({
+                                    type: "post",
+                                    url: "@Url.Action("SearchPostAjax", "Post")",
+                                    contentType: "application/json; charset=utf-8",
+                                    data: JSON.stringify({ 'strSearch': search }),
+                                    success: function (res) {
+                                        for (var i = 0; i < res.length; i++) {
+                                            divAuthorGrid.innerHTML += res[i];
+                                        }
+                                    }
+                                });
+                            }
+                        });
+
+    </script>*@

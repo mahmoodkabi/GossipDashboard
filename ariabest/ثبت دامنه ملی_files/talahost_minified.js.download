@@ -1,0 +1,5057 @@
+var cancell_checkout='انصراف از ادامهء خرید';
+var input_name='لطفا نام خود را وارد کنید';
+var input_comment='لطفا نظر خود را در قسمت توضیحات بنویسید';
+var invalid_email='اي ميل وارد شده معتبر نيست';
+var input_subject='لطفا موضوع را وارد کنيد';
+var input_msg_body='متن پیغام را وارد کنید';
+var input_domain_name='دامنه (نام سایت)ی را که می خواهید ثبت کنید وارد کنید';
+var state1='ارسال اطلاعات...';
+var state2='بررسی اطلاعات...';
+var state3='دریافت اطلاعات...';
+var state4='لطفا کمی صبر کنید';
+var already_rated='شما قبلا به این پاسخ امتیاز داده اید.';
+var domain_validate_notify='نام دامنه وارد شده تغییر داده شد. لطفا به نام صحیح دامنه دقت کنید!';
+var input_state='لطفا استان خود را انتخاب کنید';
+var input_address='لطفا آدرس خود را وارد کنید';
+var input_secimg='لطفا کد امنیتی را وارد کنید';
+var passwords_not_match='رمز عبورهای وارد شده با هم برابر نیستند';
+var input_current_pass='لطفا رمز عبور فعلی خود را وارد کنید';
+var password_length_error='کلمه عبور حداقل باید 6 حرف داشته باشد';
+var password_strength_error='رمز عبور باید ترکیبی از حروف و اعداد باشد.\n لطفا از رمز ساده استفاده نکنید';
+var input_city='لطفا شهر خود را وارد کنید';
+var invalid_phone='لطفا شماره موبایل یا تلفن خود را همراه با پیش شماره بصورت صحیح وارد کنید';
+var invalid_domain='دامنهء وارد شده معتبر نيست!';
+var input_domain_name='دامنه (نام سایت)ی را که می خواهید ثبت کنید وارد کنید';
+var input_domain_ext='پسوند دامنه را وارد کنید';
+var username_code='لطفا نام کاربری و کد امنیتی را وارد کنید';
+var emailaddress_code='لطفاً آدرس ایمیل و کد امنیتی را وارد کنید';
+var input_username='لطفا نام کاربری خود را وارد کنید';
+var Username_only_english='لطفا فقط از حروف لاتین و اعداد برای نام کاربری استفاده کنید\nاز حروف فارسی، فاصله، حروف ویژه مانند @،/:و ... استفاده نکنید';
+var input_code_melli='لطفا نام کاربری خود را وارد کنید';
+var input_passport='لطفا نام کاربری خود را وارد کنید';
+var input_lastname='لطفا نام خانوادگی خود را وارد کنید';
+var please_check_rules='برای تکمیل ثبت نام باید قوانین را بپذیرید';
+var are_you_sure='آيا از انجام اين کار مطمئن هستيد؟';
+var confirm_del_all='آيا از حذف همهء موارد اطمينان داريد؟';
+var confirm_logout='آيا با اطمينان مي خواهيد خارج شويد';
+var lng_select_department='لطفا بخش مورد نظر را انتخاب کنید';
+var lng_please_type_english='لطفا انگلیسی تایپ کنید';
+var add_fund_fill_all_plz='لطفا قسمتهای ستاره دار را تکمیل کنید.';
+var new_message_invalid_subject='برای تسریع پاسخگویی لطفا از عنوان مناسب استفاده کنید! عنوان باید چکیده ای از متن پیغام باشد؛ نه عباراتی مانند: سلام، کمک و ...';
+var new_message_input_message='لطفا متن پیغام را وارد کنید';
+var ticketTermsAlert='برای ارسال تیکت باید قوانین بالا را بپذیرید';
+var order_input_nic_handle='برای خرید دامنه IR باید شناسه ایرنیک خود را وارد کنید';
+var news_title='عنوان خبر';
+var regyearsError='ساله ثبت نمی شود';
+var domain='دامنه';
+var Currency=' تومان';
+var domainRegistrationFee=' هزینه ثبت دامنه';
+var go_back=' بازگشت';
+var lng_user='نام کاربری';
+var lng_pass='رمز عبور';
+var cur_xhr = null;
+var autojax = '';
+var autojax_w = 500;
+var ajax2 = false;
+var uri_changed = false;
+var xhr,xhr2,postdata,postdata2,frmName;
+
+window.Modernizr=function(a,b,c){function t(a){i.cssText=a}function u(a,b){return t(prefixes.join(a+";")+(b||""))}function v(a,b){return typeof a===b}function w(a,b){return!!~(""+a).indexOf(b)}function x(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:v(f,"function")?f.bind(d||b):f}return!1}var d="2.6.2",e={},f=b.documentElement,g="modernizr",h=b.createElement(g),i=h.style,j,k={}.toString,l={},m={},n={},o=[],p=o.slice,q,r={}.hasOwnProperty,s;!v(r,"undefined")&&!v(r.call,"undefined")?s=function(a,b){return r.call(a,b)}:s=function(a,b){return b in a&&v(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=p.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(p.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(p.call(arguments)))};return e}),l.history=function(){return!!a.history&&!!history.pushState};for(var y in l)s(l,y)&&(q=y.toLowerCase(),e[q]=l[y](),o.push((e[q]?"":"no-")+q));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)s(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof enableClasses!="undefined"&&enableClasses&&(f.className+=" "+(b?"":"no-")+a),e[a]=b}return e},t(""),h=j=null,e._version=d,e}(this,this.document);
+
+function accjax(url,dw,dc,method, uri)
+{
+	if(ajax2){
+		requrl = hostname + '/' + url;
+	}else{
+		requrl = siteurl + '/ajax.php' + url + '&' + new Date().getTime();
+	}
+
+if(xhr !== undefined) {xhr.abort();}
+if(method == 'GET'){
+xhr=$.ajax({
+	url: requrl,
+	type: "GET",
+	beforeSend: function(){
+		if(dw == 'ajaxwait'){
+			$('#ajx_overaly').css('display','block');
+		}
+		$('#'+dw).fadeIn('slow');
+		change_cursor('wait');
+		cur_xhr = 'xhr';
+	},
+	success: function(response){
+		if($('.fancybox-inner').is(':visible')){
+			dc = 'fancybox-inner';
+			$('.'+dc).html(response);
+		}else{
+			$('#'+dc).html(response);
+			var newpos = $('#'+dc).position().top-45;
+			$('html, body').animate({scrollTop:newpos}, 800);
+		}
+		if(uri != '' && uri != undefined && Modernizr.history){
+			tmp_siteurl = 'tmp'+siteurl;
+			if(tmp_siteurl.search("https://") > 0){
+				uri = uri.replace("http://", "https://");
+			}else{
+				uri = uri.replace("https://", "http://");
+			}
+			window.history.pushState('', '', uri);
+			uri_changed = true;
+		}
+		change_cursor('auto');
+		if ($(".chosen")[0]){
+			jQuery(".chosen").chosen();
+		}
+		$('#'+dw).fadeOut('slow');
+		ticker();
+		if(dw == 'ajaxwait'){
+			$('#ajx_overaly').css('display','none');
+		}
+	}
+});
+}else{
+xhr=$.ajax({
+  url: requrl,
+  type: "POST",
+  data: postdata,
+  beforeSend: function(){
+    $('#'+dw).fadeIn('slow');
+	change_cursor('wait');
+	cur_xhr = 'xhr';
+  },
+  success: function(html){
+  
+		if($('.fancybox-inner').is(':visible')){
+			dc = 'fancybox-inner';
+			$('.'+dc).html(html);
+		}else{
+			$('#'+dc).html(html);
+			var newpos = $('#'+dc).position().top-45;
+			$('html, body').animate({scrollTop:newpos}, 800);
+		}
+  
+  
+		hide_div(dw);
+		change_cursor('auto');
+  }
+});
+}
+}
+function accjax2(url2,dw2,dc2,method2)
+{
+ajaxurl2 = siteurl + '/ajax.php' + url2;
+if(xhr2 !== undefined) { xhr2.abort(); }
+if(method2 == 'GET'){
+xhr2=$.ajax({
+  url: ajaxurl2,
+  timeout: 0,
+  beforeSend: function(){
+    show_div(dw2);
+	cur_xhr = 'xhr2';
+  },
+  success: function(html){
+	  $('#'+dc2).html(html);
+	hide_div(dw2);
+  }
+});
+}else{
+xhr2=$.ajax({
+  url: ajaxurl2,
+  type: "POST",
+  data: postdata2,
+  beforeSend: function(){
+    show_div(dw2);
+	cur_xhr = 'xhr2';
+  },
+  success: function(html){
+	$('#'+dc2).html(html);
+    hide_div(dw2);
+	change_cursor('auto');
+  }
+});
+}
+}
+function accjax_post2(url2,obj2,dw2,dc2)
+{
+accjax_post(url2,obj2,dw2,dc2,1);
+}
+function accjax_post(url,obj,dw,dc,silent,uri)
+{
+frmName = obj.name;
+var count=obj.elements.length;
+var poststr="";
+for(var i=0; i < count; i++){
+if(obj.elements[i].type =='checkbox'){
+if(obj.elements[i].checked == true){
+	obj.elements[i].value = 'on';
+}else{
+	obj.elements[i].value = '';
+}
+}
+if(obj.elements[i].type =='radio'){
+if(obj.elements[i].checked == true){
+	objValue = obj.elements[i].value;
+	objValue = objValue.replace(/&/g,'(_amp_ersand_)');
+	objValue = objValue.replace(/\+/g,'(_pl_u_s_)');
+	poststr=poststr+obj.elements[i].name+"="+objValue+"&";
+}else{
+	continue;
+}
+}
+objValue = obj.elements[i].value;
+if(objValue != undefined){
+	objValue = objValue.replace(/&/g,'(_amp_ersand_)');
+	objValue = objValue.replace(/\+/g,'(_pl_u_s_)');
+}
+objValue = encodeURI(objValue);
+poststr=poststr+obj.elements[i].name+"="+objValue+"&";
+}
+if(silent == 1){
+postdata2=poststr;
+accjax2(url,dw,dc,'POST');
+}else{
+postdata=poststr;
+accjax(url,dw,dc,'POST');
+}
+}
+function MyAlert(message){
+alert(message);
+}
+function UnCurrentMenu()
+{
+if(element_exist('currentmenu')){
+	document.getElementById('currentmenu').id = '';
+}
+}
+function showdetail(prod)
+{
+	var str=$('#imgdetail'+prod).attr('class');
+	if(str.search("collapse")!=-1){
+		$('#imgdetail'+prod).toggleClass('msp2 msp2-expand');
+		hide_div("details"+prod);
+	}else{
+		$('#imgdetail'+prod).toggleClass('msp2 msp2-collapse');
+	show_div("details"+prod);
+	}
+}
+function printPage(print)
+{
+	if(print == 1){
+		$('#container').fadeOut(600);
+		printContent = "<div align=left><a href=# onclick=javascript:printPage(0);>"+go_back+"</a></div><br>" + ElementContent('maincontent');
+		Write_in_element('print', printContent);
+		hide_div('nazarsanji');
+		hide_div('shownazarsanji');
+		hide_div('footer');
+		hide_div('LogoMenu');
+		hide_div('dv_showadminsplash');
+		hide_div('dv_link_user_panel');
+		hide_div('dv_inc_file');
+		hide_div('resource_statistic');
+		hide_div('topMenu');
+		 $('body').css('background-color', '#fff');
+		$('#print').fadeIn(600);
+	}else{
+		Write_in_element('print', '');
+		hide_div('print');
+		show_div('nazarsanji');
+		show_div('shownazarsanji');
+		show_div('dv_showadminsplash');
+		show_div('dv_link_user_panel');
+		show_div('dv_inc_file');
+		show_div('resource_statistic');
+		show_div('footer');
+		show_div('LogoMenu');
+		show_div('topMenu');
+		$('#print').fadeOut(600);
+		$('#container').fadeIn(600);
+	}
+}
+function form_cart_deleteall_confirm()
+{
+var agree=confirm(confirm_del_all);
+if(agree){
+if(useajax==true){
+var _url="?param=99652365&param2=empty";
+accjax_post(_url,document.getElementById('frm_empty_cart'),'empty_cart_wait','maincontent');
+}else{
+document.frm_empty_cart.submit();
+}
+}
+}
+function disagree()
+{
+var disagree=confirm(cancell_checkout);
+if(disagree)
+{
+d_url="?param=99400054&param2=disagree";
+if(useajax==true){
+accjax_post(d_url,document.getElementById('frmagree'),'page_condition_wait','maincontent');
+}else{
+document.frmagree.action=siteurl+"/"+d_url;
+document.frmagree.submit();
+}
+}
+}
+function check_comment_form(frmname)
+{
+if(document.forms[frmname].name.value=="")
+{
+MyAlert(input_name);
+document.forms[frmname].name.select();
+return false;
+}
+else if(!IsEmail(document.forms[frmname].email.value))
+{
+MyAlert(invalid_email);
+document.forms[frmname].email.select();
+return false;
+}
+else if(document.forms[frmname].comment.value=="")
+{
+MyAlert(input_comment);
+document.forms[frmname].comment.select();
+return false;
+}else{
+if(useajax==true){
+accjax_post2('?param=99174452',document.getElementById(frmname),'page_'+frmname+'_wait','save_comment_response');
+}else{
+document.frmcontact.submit();
+}
+}
+}
+function check_contact_form()
+{
+if(document.frmcontact.c_name.value=="")
+{
+MyAlert(input_name);
+document.frmcontact.c_name.select();
+return false;
+}
+else if(!(IsEmail(document.frmcontact.c_email.value)))
+{
+MyAlert(invalid_email);
+document.frmcontact.c_email.select();
+return false;
+}
+else if(document.frmcontact.c_subject.value=="")
+{
+MyAlert(input_subject);
+document.frmcontact.c_subject.select();
+return false;
+}
+else if(document.frmcontact.c_message.value=="")
+{
+MyAlert(input_msg_body);
+document.frmcontact.c_message.select();
+return false;
+}
+else
+{
+if(useajax==true){
+accjax_post('?param=99444525&param2=save&contactform=1',document.getElementById('frmcontact'),'page_contact_wait','maincontent');
+}else{
+document.frmcontact.submit();
+}
+}
+}
+function domain_register_form(pid)
+{
+	var haveDomain = getRadioCheckedValue('R_domain'+pid, 'frmorder'+pid);
+	if(haveDomain == 'have_domain'){
+		showregister=0;
+	}else{
+		showregister=1;
+	}
+	if(showregister==1){
+		show_div('registerdomain'+pid);
+		hide_div('havedomain'+pid);
+		show_div('txt_have_domain');
+		show_div('domain_ext');
+		if(haveDomain == 'renew_domain'){
+			var renew_register_transfer = 'renew_domain';
+		}else if(haveDomain == 'transfer_domain'){
+			var renew_register_transfer = 'transfer_domain';
+		}else{
+			var renew_register_transfer = 'register_domain';
+		}
+		document.getElementById('txtdomain').value = document.getElementById('txt_have_domain').value;
+		document.getElementById('txt_have_or_register_domain'+pid).value = renew_register_transfer;
+	}else{
+		hide_div('registerdomain'+pid);
+		show_div('havedomain'+pid);
+		show_div('txtdomain');
+		document.getElementById('txt_have_domain').value = document.getElementById('txtdomain').value;
+		document.getElementById('txt_have_or_register_domain'+pid).value = 'have_domain';
+	}
+}
+function get_irnic_txtbox(pid)
+{
+	var haveDomain = getRadioCheckedValue('R_domain'+pid, 'frmorder'+pid);
+	if(haveDomain == 'new_domain'){
+		if(order_irnic_required(pid)){
+			show_div('dv_irnic'+pid);
+		}else{
+			hide_div('dv_irnic'+pid);
+		}
+	}else{
+		hide_div('dv_irnic'+pid);
+	}
+}
+function order_irnic_required(pid){
+	var haveDomain = getRadioCheckedValue('R_domain'+pid, 'frmorder'+pid);
+	if(haveDomain == 'new_domain'){
+		var dmn_ext = document.getElementById('domain').value;
+		if(dmn_ext == 'ir' || dmn_ext.search('.ir') > 0){
+			return true;
+		}else{
+			return false;
+		}
+	}else{
+		return false;
+	}
+}
+function IsEmail(address)
+{
+if( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(address)){
+	return true;
+}else{
+	return false;
+}
+}
+function change_title(title)
+{
+document.title=title;
+}
+var sec_img_name; var new_hash;
+function new_secimg(){
+	$.getScript(siteurl + "/security/reload/" + new Date().getTime() +'.gif');
+}
+function changesecimg(src)
+{
+	if(element_exist(src)){
+		img_id = src;
+			document.getElementById(img_id).src= siteurl+'/security.gif?'+new Date().getTime();
+	}
+}
+function IsDomain(Expression)
+{
+return true;
+Expression=Expression.toLowerCase();
+RefString="abcdefghijklmnopqrstuvwxyz0123456789-";
+RefNumDash="0123456789-";
+if(Expression.length < 1){return(false);}
+var end_ch=Expression.substr(Expression.length - 1,1)
+if(end_ch=="-"){return(false);}
+var begin_ch=Expression.substr(0,1)
+var a=RefNumDash.indexOf(begin_ch,0)
+if(a !=-1){return(false);}
+for(var i=0; i < Expression.length; i++)
+{
+var ch=Expression.substr(i,1)
+var a=RefString.indexOf(ch,0)
+if(a==-1){return(false);}
+}
+return(true);
+}
+function SubmitForm(e,formname,func)
+{
+var characterCode;
+var event;
+if(e && e.which){
+e=e;
+characterCode=e.which;
+}else{
+	if(event != 'undefined'){
+		e=event;
+		characterCode=e.keyCode;
+	}
+}
+if(characterCode==13){
+if(formname=="0"){
+eval(func);
+}else{
+document.forms[formname].submit();
+}
+}
+}
+function strLen(string)
+{
+if(string==null){return(false);}
+return String(string).length;
+}
+function onlyNum(string){
+string.value=string.value.replace(/([^0-9])/g,"");
+}
+function ExecJS(responseText) {
+var ScriptFragment = '(?:<script.*?>)((\n|.)*?)(?:</script>)';
+var match = new RegExp(ScriptFragment, 'img');
+var scripts = responseText.match(match);
+if(scripts){
+var js = '';
+for(var s = 0; s < scripts.length; s++) {
+var match = new RegExp(ScriptFragment, 'im');
+js += scripts[s].match(match)[1];
+}
+eval(js);
+}
+}
+function show_div(id){
+if(element_exist(id)){
+document.getElementById(id).style.display="";
+}
+}
+function IsVisible(id){
+	if(element_exist(id)){
+	if (document.getElementById(id).style.display==""){
+		return true;
+	}else{
+		return false;
+	}
+	}
+return false;
+}
+function toggle(div1, div2)
+{
+	if(IsVisible(div1)){
+		hide_div(div1);
+		show_div(div2);
+	}else{
+		hide_div(div2);
+		show_div(div1);
+	}
+if(div1 == 'UserMenu' || div2 == 'UserMenu'){
+	refresh_statistic();
+}
+}
+function hide_div(id){
+if(element_exist(id)){
+document.getElementById(id).style.display="none";
+}
+}
+function change_cursor(cursor){
+doc=document.getElementsByTagName("html");
+doc[0].style.cursor=cursor;
+}
+function Write_in_element(id,text){
+if(element_exist(id)){
+document.getElementById(id).innerHTML=text;
+}
+}
+function ElementContent(id){
+if(element_exist(id)){
+return document.getElementById(id).innerHTML;
+}
+}
+function disable(id)
+{
+if(element_exist(id)){
+document.getElementById(id).disabled=true;
+}
+}
+function enable(id)
+{
+if(element_exist(id)){
+document.getElementById(id).disabled=false;
+}
+}
+function element_exist(id)
+{
+if(document.getElementById(id)){
+return true;
+}
+return false;
+}
+function fill(id, val)
+{
+if(element_exist(id)){
+document.getElementById(id).value=val;
+}
+}
+function go_to(link) {
+location.href = link;
+}
+function logout(){
+var agree=confirm(confirm_logout);
+if(agree){
+if(useajax==true){
+accjax('?param=99458510', 'ajaxwait', 'maincontent', 'GET');
+return false;
+}else{
+go_to(siteurl+'/logout.htm');
+return false;
+}
+}else{
+return false;
+}
+}
+
+function select_all(main_chk_id, child_id, num_rows){
+	for(var i=1; i <= num_rows; i++){
+		_id = child_id+i;
+		if(element_exist(_id)){
+			r_chk = document.getElementById(main_chk_id).checked;
+			document.getElementById(_id).checked = r_chk;
+		}
+		_id = null;
+	selecte_all_selected = true;
+	}
+}
+function whois(domain,ext,dw2,dc2,silent)
+{
+if(domain=="")
+{
+MyAlert(input_domain_name);
+return false;
+}
+if(silent==1)
+{
+var url2="?param=99554439&ajx=1&slnt=y&q="+domain+"&ext="+ext;
+}else{
+var url2="?param=99554439&ajx=1&q="+domain+"&ext="+ext;
+}
+accjax2(url2,dw2,dc2,'GET');
+}
+function whois_idn(domain,ext,dw2,dc2,silent){
+	if(domain==""){
+		MyAlert(input_domain_name);return false;
+	}
+	if(silent==1){
+		var url2="?param=99554439&ajx=1&idn=1&q="+domain+"&ext="+ext;}else{var url2="?param=99554439&ajx=1&idn=1&q="+domain+"&ext="+ext;
+	}
+	accjax2(url2,dw2,dc2,'GET');
+}
+function Split(Expression, Delimiter)
+{
+	var temp = Expression;
+	var a, b = 0;
+	var array = new Array();
+	if (Delimiter.length == 0)
+	{
+		array[0] = Expression;
+		return (array);
+	}
+	if(Expression.length == '')
+	{
+		array[0] = Expression;
+		return (array);
+	}
+	Delimiter = Delimiter.charAt(0);
+	for (var i = 0; i < Expression.length; i++)
+	{
+		a = temp.indexOf(Delimiter);
+		if (a == -1)
+		{
+			array[i] = temp;
+			break;
+		}else{
+			b = (b + a) + 1;
+			var temp2 = temp.substring(0, a);
+			array[i] = temp2;
+			temp = Expression.substr(b, Expression.length - temp2.length);
+		}
+	}
+	return (array);
+}
+function write_price(pid)
+{
+	select_name = 'pay_period'+pid;
+	Delimiter = ':';
+	div_price = 'prod_price'+pid;
+	txt_pay_period = 'txt_pay_period'+pid;
+	month_price = document.getElementById(select_name).value;
+	a = Split(month_price, Delimiter);
+	pay_period = a[0];
+	price = a[1];
+	Write_in_element(div_price,price);
+	document.getElementById(txt_pay_period).value = pay_period;
+}
+
+function WriteDomainPrice(pid,withHost)
+{
+	var haveDomain = getRadioCheckedValue('R_domain'+pid, 'frmorder'+pid);
+	if(haveDomain == 'have_domain'){
+		return;
+	}
+	var renew = 0;
+
+	select_name = 'regyears'+pid;
+	tldCombo = 'domain';
+	div_price = 'prod_price'+pid;
+	regyears = document.getElementById(select_name).value;
+	TLD = document.getElementById(tldCombo).value;
+	domain_price_url = siteurl + '/ajax.php?param=99102939&ext='+TLD+'&regyear='+regyears;
+	if(xhr3 !== undefined) { xhr3.abort(); } 
+var xhr3 =$.ajax({
+	url: domain_price_url,
+	type: "GET",
+	beforeSend: function(){
+		change_cursor('wait');
+	},
+	success: function(response){
+		if(response == 'regyear_error'){
+			alert('.'+TLD+'\n '+regyears+' '+regyearsError);
+			document.getElementById(select_name).selectedIndex = 0;
+			WriteDomainPrice(pid,withHost);
+		}else{
+			prices = response;
+			tmpPrice = Split(prices, ':');
+			if(withHost == true){
+				price = tmpPrice[0];
+			}else{
+				price = tmpPrice[1];
+			}
+			if(haveDomain == 'renew_domain' || haveDomain == 'transfer_domain'){
+				price = tmpPrice[2];
+			}
+			tmp = ElementContent(div_price);
+			Write_in_element(div_price,tmp+'<br> + ' + price + Currency + ' ' + domainRegistrationFee);
+			change_cursor('auto');
+			return;
+		}
+	}
+});
+}
+
+function ShowWhois(domain, ext){
+	DVid=domain+'_'+ext;
+	tmp = ElementContent(DVid);
+	Write_in_element('currentWhois', tmp);
+	$('html, body').animate({scrollTop:$('#currentWhois').position().top-75}, 1000);
+}
+function PassStrength(pass){
+return;
+}
+var RAlertTimeOut = 60000;//60 second
+var itisok;
+$(window).focus(function() {
+    if (!itisok){
+        itisok = 1;
+	}
+});
+$(window).blur(function() {
+    clearInterval(itisok);
+    itisok = 0;
+});
+var RoboAlert=setInterval(function(){
+	if(itisok){
+		RAlert();
+	}
+},RAlertTimeOut);
+var xmlHttpAlert, validRequest=false;
+function RAlert()
+{
+AlertUrl = siteurl + '/Alert.php';
+var alertRequest = $.ajax({
+  url: AlertUrl,
+  cache: false,
+  timeout: 3000,
+	success: function(response){
+		eval(response);
+	}
+});
+}
+var news_item = 0;
+var newsTicker=setInterval(function(){
+	ticker();
+},10000);
+function ticker(){
+	hide_div('all_news');
+	news_item += 1;
+	if(element_exist('news_'+news_item)){
+		currentnews = ElementContent('news_'+news_item);
+		$('#ticker').fadeOut('fast');
+		Write_in_element('ticker', currentnews);
+		$('#ticker').fadeIn('slow');
+	}else{
+		news_item = 0;
+		if(element_exist('ticker')){
+			ticker();
+		}
+	}
+}
+function check_password()
+{
+	oldp = document.frm_change_pass.oldpass.value;
+	p1 = document.frm_change_pass.pass1.value;
+	p2 = document.frm_change_pass.pass2.value;
+if(p1 !=p2){
+MyAlert(passwords_not_match);
+document.frm_change_pass.pass2.select();
+return 0;
+}else if(oldp==""){
+MyAlert(input_current_pass);
+document.frm_change_pass.oldpass.select();
+return 0;
+}else if(strLen(p1)<6){
+MyAlert(password_length_error);
+document.frm_change_pass.pass1.select();
+return 0;
+}else{
+if(useajax == true){
+accjax_post('?param=99051000&param2=change_pass_save', document.getElementById('frm_change_pass'), 'change_pass_wait', 'maincontent');
+ }else{
+document.frm_change_pass.submit();
+}
+}
+}
+function password_strength(p){
+    var anUpperCase = /[A-Z]/;
+    var aLowerCase = /[a-z]/; 
+    var aNumber = /[0-9]/;
+    var aSpecial = /[!|@|#|$|%|^|&|*|(|)|-|_]/;
+    var obj = {};
+    obj.result = true;
+
+    if(p.length < 6){
+        obj.result=false;
+        obj.error="Not long enough!"
+        return obj.result;
+    }
+
+    var numUpper = 0;
+    var numLower = 0;
+    var numNums = 0;
+    var numSpecials = 0;
+    for(var i=0; i<p.length; i++){
+        if(anUpperCase.test(p[i]))
+            numUpper++;
+        else if(aLowerCase.test(p[i]))
+            numLower++;
+        else if(aNumber.test(p[i]))
+            numNums++;
+        else if(aSpecial.test(p[i]))
+            numSpecials++;
+    }
+
+    if((numUpper < 1 && numLower < 1) || (numNums < 1 && numSpecials < 1)){
+        obj.result=false;
+        obj.error="Wrong Format!";
+        return obj.result;
+    }
+    return obj.result;
+}
+function check_profile_form()
+{
+if(document.frm_profile.address.value=="")
+{
+MyAlert(input_address);
+document.frm_profile.address.select();
+return 0;
+}else if(document.frm_profile.state.value=="")
+{
+MyAlert(input_state);
+return 0;
+}else if(document.frm_profile.city.value=="")
+{
+MyAlert(input_city);
+document.frm_profile.city.select();
+return 0;
+}else if(document.frm_profile.phone.value=="")
+{
+MyAlert(invalid_phone);
+document.frm_profile.phone.select();
+return 0;
+}else{
+if(useajax == true){
+accjax_post('?param=99051000&param2=save',document.getElementById('frm_profile'),'page_profile_wait','maincontent');
+}else{
+document.frm_profile.submit();
+}
+}
+}
+function checkorder(id, has_domain)
+{
+if(has_domain == 0){
+if(useajax == true){
+var getelement='frmorder'+id;
+accjax_post('?param=99652365&param2=add',document.getElementById(getelement),'page_order_wait','maincontent');
+}else{
+document.forms["frmorder"+id].submit();
+}
+return 0;
+}
+if(order_irnic_required(id)){
+	if(document.getElementById('nic_handle'+id).value==""){
+		MyAlert(order_input_nic_handle);
+		document.getElementById('nic_handle'+id).select();
+		return 0;
+	}
+}
+
+	var haveDomain = getRadioCheckedValue('R_domain'+id, 'frmorder'+id);
+	if(haveDomain == 'have_domain'){
+		var registerdomain = false;
+	}else{
+		var registerdomain = true;
+	}
+if(registerdomain==true){
+var domainname = document.forms["frmorder"+id].txtdomain.value;
+if(document.forms["frmorder"+id].txtdomain.value==""){
+MyAlert(input_domain_name);
+document.forms["frmorder"+id].txtdomain.select();
+return 0;
+}
+if(!IsDomain(domainname)){
+MyAlert(invalid_domain);
+document.forms["frmorder"+id].txtdomain.select();
+return 0;
+}else{
+if(useajax == true){
+var getelement='frmorder'+id;
+accjax_post('?param=99652365&param2=add',document.getElementById(getelement),'page_order_wait_'+id,'maincontent');
+}else{
+document.forms["frmorder"+id].submit();
+}
+}
+}else{
+if(document.forms["frmorder"+id].txt_have_domain.value==""){
+MyAlert(input_domain_name);
+document.forms["frmorder"+id].txt_have_domain.select();
+return 0;
+}
+if(document.forms["frmorder"+id].domain_ext.value==""){
+MyAlert(input_domain_ext);
+document.forms["frmorder"+id].domain_ext.select();
+return 0;
+}else{
+
+if(useajax == true){
+var getelement='frmorder'+id;
+accjax_post('?param=99652365&param2=add',document.getElementById(getelement),'page_order_wait_'+id,'maincontent');
+}else{
+document.forms["frmorder"+id].submit();
+}
+}
+}
+}
+function check_form_recover_login()
+{
+if(document.frmrecover.userOrMail.value==""){
+MyAlert(username_code);
+document.frmrecover.userOrMail.select();
+return 0;
+}else if(document.frmrecover.secimg.value==""){
+MyAlert(input_secimg);
+document.frmrecover.secimg.select();
+return 0;
+}
+else
+{
+if(useajax == true){
+accjax_post('?param=99054625&recoverlogin=2',document.getElementById('frmrecover'),'frmrecover_wait','maincontent');
+}else{
+document.frmrecover.submit();
+}
+}
+}
+function check_form_recover_username()
+{
+if(document.frmrecover.userOrMail.value==""){
+MyAlert(emailaddress_code);
+document.frmrecover.userOrMail.select();
+return 0;
+}else if(document.frmrecover.secimg.value==""){
+MyAlert(emailaddress_code);
+document.frmrecover.secimg.select();
+return 0;
+}
+else
+{
+if(useajax == true){
+accjax_post('?param=99054625&recoverlogin=6',document.getElementById('frmrecover'),'frmrecover_wait','maincontent');
+}else{
+document.frmrecover.submit();
+}
+}
+}
+
+function validate_username(str){
+	tmp=str.replace(/([^0-9a-zA-Z@-])/g,"");
+	if(tmp != str){
+		return false;
+	}
+	return true;
+}
+	
+
+function check_register_form1()
+{
+	p1 = document.frmregister.pass1.value;
+	p2 = document.frmregister.pass2.value;
+if(document.frmregister.loginname.value==""){
+	register_type = $('input[name=register_type]:checked').val();
+	if(register_type == 'haghighi'){
+		MyAlert(input_code_melli);
+	}else if(register_type == 'hoghooghi'){
+		MyAlert(input_username);
+	}else if(register_type == 'khareji'){
+		MyAlert(input_passport);
+	}
+document.frmregister.loginname.select();
+return 0;
+}else if(!validate_username(document.frmregister.loginname.value)){
+	MyAlert(Username_only_english);
+	document.frmregister.loginname.select();
+	return 0;
+}else if(strLen(p1)<6){
+MyAlert(password_length_error);
+document.frmregister.pass1.select();
+return 0;
+}else if(password_strength(p1) == false){
+	MyAlert(password_strength_error);
+	document.frmregister.pass1.select();
+}else if(p1 !=p2){
+MyAlert(passwords_not_match);
+document.frmregister.pass2.select();
+return 0;
+}else if(!(IsEmail(document.frmregister.email.value))){
+MyAlert(invalid_email);
+document.frmregister.email.select();
+return 0;
+}else if(document.frmregister.fname.value==""){
+MyAlert(input_name);
+document.frmregister.fname.select();
+return 0;
+}else if(document.frmregister.lname.value==""){
+MyAlert(input_lastname);
+document.frmregister.lname.select();
+return 0;
+}else{
+change_cursor('wait');
+show_div('page_register1_wait');
+var load_register_step2=setInterval(function(){
+toggle('register_step1', 'register_step2');
+hide_div('page_register1_wait');
+clearInterval(load_register_step2);
+},250);
+hide_div('dv_register_error');
+change_cursor('auto');
+}
+}
+function check_register_form2()
+{
+if(document.frmregister.state.value=="")
+{
+MyAlert(input_state);
+return 0;
+}
+else if(document.frmregister.city.value=="")
+{
+MyAlert(input_city);
+document.frmregister.city.select();
+return 0;
+}
+else if(document.frmregister.address.value=="")
+{
+MyAlert(input_address);
+document.frmregister.address.select();
+return 0;
+}
+else if(strLen(document.frmregister.phone_number.value)<10)
+{
+MyAlert(invalid_phone);
+document.frmregister.phone_number.select();
+return 0;
+}
+else if(strLen(document.frmregister.mobile_number.value)<10)
+{
+MyAlert(invalid_phone);
+document.frmregister.mobile_number.select();
+return 0;
+}else if(strLen(document.frmregister.secimg.value)<4)
+{
+MyAlert(input_secimg);
+document.frmregister.secimg.select();
+return 0;
+}
+else
+{
+change_cursor('wait');
+show_div('page_register2_wait');
+var load_register_step3=setInterval(function(){
+toggle('register_step2', 'register_step3');
+hide_div('page_register2_wait');
+clearInterval(load_register_step3);
+},250);
+change_cursor('auto');	
+hide_div('dv_register_error');
+}
+}
+function check_register_form3()
+{
+	chk1 = document.getElementById('rules_accepted').checked;
+	chk2 = document.getElementById('rules_accepted2').checked;
+	if(chk1 == false || chk2 == false){
+		MyAlert(please_check_rules);
+		return 0;
+	}
+if(useajax == true){
+accjax_post('?param=99100001&param2=save',document.getElementById('frmregister'),'page_register3_wait','maincontent');
+}else{
+document.frmregister.submit();
+}
+}
+function Check_Add_Fund(){
+	if(document.frmpayment.pdate.value==""){
+	MyAlert(add_fund_fill_all_plz);
+	document.frmpayment.pdate.select();
+	return false;
+	}
+	if(document.frmpayment.bank_name.value=="pleaseselect"){
+	MyAlert(add_fund_fill_all_plz);
+	document.frmpayment.bank_name.select();
+	return false;
+	}
+	if(document.frmpayment.fnumber.value==""){
+	MyAlert(add_fund_fill_all_plz);
+	document.frmpayment.fnumber.select();
+	return false;
+	}
+	return true;
+}
+function CheckNewMessageSubject()
+{
+if(!ticketTerms()){
+	alert(ticketTermsAlert);
+	return;
+}
+	if(document.frm_newpm.message.value == ''){
+		MyAlert(new_message_input_message);
+		document.frm_newpm.message.select();
+		return false;
+	}else if(document.frm_newpm.department.value == 0){
+		MyAlert(lng_select_department);
+		return false;
+	}else{
+		if(useajax == true){
+			accjax_post('?param=99202255&param2=newpm', document.getElementById('frm_newpm'), 'frm_newpm_wait', 'maincontent');
+		}else{
+			document.frm_newpm.submit();
+		}
+	}
+}
+function getRadioCheckedValue(radio_name, formName){
+	if(element_exist(radio_name)){
+		var oRadio = document.forms[formName].elements[radio_name];
+		for(var i = 0; i < oRadio.length; i++){
+			if(oRadio[i].checked){
+				return oRadio[i].value;
+			}
+		}
+		return '';
+	}
+}
+function ShowTab(ID){
+	for(var i = 1; i <= 7; i++){
+		hide_div('dvTab'+i);
+	}
+	show_div('dvTab'+ID);
+}
+function toggleElement(e_name)
+{
+		a = Split(e_name, '_');
+		catID = a[1];
+		obj = document.getElementById('plusminus_'+catID);
+	if(IsVisible(e_name)){
+		hide_div(e_name);
+		classname="sptdfr sptdfrplus";
+	}else{
+		show_div(e_name);
+		classname="sptdfr sptdfrminus";
+	}
+	obj.setAttribute("class", classname);
+	obj.setAttribute("className", classname); // for IE which does not recognize "class"
+}
+var farsiKeyCodes = new Array(1662, 1670, 1580, 1581, 1582, 1607, 1593, 1594, 1601, 1602, 1603,
+        1572,
+        1579, //   ?  for firefox
+        1589, 1590, 1711, 1705, 1605, 1606, 1578, 1575, 1604, 1576, 1740, 1587,
+        1588, 1608, 1574, 1571, 1583, 1584, 1585, 1585, 1586, 1591, 1592, 1570, 17281569, 1571, 1573, 1572, 1688, 1610, 1577,
+        1611, 1612, 1613, 1614, 1615, 1617);
+function alertEnglishOnKeyPress(e){
+	var isFarsi = isFarsiKeysPressed(e);
+	if(isFarsi){alert(lng_please_type_english);}
+	return !isFarsi;
+}
+function isFarsiKeysPressed(e) {
+	var key = getEventKeyCode(e);
+	for (var i = 0; i < farsiKeyCodes.length; i++) {
+		if (key == farsiKeyCodes[i]) {
+			return true;
+		}
+	}
+	return false;
+}
+function getEventKeyCode(e){
+    var key;
+    if (window.event){
+        key = event.keyCode;
+	}else{
+        key = e.which;
+	}
+    return key;
+}
+var validDomainKeys = new Array(45,48,49,50,51,52,53,54,55,56,57,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122);
+function validateDomain(str, idn){
+	if(idn){
+		return;
+	}
+	str.value = str.value.toLowerCase();
+	var old_str = str.value;
+	var lng = str.value.length;
+	var validStr = '';
+	for (var i = 0; i < lng; i++){
+		tmpStr = str.value.substr(i, 1);
+		var key=str.value.charCodeAt(i);
+		var prev_key = 0;
+		if(i > 1){
+			prev_key = str.value.charCodeAt(i-1);
+		}
+		for (var j = 0; j < validDomainKeys.length; j++){
+			if (key == validDomainKeys[j]){
+				if(i == 0 && key == 45){
+					valid = false;
+				}else{
+					if(1 == 2 && key == 45 && prev_key == 45 && !element_exist('transfer_auth_code')){
+							valid = false;
+					}else{
+						valid = true;
+						validStr = validStr + tmpStr;
+						hide_div('validateDomain');
+						break;
+					}
+				}
+			}else{
+				valid = false;
+			}
+		}
+		if(!valid){
+			show_div('validateDomain');
+		}
+	}
+	str.value=validStr;
+	if(old_str != str.value){
+		MyAlert(domain_validate_notify);
+		show_div('validateDomain');
+	}
+}
+
+function topmenu(){
+	if(!element_exist('topMenu')){
+		return;
+	}
+	if(IsVisible('print')){
+		$('#topMenu').css('position','relative');
+		$('#logo_img').css('position','relative');
+		return false;
+	}
+	//return false;
+	var logotop = $(document).scrollTop();
+	//alert(logotop);
+	if(logotop > 30){
+		$('#topMenu').css('position','fixed');
+		$('#topMenu').css('top','0px');
+		$('#topMenu').css('z-index','9999');
+	}else{
+		$('#topMenu').css('position','relative');
+	}
+		if(logotop > 5){
+			$('#logo_img').css('position','fixed');
+			$('#logo_img').css('top','3px');
+		}else{
+			$('#logo_img').css('position','relative');
+		}
+}
+var topm=setInterval(function(){
+	topmenu();
+},100);
+function StopIt(){
+	if(cur_xhr != ''){
+		eval(cur_xhr+'.abort();');
+	}
+	hide_div('ajaxwait');
+	change_cursor('auto');
+}
+function autojax_lw(link, awidth){
+	autojax_w = awidth;
+	autojax = link +'&atjx=1';
+	return false;
+}
+function abort_xhr(){
+	xhr.abort();
+	change_cursor('auto');
+	$('#ajaxwait').fadeOut('slow');
+	$('#ajx_overaly').css('display','none');
+}
+function restorebackupTerms(){
+	for(i=1;i<2;i++){
+		if(document.getElementById('restore_backup_term_'+i).checked == false){
+			$('#submit_restore_btn').prop('disabled', true);
+			return false;
+		}
+	}
+	$('#submit_restore_btn').prop('disabled', false);
+	return true;
+}
+
+function ticketTerms(){
+	for(i=1;i<2;i++){
+		if(document.getElementById('ticket_term_'+i).checked == false){
+			document.forms['frm_newpm'].subject.disabled = true;
+			document.forms['frm_newpm'].message.disabled = true;
+			document.forms['frm_newpm'].btnSend.disabled = true;
+			$('#subject').css('background','#e3e3e3');
+			$('#message').css('background','#e3e3e3');
+			return false;
+		}
+	}
+	document.forms['frm_newpm'].subject.disabled = false;
+	document.forms['frm_newpm'].message.disabled = false;
+	document.forms['frm_newpm'].btnSend.disabled = false;
+	$('#subject').css('background','');
+	$('#message').css('background','');
+	document.forms['frm_newpm'].subject.select();
+	return true;
+}
+
+function replyTerms(){
+	if(document.getElementById('reply_term_1').checked == false){
+		document.forms['frmreply'].message.disabled = true;
+		document.forms['frmreply'].btnSend.disabled = true;
+		$('#message').css('background','#e3e3e3');
+		return false;
+	}
+	document.forms['frmreply'].message.disabled = false;
+	document.forms['frmreply'].btnSend.disabled = false;
+	$('#message').css('background','');
+	return true;
+}
+
+function confirmLink(theLink, alert_str)
+{
+    var is_confirmed = confirm(alert_str);
+    if (is_confirmed) {
+        if ( typeof(theLink.href) != 'undefined' ) {
+            theLink.href += '&confirmed=1';
+        }else if ( typeof(theLink.form) != 'undefined' ) {
+            theLink.form.action += '&confirmed=1';
+        }
+    }
+
+    return is_confirmed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!
+ * fancyBox - jQuery Plugin
+ * version: 2.1.5 (Fri, 14 Jun 2013)
+ * @requires jQuery v1.6 or later
+ *
+ * Examples at http://fancyapps.com/fancybox/
+ * License: www.fancyapps.com/fancybox/#license
+ *
+ * Copyright 2012 Janis Skarnelis - janis@fancyapps.com
+ *
+ */
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+/*!
+ * fancyBox - jQuery Plugin
+ * version: 2.1.5 (Fri, 14 Jun 2013)
+ * @requires jQuery v1.6 or later
+ */
+/*						width     : autojax_w,
+						href      = siteurl+'/ajax.php'+autojax;*/
+(function (window, document, $, undefined) {
+	"use strict";
+
+	var H = $("html"),
+		W = $(window),
+		D = $(document),
+		F = $.fancybox = function () {
+			F.open.apply( this, arguments );
+		},
+		IE =  navigator.userAgent.match(/msie/i),
+		didUpdate	= null,
+		isTouch		= document.createTouch !== undefined,
+
+		isQuery	= function(obj) {
+			return obj && obj.hasOwnProperty && obj instanceof $;
+		},
+		isString = function(str) {
+			return str && $.type(str) === "string";
+		},
+		isPercentage = function(str) {
+			return isString(str) && str.indexOf('%') > 0;
+		},
+		isScrollable = function(el) {
+			return (el && !(el.style.overflow && el.style.overflow === 'hidden') && ((el.clientWidth && el.scrollWidth > el.clientWidth) || (el.clientHeight && el.scrollHeight > el.clientHeight)));
+		},
+		getScalar = function(orig, dim) {
+			var value = parseInt(orig, 10) || 0;
+
+			if (dim && isPercentage(orig)) {
+				value = F.getViewport()[ dim ] / 100 * value;
+			}
+
+			return Math.ceil(value);
+		},
+		getValue = function(value, dim) {
+			return getScalar(value, dim) + 'px';
+		};
+
+	$.extend(F, {
+		// The current version of fancyBox
+		version: '2.1.5',
+
+		defaults: {
+			padding : 15,
+			margin  : 20,
+
+			width     : autojax_w,
+			height    : 600,
+			minWidth  : 300,
+			minHeight : 100,
+			maxWidth  : 9999,
+			maxHeight : 9999,
+			pixelRatio: 1, // Set to 2 for retina display support
+
+			autoSize   : true,
+			autoHeight : false,
+			autoWidth  : false,
+
+			autoResize  : true,
+			autoCenter  : !isTouch,
+			fitToView   : true,
+			aspectRatio : false,
+			topRatio    : 0.5,
+			leftRatio   : 0.5,
+
+			scrolling : 'auto', // 'auto', 'yes' or 'no'
+			wrapCSS   : '',
+
+			arrows     : true,
+			closeBtn   : true,
+			closeClick : false,
+			nextClick  : false,
+			mouseWheel : true,
+			autoPlay   : false,
+			playSpeed  : 3000,
+			preload    : 3,
+			modal      : false,
+			loop       : true,
+
+			ajax  : {
+				dataType : 'html',
+				headers  : { 'X-fancyBox': true }
+			},
+			iframe : {
+				scrolling : 'auto',
+				preload   : true
+			},
+			swf : {
+				wmode: 'transparent',
+				allowfullscreen   : 'true',
+				allowscriptaccess : 'always'
+			},
+
+			keys  : {
+				next : {
+					13 : 'left', // enter
+					34 : 'up',   // page down
+					39 : 'left', // right arrow
+					40 : 'up'    // down arrow
+				},
+				prev : {
+					8  : 'right',  // backspace
+					33 : 'down',   // page up
+					37 : 'right',  // left arrow
+					38 : 'down'    // up arrow
+				},
+				close  : [27], // escape key
+				play   : [32], // space - start/stop slideshow
+				toggle : [70]  // letter "f" - toggle fullscreen
+			},
+
+			direction : {
+				next : 'left',
+				prev : 'right'
+			},
+
+			scrollOutside  : true,
+
+			// Override some properties
+			index   : 0,
+			type    : null,
+			href    : null,
+			content : null,
+			title   : null,
+
+			// HTML templates
+			tpl: {
+				wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
+				image    : '<img class="fancybox-image" src="{href}" alt="" />',
+				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
+				error    : '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
+				closeBtn : '<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
+				next     : '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
+				prev     : '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+			},
+
+			// Properties for each animation type
+			// Opening fancyBox
+			openEffect  : 'fade', // 'elastic', 'fade' or 'none'
+			openSpeed   : 250,
+			openEasing  : 'swing',
+			openOpacity : true,
+			openMethod  : 'zoomIn',
+
+			// Closing fancyBox
+			closeEffect  : 'fade', // 'elastic', 'fade' or 'none'
+			closeSpeed   : 250,
+			closeEasing  : 'swing',
+			closeOpacity : true,
+			closeMethod  : 'zoomOut',
+
+			// Changing next gallery item
+			nextEffect : 'elastic', // 'elastic', 'fade' or 'none'
+			nextSpeed  : 250,
+			nextEasing : 'swing',
+			nextMethod : 'changeIn',
+
+			// Changing previous gallery item
+			prevEffect : 'elastic', // 'elastic', 'fade' or 'none'
+			prevSpeed  : 250,
+			prevEasing : 'swing',
+			prevMethod : 'changeOut',
+
+			// Enable default helpers
+			helpers : {
+				overlay : true,
+				title   : true
+			},
+
+			// Callbacks
+			onCancel     : $.noop, // If canceling
+			beforeLoad   : $.noop, // Before loading
+			afterLoad    : $.noop, // After loading
+			beforeShow   : $.noop, // Before changing in current item
+			afterShow    : $.noop, // After opening
+			beforeChange : $.noop, // Before changing gallery item
+			beforeClose  : $.noop, // Before closing
+			afterClose   : $.noop  // After closing
+		},
+
+		//Current state
+		group    : {}, // Selected group
+		opts     : {}, // Group options
+		previous : null,  // Previous element
+		coming   : null,  // Element being loaded
+		current  : null,  // Currently loaded element
+		isActive : false, // Is activated
+		isOpen   : false, // Is currently open
+		isOpened : false, // Have been fully opened at least once
+
+		wrap  : null,
+		skin  : null,
+		outer : null,
+		inner : null,
+
+		player : {
+			timer    : null,
+			isActive : false
+		},
+
+		// Loaders
+		ajaxLoad   : null,
+		imgPreload : null,
+
+		// Some collections
+		transitions : {},
+		helpers     : {},
+
+		/*
+		 *	Static methods
+		 */
+
+		open: function (group, opts) {
+			if (!group) {
+				return;
+			}
+
+			if (!$.isPlainObject(opts)) {
+				opts = {};
+			}
+
+			// Close if already active
+			if (false === F.close(true)) {
+				return;
+			}
+
+			// Normalize group
+			if (!$.isArray(group)) {
+				group = isQuery(group) ? $(group).get() : [group];
+			}
+
+			// Recheck if the type of each element is `object` and set content type (image, ajax, etc)
+			$.each(group, function(i, element) {
+				var obj = {},
+					href,
+					title,
+					content,
+					type,
+					rez,
+					hrefParts,
+					selector;
+
+				if ($.type(element) === "object") {
+					// Check if is DOM element
+					if (element.nodeType) {
+						element = $(element);
+					}
+
+					if (isQuery(element)) {
+						obj = {
+							href    : element.data('fancybox-href') || element.attr('href'),
+							title   : element.data('fancybox-title') || element.attr('title'),
+							isDom   : true,
+							element : element
+						};
+
+						if ($.metadata) {
+							$.extend(true, obj, element.metadata());
+						}
+
+					} else {
+						obj = element;
+					}
+				}
+
+				href  = opts.href  || obj.href || (isString(element) ? element : null);
+				title = opts.title !== undefined ? opts.title : obj.title || '';
+
+				content = opts.content || obj.content;
+				type    = content ? 'html' : (opts.type  || obj.type);
+
+				if (!type && obj.isDom) {
+					type = element.data('fancybox-type');
+
+					if (!type) {
+						rez  = element.prop('class').match(/fancybox\.(\w+)/);
+						type = rez ? rez[1] : null;
+					}
+				}
+
+				if (isString(href)) {
+					// Try to guess the content type
+					if (!type) {
+						if (F.isImage(href)) {
+							type = 'image';
+
+						} else if (F.isSWF(href)) {
+							type = 'swf';
+
+						} else if (href.charAt(0) === '#') {
+							type = 'inline';
+
+						} else if (isString(element)) {
+							type    = 'html';
+							content = element;
+						}
+					}
+
+					// Split url into two pieces with source url and content selector, e.g,
+					// "/mypage.html #my_id" will load "/mypage.html" and display element having id "my_id"
+					if (type === 'ajax') {
+						hrefParts = href.split(/\s+/, 2);
+						href      = hrefParts.shift();
+						selector  = hrefParts.shift();
+						href      = siteurl+'/ajax.php'+autojax;
+						//alert('href = '+href+"\nselector = "+selector);
+						//alert(obj.href);
+						//alert($(this).attr('href'));
+					}
+				}
+
+				if (!content) {
+					if (type === 'inline') {
+						if (href) {
+							content = $( isString(href) ? href.replace(/.*(?=#[^\s]+$)/, '') : href ); //strip for ie7
+
+						} else if (obj.isDom) {
+							content = element;
+						}
+
+					} else if (type === 'html') {
+						content = href;
+
+					} else if (!type && !href && obj.isDom) {
+						type    = 'inline';
+						content = element;
+					}
+				}
+
+				$.extend(obj, {
+					href     : href,
+					type     : type,
+					content  : content,
+					title    : title,
+					selector : selector
+				});
+
+				group[ i ] = obj;
+			});
+
+			// Extend the defaults
+			F.opts = $.extend(true, {}, F.defaults, opts);
+
+			// All options are merged recursive except keys
+			if (opts.keys !== undefined) {
+				F.opts.keys = opts.keys ? $.extend({}, F.defaults.keys, opts.keys) : false;
+			}
+
+			F.group = group;
+
+			return F._start(F.opts.index);
+		},
+
+		// Cancel image loading or abort ajax request
+		cancel: function () {
+			var coming = F.coming;
+
+			if (!coming || false === F.trigger('onCancel')) {
+				return;
+			}
+
+			F.hideLoading();
+
+			if (F.ajaxLoad) {
+				F.ajaxLoad.abort();
+			}
+
+			F.ajaxLoad = null;
+
+			if (F.imgPreload) {
+				F.imgPreload.onload = F.imgPreload.onerror = null;
+			}
+
+			if (coming.wrap) {
+				coming.wrap.stop(true, true).trigger('onReset').remove();
+			}
+
+			F.coming = null;
+
+			// If the first item has been canceled, then clear everything
+			if (!F.current) {
+				F._afterZoomOut( coming );
+			}
+		},
+
+		// Start closing animation if is open; remove immediately if opening/closing
+		close: function (event) {
+			F.cancel();
+
+			if (false === F.trigger('beforeClose')) {
+				return;
+			}
+
+			F.unbindEvents();
+
+			if (!F.isActive) {
+				return;
+			}
+
+			if (!F.isOpen || event === true) {
+				$('.fancybox-wrap').stop(true).trigger('onReset').remove();
+
+				F._afterZoomOut();
+
+			} else {
+				F.isOpen = F.isOpened = false;
+				F.isClosing = true;
+
+				$('.fancybox-item, .fancybox-nav').remove();
+
+				F.wrap.stop(true, true).removeClass('fancybox-opened');
+
+				F.transitions[ F.current.closeMethod ]();
+			}
+		},
+
+		// Manage slideshow:
+		//   $.fancybox.play(); - toggle slideshow
+		//   $.fancybox.play( true ); - start
+		//   $.fancybox.play( false ); - stop
+		play: function ( action ) {
+			var clear = function () {
+					clearTimeout(F.player.timer);
+				},
+				set = function () {
+					clear();
+
+					if (F.current && F.player.isActive) {
+						F.player.timer = setTimeout(F.next, F.current.playSpeed);
+					}
+				},
+				stop = function () {
+					clear();
+
+					D.unbind('.player');
+
+					F.player.isActive = false;
+
+					F.trigger('onPlayEnd');
+				},
+				start = function () {
+					if (F.current && (F.current.loop || F.current.index < F.group.length - 1)) {
+						F.player.isActive = true;
+
+						D.bind({
+							'onCancel.player beforeClose.player' : stop,
+							'onUpdate.player'   : set,
+							'beforeLoad.player' : clear
+						});
+
+						set();
+
+						F.trigger('onPlayStart');
+					}
+				};
+
+			if (action === true || (!F.player.isActive && action !== false)) {
+				start();
+			} else {
+				stop();
+			}
+		},
+
+		// Navigate to next gallery item
+		next: function ( direction ) {
+			var current = F.current;
+
+			if (current) {
+				if (!isString(direction)) {
+					direction = current.direction.next;
+				}
+
+				F.jumpto(current.index + 1, direction, 'next');
+			}
+		},
+
+		// Navigate to previous gallery item
+		prev: function ( direction ) {
+			var current = F.current;
+
+			if (current) {
+				if (!isString(direction)) {
+					direction = current.direction.prev;
+				}
+
+				F.jumpto(current.index - 1, direction, 'prev');
+			}
+		},
+
+		// Navigate to gallery item by index
+		jumpto: function ( index, direction, router ) {
+			var current = F.current;
+
+			if (!current) {
+				return;
+			}
+
+			index = getScalar(index);
+
+			F.direction = direction || current.direction[ (index >= current.index ? 'next' : 'prev') ];
+			F.router    = router || 'jumpto';
+
+			if (current.loop) {
+				if (index < 0) {
+					index = current.group.length + (index % current.group.length);
+				}
+
+				index = index % current.group.length;
+			}
+
+			if (current.group[ index ] !== undefined) {
+				F.cancel();
+
+				F._start(index);
+			}
+		},
+
+		// Center inside viewport and toggle position type to fixed or absolute if needed
+		reposition: function (e, onlyAbsolute) {
+			var current = F.current,
+				wrap    = current ? current.wrap : null,
+				pos;
+
+			if (wrap) {
+				pos = F._getPosition(onlyAbsolute);
+
+				if (e && e.type === 'scroll') {
+					delete pos.position;
+
+					wrap.stop(true, true).animate(pos, 200);
+
+				} else {
+					wrap.css(pos);
+
+					current.pos = $.extend({}, current.dim, pos);
+				}
+			}
+		},
+
+		update: function (e) {
+			var type = (e && e.type),
+				anyway = !type || type === 'orientationchange';
+
+			if (anyway) {
+				clearTimeout(didUpdate);
+
+				didUpdate = null;
+			}
+
+			if (!F.isOpen || didUpdate) {
+				return;
+			}
+
+			didUpdate = setTimeout(function() {
+				var current = F.current;
+
+				if (!current || F.isClosing) {
+					return;
+				}
+
+				F.wrap.removeClass('fancybox-tmp');
+
+				if (anyway || type === 'load' || (type === 'resize' && current.autoResize)) {
+					F._setDimension();
+				}
+
+				if (!(type === 'scroll' && current.canShrink)) {
+					F.reposition(e);
+				}
+
+				F.trigger('onUpdate');
+
+				didUpdate = null;
+
+			}, (anyway && !isTouch ? 0 : 300));
+		},
+
+		// Shrink content to fit inside viewport or restore if resized
+		toggle: function ( action ) {
+			if (F.isOpen) {
+				F.current.fitToView = $.type(action) === "boolean" ? action : !F.current.fitToView;
+
+				// Help browser to restore document dimensions
+				if (isTouch) {
+					F.wrap.removeAttr('style').addClass('fancybox-tmp');
+
+					F.trigger('onUpdate');
+				}
+
+				F.update();
+			}
+		},
+
+		hideLoading: function () {
+			D.unbind('.loading');
+
+			$('#fancybox-loading').remove();
+		},
+
+		showLoading: function () {
+			var el, viewport;
+
+			F.hideLoading();
+
+			el = $('<div id="fancybox-loading"><div></div></div>').click(F.cancel).appendTo('body');
+
+			// If user will press the escape-button, the request will be canceled
+			D.bind('keydown.loading', function(e) {
+				if ((e.which || e.keyCode) === 27) {
+					e.preventDefault();
+
+					F.cancel();
+				}
+			});
+
+			if (!F.defaults.fixed) {
+				viewport = F.getViewport();
+
+				el.css({
+					position : 'absolute',
+					top  : (viewport.h * 0.5) + viewport.y,
+					left : (viewport.w * 0.5) + viewport.x
+				});
+			}
+		},
+
+		getViewport: function () {
+			var locked = (F.current && F.current.locked) || false,
+				rez    = {
+					x: W.scrollLeft(),
+					y: W.scrollTop()
+				};
+
+			if (locked) {
+				rez.w = locked[0].clientWidth;
+				rez.h = locked[0].clientHeight;
+
+			} else {
+				// See http://bugs.jquery.com/ticket/6724
+				rez.w = isTouch && window.innerWidth  ? window.innerWidth  : W.width();
+				rez.h = isTouch && window.innerHeight ? window.innerHeight : W.height();
+			}
+
+			return rez;
+		},
+
+		// Unbind the keyboard / clicking actions
+		unbindEvents: function () {
+			if (F.wrap && isQuery(F.wrap)) {
+				F.wrap.unbind('.fb');
+			}
+
+			D.unbind('.fb');
+			W.unbind('.fb');
+		},
+
+		bindEvents: function () {
+			var current = F.current,
+				keys;
+
+			if (!current) {
+				return;
+			}
+
+			// Changing document height on iOS devices triggers a 'resize' event,
+			// that can change document height... repeating infinitely
+			W.bind('orientationchange.fb' + (isTouch ? '' : ' resize.fb') + (current.autoCenter && !current.locked ? ' scroll.fb' : ''), F.update);
+
+			keys = current.keys;
+
+			if (keys) {
+				D.bind('keydown.fb', function (e) {
+					var code   = e.which || e.keyCode,
+						target = e.target || e.srcElement;
+
+					// Skip esc key if loading, because showLoading will cancel preloading
+					if (code === 27 && F.coming) {
+						return false;
+					}
+
+					// Ignore key combinations and key events within form elements
+					if (!e.ctrlKey && !e.altKey && !e.shiftKey && !e.metaKey && !(target && (target.type || $(target).is('[contenteditable]')))) {
+						$.each(keys, function(i, val) {
+							if (current.group.length > 1 && val[ code ] !== undefined) {
+								F[ i ]( val[ code ] );
+
+								e.preventDefault();
+								return false;
+							}
+
+							if ($.inArray(code, val) > -1) {
+								F[ i ] ();
+
+								e.preventDefault();
+								return false;
+							}
+						});
+					}
+				});
+			}
+
+			if ($.fn.mousewheel && current.mouseWheel) {
+				F.wrap.bind('mousewheel.fb', function (e, delta, deltaX, deltaY) {
+					var target = e.target || null,
+						parent = $(target),
+						canScroll = false;
+
+					while (parent.length) {
+						if (canScroll || parent.is('.fancybox-skin') || parent.is('.fancybox-wrap')) {
+							break;
+						}
+
+						canScroll = isScrollable( parent[0] );
+						parent    = $(parent).parent();
+					}
+
+					if (delta !== 0 && !canScroll) {
+						if (F.group.length > 1 && !current.canShrink) {
+							if (deltaY > 0 || deltaX > 0) {
+								F.prev( deltaY > 0 ? 'down' : 'left' );
+
+							} else if (deltaY < 0 || deltaX < 0) {
+								F.next( deltaY < 0 ? 'up' : 'right' );
+							}
+
+							e.preventDefault();
+						}
+					}
+				});
+			}
+		},
+
+		trigger: function (event, o) {
+			var ret, obj = o || F.coming || F.current;
+
+			if (!obj) {
+				return;
+			}
+
+			if ($.isFunction( obj[event] )) {
+				ret = obj[event].apply(obj, Array.prototype.slice.call(arguments, 1));
+			}
+
+			if (ret === false) {
+				return false;
+			}
+
+			if (obj.helpers) {
+				$.each(obj.helpers, function (helper, opts) {
+					if (opts && F.helpers[helper] && $.isFunction(F.helpers[helper][event])) {
+						F.helpers[helper][event]($.extend(true, {}, F.helpers[helper].defaults, opts), obj);
+					}
+				});
+			}
+
+			D.trigger(event);
+		},
+
+		isImage: function (str) {
+			return isString(str) && str.match(/(^data:image\/.*,)|(\.(jp(e|g|eg)|gif|png|bmp|webp|svg)((\?|#).*)?$)/i);
+		},
+
+		isSWF: function (str) {
+			return isString(str) && str.match(/\.(swf)((\?|#).*)?$/i);
+		},
+
+		_start: function (index) {
+			var coming = {},
+				obj,
+				href,
+				type,
+				margin,
+				padding;
+
+			index = getScalar( index );
+			obj   = F.group[ index ] || null;
+
+			if (!obj) {
+				return false;
+			}
+
+			coming = $.extend(true, {}, F.opts, obj);
+
+			// Convert margin and padding properties to array - top, right, bottom, left
+			margin  = coming.margin;
+			padding = coming.padding;
+
+			if ($.type(margin) === 'number') {
+				coming.margin = [margin, margin, margin, margin];
+			}
+
+			if ($.type(padding) === 'number') {
+				coming.padding = [padding, padding, padding, padding];
+			}
+
+			// 'modal' propery is just a shortcut
+			if (coming.modal) {
+				$.extend(true, coming, {
+					closeBtn   : false,
+					closeClick : false,
+					nextClick  : false,
+					arrows     : false,
+					mouseWheel : false,
+					keys       : null,
+					helpers: {
+						overlay : {
+							closeClick : false
+						}
+					}
+				});
+			}
+
+			// 'autoSize' property is a shortcut, too
+			if (coming.autoSize) {
+				coming.autoWidth = coming.autoHeight = true;
+			}
+
+			if (coming.width === 'auto') {
+				coming.autoWidth = true;
+			}
+
+			if (coming.height === 'auto') {
+				coming.autoHeight = true;
+			}
+
+			/*
+			 * Add reference to the group, so it`s possible to access from callbacks, example:
+			 * afterLoad : function() {
+			 *     this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+			 * }
+			 */
+
+			coming.group  = F.group;
+			coming.index  = index;
+
+			// Give a chance for callback or helpers to update coming item (type, title, etc)
+			F.coming = coming;
+
+			if (false === F.trigger('beforeLoad')) {
+				F.coming = null;
+
+				return;
+			}
+
+			type = coming.type;
+			href = coming.href;
+
+			if (!type) {
+				F.coming = null;
+
+				//If we can not determine content type then drop silently or display next/prev item if looping through gallery
+				if (F.current && F.router && F.router !== 'jumpto') {
+					F.current.index = index;
+
+					return F[ F.router ]( F.direction );
+				}
+
+				return false;
+			}
+
+			F.isActive = true;
+
+			if (type === 'image' || type === 'swf') {
+				coming.autoHeight = coming.autoWidth = false;
+				coming.scrolling  = 'visible';
+			}
+
+			if (type === 'image') {
+				coming.aspectRatio = true;
+			}
+
+			if (type === 'iframe' && isTouch) {
+				coming.scrolling = 'scroll';
+			}
+
+			// Build the neccessary markup
+			coming.wrap = $(coming.tpl.wrap).addClass('fancybox-' + (isTouch ? 'mobile' : 'desktop') + ' fancybox-type-' + type + ' fancybox-tmp ' + coming.wrapCSS).appendTo( coming.parent || 'body' );
+
+			$.extend(coming, {
+				skin  : $('.fancybox-skin',  coming.wrap),
+				outer : $('.fancybox-outer', coming.wrap),
+				inner : $('.fancybox-inner', coming.wrap)
+			});
+
+			$.each(["Top", "Right", "Bottom", "Left"], function(i, v) {
+				coming.skin.css('padding' + v, getValue(coming.padding[ i ]));
+			});
+
+			F.trigger('onReady');
+
+			// Check before try to load; 'inline' and 'html' types need content, others - href
+			if (type === 'inline' || type === 'html') {
+				if (!coming.content || !coming.content.length) {
+					return F._error( 'content' );
+				}
+
+			} else if (!href) {
+				return F._error( 'href' );
+			}
+
+			if (type === 'image') {
+				F._loadImage();
+
+			} else if (type === 'ajax') {
+				F._loadAjax();
+
+			} else if (type === 'iframe') {
+				F._loadIframe();
+
+			} else {
+				F._afterLoad();
+			}
+		},
+
+		_error: function ( type ) {
+			$.extend(F.coming, {
+				type       : 'html',
+				autoWidth  : true,
+				autoHeight : true,
+				minWidth   : 0,
+				minHeight  : 0,
+				scrolling  : 'no',
+				hasError   : type,
+				content    : F.coming.tpl.error
+			});
+
+			F._afterLoad();
+		},
+
+		_loadImage: function () {
+			// Reset preload image so it is later possible to check "complete" property
+			var img = F.imgPreload = new Image();
+
+			img.onload = function () {
+				this.onload = this.onerror = null;
+
+				F.coming.width  = this.width / F.opts.pixelRatio;
+				F.coming.height = this.height / F.opts.pixelRatio;
+
+				F._afterLoad();
+			};
+
+			img.onerror = function () {
+				this.onload = this.onerror = null;
+
+				F._error( 'image' );
+			};
+
+			img.src = F.coming.href;
+
+			if (img.complete !== true) {
+				F.showLoading();
+			}
+		},
+
+		_loadAjax: function () {
+			var coming = F.coming;
+
+			F.showLoading();
+
+			F.ajaxLoad = $.ajax($.extend({}, coming.ajax, {
+				url: coming.href,
+				error: function (jqXHR, textStatus) {
+					if (F.coming && textStatus !== 'abort') {
+						F._error( 'ajax', jqXHR );
+
+					} else {
+						F.hideLoading();
+					}
+				},
+				success: function (data, textStatus) {
+					if (textStatus === 'success') {
+						coming.content = data;
+
+						F._afterLoad();
+					}
+				}
+			}));
+		},
+
+		_loadIframe: function() {
+			var coming = F.coming,
+				iframe = $(coming.tpl.iframe.replace(/\{rnd\}/g, new Date().getTime()))
+					.attr('scrolling', isTouch ? 'auto' : coming.iframe.scrolling)
+					.attr('src', coming.href);
+
+			// This helps IE
+			$(coming.wrap).bind('onReset', function () {
+				try {
+					$(this).find('iframe').hide().attr('src', '//about:blank').end().empty();
+				} catch (e) {}
+			});
+
+			if (coming.iframe.preload) {
+				F.showLoading();
+
+				iframe.one('load', function() {
+					$(this).data('ready', 1);
+
+					// iOS will lose scrolling if we resize
+					if (!isTouch) {
+						$(this).bind('load.fb', F.update);
+					}
+
+					// Without this trick:
+					//   - iframe won't scroll on iOS devices
+					//   - IE7 sometimes displays empty iframe
+					$(this).parents('.fancybox-wrap').width('100%').removeClass('fancybox-tmp').show();
+
+					F._afterLoad();
+				});
+			}
+
+			coming.content = iframe.appendTo( coming.inner );
+
+			if (!coming.iframe.preload) {
+				F._afterLoad();
+			}
+		},
+
+		_preloadImages: function() {
+			var group   = F.group,
+				current = F.current,
+				len     = group.length,
+				cnt     = current.preload ? Math.min(current.preload, len - 1) : 0,
+				item,
+				i;
+
+			for (i = 1; i <= cnt; i += 1) {
+				item = group[ (current.index + i ) % len ];
+
+				if (item.type === 'image' && item.href) {
+					new Image().src = item.href;
+				}
+			}
+		},
+
+		_afterLoad: function () {
+			var coming   = F.coming,
+				previous = F.current,
+				placeholder = 'fancybox-placeholder',
+				current,
+				content,
+				type,
+				scrolling,
+				href,
+				embed;
+
+			F.hideLoading();
+
+			if (!coming || F.isActive === false) {
+				return;
+			}
+
+			if (false === F.trigger('afterLoad', coming, previous)) {
+				coming.wrap.stop(true).trigger('onReset').remove();
+
+				F.coming = null;
+
+				return;
+			}
+
+			if (previous) {
+				F.trigger('beforeChange', previous);
+
+				previous.wrap.stop(true).removeClass('fancybox-opened')
+					.find('.fancybox-item, .fancybox-nav')
+					.remove();
+			}
+
+			F.unbindEvents();
+
+			current   = coming;
+			content   = coming.content;
+			type      = coming.type;
+			scrolling = coming.scrolling;
+
+			$.extend(F, {
+				wrap  : current.wrap,
+				skin  : current.skin,
+				outer : current.outer,
+				inner : current.inner,
+				current  : current,
+				previous : previous
+			});
+
+			href = current.href;
+
+			switch (type) {
+				case 'inline':
+				case 'ajax':
+				case 'html':
+					if (current.selector) {
+						content = $('<div>').html(content).find(current.selector);
+
+					} else if (isQuery(content)) {
+						if (!content.data(placeholder)) {
+							content.data(placeholder, $('<div class="' + placeholder + '"></div>').insertAfter( content ).hide() );
+						}
+
+						content = content.show().detach();
+
+						current.wrap.bind('onReset', function () {
+							if ($(this).find(content).length) {
+								content.hide().replaceAll( content.data(placeholder) ).data(placeholder, false);
+							}
+						});
+					}
+				break;
+
+				case 'image':
+					content = current.tpl.image.replace('{href}', href);
+				break;
+
+				case 'swf':
+					content = '<object id="fancybox-swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%"><param name="movie" value="' + href + '"></param>';
+					embed   = '';
+
+					$.each(current.swf, function(name, val) {
+						content += '<param name="' + name + '" value="' + val + '"></param>';
+						embed   += ' ' + name + '="' + val + '"';
+					});
+
+					content += '<embed src="' + href + '" type="application/x-shockwave-flash" width="100%" height="100%"' + embed + '></embed></object>';
+				break;
+			}
+
+			if (!(isQuery(content) && content.parent().is(current.inner))) {
+				current.inner.append( content );
+			}
+
+			// Give a chance for helpers or callbacks to update elements
+			F.trigger('beforeShow');
+
+			// Set scrolling before calculating dimensions
+			current.inner.css('overflow', scrolling === 'yes' ? 'scroll' : (scrolling === 'no' ? 'hidden' : scrolling));
+
+			// Set initial dimensions and start position
+			F._setDimension();
+
+			F.reposition();
+
+			F.isOpen = false;
+			F.coming = null;
+
+			F.bindEvents();
+
+			if (!F.isOpened) {
+				$('.fancybox-wrap').not( current.wrap ).stop(true).trigger('onReset').remove();
+
+			} else if (previous.prevMethod) {
+				F.transitions[ previous.prevMethod ]();
+			}
+
+			F.transitions[ F.isOpened ? current.nextMethod : current.openMethod ]();
+
+			F._preloadImages();
+		},
+
+		_setDimension: function () {
+			var viewport   = F.getViewport(),
+				steps      = 0,
+				canShrink  = false,
+				canExpand  = false,
+				wrap       = F.wrap,
+				skin       = F.skin,
+				inner      = F.inner,
+				current    = F.current,
+				width      = current.width,
+				height     = current.height,
+				minWidth   = current.minWidth,
+				minHeight  = current.minHeight,
+				maxWidth   = current.maxWidth,
+				maxHeight  = current.maxHeight,
+				scrolling  = current.scrolling,
+				scrollOut  = current.scrollOutside ? current.scrollbarWidth : 0,
+				margin     = current.margin,
+				wMargin    = getScalar(margin[1] + margin[3]),
+				hMargin    = getScalar(margin[0] + margin[2]),
+				wPadding,
+				hPadding,
+				wSpace,
+				hSpace,
+				origWidth,
+				origHeight,
+				origMaxWidth,
+				origMaxHeight,
+				ratio,
+				width_,
+				height_,
+				maxWidth_,
+				maxHeight_,
+				iframe,
+				body;
+
+			// Reset dimensions so we could re-check actual size
+			wrap.add(skin).add(inner).width('auto').height('auto').removeClass('fancybox-tmp');
+
+			wPadding = getScalar(skin.outerWidth(true)  - skin.width());
+			hPadding = getScalar(skin.outerHeight(true) - skin.height());
+
+			// Any space between content and viewport (margin, padding, border, title)
+			wSpace = wMargin + wPadding;
+			hSpace = hMargin + hPadding;
+
+			origWidth  = isPercentage(width)  ? (viewport.w - wSpace) * getScalar(width)  / 100 : width;
+			origHeight = isPercentage(height) ? (viewport.h - hSpace) * getScalar(height) / 100 : height;
+
+			if (current.type === 'iframe') {
+				iframe = current.content;
+
+				if (current.autoHeight && iframe.data('ready') === 1) {
+					try {
+						if (iframe[0].contentWindow.document.location) {
+							inner.width( origWidth ).height(9999);
+
+							body = iframe.contents().find('body');
+
+							if (scrollOut) {
+								body.css('overflow-x', 'hidden');
+							}
+
+							origHeight = body.outerHeight(true);
+						}
+
+					} catch (e) {}
+				}
+
+			} else if (current.autoWidth || current.autoHeight) {
+				inner.addClass( 'fancybox-tmp' );
+
+				// Set width or height in case we need to calculate only one dimension
+				if (!current.autoWidth) {
+					inner.width( origWidth );
+				}
+
+				if (!current.autoHeight) {
+					inner.height( origHeight );
+				}
+
+				if (current.autoWidth) {
+					origWidth = inner.width();
+				}
+
+				if (current.autoHeight) {
+					origHeight = inner.height();
+				}
+
+				inner.removeClass( 'fancybox-tmp' );
+			}
+
+			width  = getScalar( origWidth );
+			height = getScalar( origHeight );
+
+			ratio  = origWidth / origHeight;
+
+			// Calculations for the content
+			minWidth  = getScalar(isPercentage(minWidth) ? getScalar(minWidth, 'w') - wSpace : minWidth);
+			maxWidth  = getScalar(isPercentage(maxWidth) ? getScalar(maxWidth, 'w') - wSpace : maxWidth);
+
+			minHeight = getScalar(isPercentage(minHeight) ? getScalar(minHeight, 'h') - hSpace : minHeight);
+			maxHeight = getScalar(isPercentage(maxHeight) ? getScalar(maxHeight, 'h') - hSpace : maxHeight);
+
+			// These will be used to determine if wrap can fit in the viewport
+			origMaxWidth  = maxWidth;
+			origMaxHeight = maxHeight;
+
+			if (current.fitToView) {
+				maxWidth  = Math.min(viewport.w - wSpace, maxWidth);
+				maxHeight = Math.min(viewport.h - hSpace, maxHeight);
+			}
+
+			maxWidth_  = viewport.w - wMargin;
+			maxHeight_ = viewport.h - hMargin;
+
+			if (current.aspectRatio) {
+				if (width > maxWidth) {
+					width  = maxWidth;
+					height = getScalar(width / ratio);
+				}
+
+				if (height > maxHeight) {
+					height = maxHeight;
+					width  = getScalar(height * ratio);
+				}
+
+				if (width < minWidth) {
+					width  = minWidth;
+					height = getScalar(width / ratio);
+				}
+
+				if (height < minHeight) {
+					height = minHeight;
+					width  = getScalar(height * ratio);
+				}
+
+			} else {
+				width = Math.max(minWidth, Math.min(width, maxWidth));
+
+				if (current.autoHeight && current.type !== 'iframe') {
+					inner.width( width );
+
+					height = inner.height();
+				}
+
+				height = Math.max(minHeight, Math.min(height, maxHeight));
+			}
+
+			// Try to fit inside viewport (including the title)
+			if (current.fitToView) {
+				inner.width( width ).height( height );
+
+				wrap.width( width + wPadding );
+
+				// Real wrap dimensions
+				width_  = wrap.width();
+				height_ = wrap.height();
+
+				if (current.aspectRatio) {
+					while ((width_ > maxWidth_ || height_ > maxHeight_) && width > minWidth && height > minHeight) {
+						if (steps++ > 19) {
+							break;
+						}
+
+						height = Math.max(minHeight, Math.min(maxHeight, height - 10));
+						width  = getScalar(height * ratio);
+
+						if (width < minWidth) {
+							width  = minWidth;
+							height = getScalar(width / ratio);
+						}
+
+						if (width > maxWidth) {
+							width  = maxWidth;
+							height = getScalar(width / ratio);
+						}
+
+						inner.width( width ).height( height );
+
+						wrap.width( width + wPadding );
+
+						width_  = wrap.width();
+						height_ = wrap.height();
+					}
+
+				} else {
+					width  = Math.max(minWidth,  Math.min(width,  width  - (width_  - maxWidth_)));
+					height = Math.max(minHeight, Math.min(height, height - (height_ - maxHeight_)));
+				}
+			}
+
+			if (scrollOut && scrolling === 'auto' && height < origHeight && (width + wPadding + scrollOut) < maxWidth_) {
+				width += scrollOut;
+			}
+
+			inner.width( width ).height( height );
+
+			wrap.width( width + wPadding );
+
+			width_  = wrap.width();
+			height_ = wrap.height();
+
+			canShrink = (width_ > maxWidth_ || height_ > maxHeight_) && width > minWidth && height > minHeight;
+			canExpand = current.aspectRatio ? (width < origMaxWidth && height < origMaxHeight && width < origWidth && height < origHeight) : ((width < origMaxWidth || height < origMaxHeight) && (width < origWidth || height < origHeight));
+
+			$.extend(current, {
+				dim : {
+					width	: getValue( width_ ),
+					height	: getValue( height_ )
+				},
+				origWidth  : origWidth,
+				origHeight : origHeight,
+				canShrink  : canShrink,
+				canExpand  : canExpand,
+				wPadding   : wPadding,
+				hPadding   : hPadding,
+				wrapSpace  : height_ - skin.outerHeight(true),
+				skinSpace  : skin.height() - height
+			});
+
+			if (!iframe && current.autoHeight && height > minHeight && height < maxHeight && !canExpand) {
+				inner.height('auto');
+			}
+		},
+
+		_getPosition: function (onlyAbsolute) {
+			var current  = F.current,
+				viewport = F.getViewport(),
+				margin   = current.margin,
+				width    = F.wrap.width()  + margin[1] + margin[3],
+				height   = F.wrap.height() + margin[0] + margin[2],
+				rez      = {
+					position: 'absolute',
+					top  : margin[0],
+					left : margin[3]
+				};
+
+			if (current.autoCenter && current.fixed && !onlyAbsolute && height <= viewport.h && width <= viewport.w) {
+				rez.position = 'fixed';
+
+			} else if (!current.locked) {
+				rez.top  += viewport.y;
+				rez.left += viewport.x;
+			}
+
+			rez.top  = getValue(Math.max(rez.top,  rez.top  + ((viewport.h - height) * current.topRatio)));
+			rez.left = getValue(Math.max(rez.left, rez.left + ((viewport.w - width)  * current.leftRatio)));
+
+			return rez;
+		},
+
+		_afterZoomIn: function () {
+			var current = F.current;
+
+			if (!current) {
+				return;
+			}
+
+			F.isOpen = F.isOpened = true;
+
+			F.wrap.css('overflow', 'visible').addClass('fancybox-opened');
+
+			F.update();
+
+			// Assign a click event
+			if ( current.closeClick || (current.nextClick && F.group.length > 1) ) {
+				F.inner.css('cursor', 'pointer').bind('click.fb', function(e) {
+					if (!$(e.target).is('a') && !$(e.target).parent().is('a')) {
+						e.preventDefault();
+
+						F[ current.closeClick ? 'close' : 'next' ]();
+					}
+				});
+			}
+
+			// Create a close button
+			if (current.closeBtn) {
+				$(current.tpl.closeBtn).appendTo(F.skin).bind('click.fb', function(e) {
+					e.preventDefault();
+
+					F.close();
+				});
+			}
+
+			// Create navigation arrows
+			if (current.arrows && F.group.length > 1) {
+				if (current.loop || current.index > 0) {
+					$(current.tpl.prev).appendTo(F.outer).bind('click.fb', F.prev);
+				}
+
+				if (current.loop || current.index < F.group.length - 1) {
+					$(current.tpl.next).appendTo(F.outer).bind('click.fb', F.next);
+				}
+			}
+
+			F.trigger('afterShow');
+
+			// Stop the slideshow if this is the last item
+			if (!current.loop && current.index === current.group.length - 1) {
+				F.play( false );
+
+			} else if (F.opts.autoPlay && !F.player.isActive) {
+				F.opts.autoPlay = false;
+
+				F.play();
+			}
+		},
+
+		_afterZoomOut: function ( obj ) {
+			obj = obj || F.current;
+
+			$('.fancybox-wrap').trigger('onReset').remove();
+
+			$.extend(F, {
+				group  : {},
+				opts   : {},
+				router : false,
+				current   : null,
+				isActive  : false,
+				isOpened  : false,
+				isOpen    : false,
+				isClosing : false,
+				wrap   : null,
+				skin   : null,
+				outer  : null,
+				inner  : null
+			});
+
+			F.trigger('afterClose', obj);
+		}
+	});
+
+	/*
+	 *	Default transitions
+	 */
+
+	F.transitions = {
+		getOrigPosition: function () {
+			var current  = F.current,
+				element  = current.element,
+				orig     = current.orig,
+				pos      = {},
+				width    = 50,
+				height   = 50,
+				hPadding = current.hPadding,
+				wPadding = current.wPadding,
+				viewport = F.getViewport();
+
+			if (!orig && current.isDom && element.is(':visible')) {
+				orig = element.find('img:first');
+
+				if (!orig.length) {
+					orig = element;
+				}
+			}
+
+			if (isQuery(orig)) {
+				pos = orig.offset();
+
+				if (orig.is('img')) {
+					width  = orig.outerWidth();
+					height = orig.outerHeight();
+				}
+
+			} else {
+				pos.top  = viewport.y + (viewport.h - height) * current.topRatio;
+				pos.left = viewport.x + (viewport.w - width)  * current.leftRatio;
+			}
+
+			if (F.wrap.css('position') === 'fixed' || current.locked) {
+				pos.top  -= viewport.y;
+				pos.left -= viewport.x;
+			}
+
+			pos = {
+				top     : getValue(pos.top  - hPadding * current.topRatio),
+				left    : getValue(pos.left - wPadding * current.leftRatio),
+				width   : getValue(width  + wPadding),
+				height  : getValue(height + hPadding)
+			};
+
+			return pos;
+		},
+
+		step: function (now, fx) {
+			var ratio,
+				padding,
+				value,
+				prop       = fx.prop,
+				current    = F.current,
+				wrapSpace  = current.wrapSpace,
+				skinSpace  = current.skinSpace;
+
+			if (prop === 'width' || prop === 'height') {
+				ratio = fx.end === fx.start ? 1 : (now - fx.start) / (fx.end - fx.start);
+
+				if (F.isClosing) {
+					ratio = 1 - ratio;
+				}
+
+				padding = prop === 'width' ? current.wPadding : current.hPadding;
+				value   = now - padding;
+
+				F.skin[ prop ](  getScalar( prop === 'width' ?  value : value - (wrapSpace * ratio) ) );
+				F.inner[ prop ]( getScalar( prop === 'width' ?  value : value - (wrapSpace * ratio) - (skinSpace * ratio) ) );
+			}
+		},
+
+		zoomIn: function () {
+			var current  = F.current,
+				startPos = current.pos,
+				effect   = current.openEffect,
+				elastic  = effect === 'elastic',
+				endPos   = $.extend({opacity : 1}, startPos);
+
+			// Remove "position" property that breaks older IE
+			delete endPos.position;
+
+			if (elastic) {
+				startPos = this.getOrigPosition();
+
+				if (current.openOpacity) {
+					startPos.opacity = 0.1;
+				}
+
+			} else if (effect === 'fade') {
+				startPos.opacity = 0.1;
+			}
+
+			F.wrap.css(startPos).animate(endPos, {
+				duration : effect === 'none' ? 0 : current.openSpeed,
+				easing   : current.openEasing,
+				step     : elastic ? this.step : null,
+				complete : F._afterZoomIn
+			});
+		},
+
+		zoomOut: function () {
+			var current  = F.current,
+				effect   = current.closeEffect,
+				elastic  = effect === 'elastic',
+				endPos   = {opacity : 0.1};
+
+			if (elastic) {
+				endPos = this.getOrigPosition();
+
+				if (current.closeOpacity) {
+					endPos.opacity = 0.1;
+				}
+			}
+
+			F.wrap.animate(endPos, {
+				duration : effect === 'none' ? 0 : current.closeSpeed,
+				easing   : current.closeEasing,
+				step     : elastic ? this.step : null,
+				complete : F._afterZoomOut
+			});
+		},
+
+		changeIn: function () {
+			var current   = F.current,
+				effect    = current.nextEffect,
+				startPos  = current.pos,
+				endPos    = { opacity : 1 },
+				direction = F.direction,
+				distance  = 200,
+				field;
+
+			startPos.opacity = 0.1;
+
+			if (effect === 'elastic') {
+				field = direction === 'down' || direction === 'up' ? 'top' : 'left';
+
+				if (direction === 'down' || direction === 'right') {
+					startPos[ field ] = getValue(getScalar(startPos[ field ]) - distance);
+					endPos[ field ]   = '+=' + distance + 'px';
+
+				} else {
+					startPos[ field ] = getValue(getScalar(startPos[ field ]) + distance);
+					endPos[ field ]   = '-=' + distance + 'px';
+				}
+			}
+
+			// Workaround for http://bugs.jquery.com/ticket/12273
+			if (effect === 'none') {
+				F._afterZoomIn();
+
+			} else {
+				F.wrap.css(startPos).animate(endPos, {
+					duration : current.nextSpeed,
+					easing   : current.nextEasing,
+					complete : F._afterZoomIn
+				});
+			}
+		},
+
+		changeOut: function () {
+			var previous  = F.previous,
+				effect    = previous.prevEffect,
+				endPos    = { opacity : 0.1 },
+				direction = F.direction,
+				distance  = 200;
+
+			if (effect === 'elastic') {
+				endPos[ direction === 'down' || direction === 'up' ? 'top' : 'left' ] = ( direction === 'up' || direction === 'left' ? '-' : '+' ) + '=' + distance + 'px';
+			}
+
+			previous.wrap.animate(endPos, {
+				duration : effect === 'none' ? 0 : previous.prevSpeed,
+				easing   : previous.prevEasing,
+				complete : function () {
+					$(this).trigger('onReset').remove();
+				}
+			});
+		}
+	};
+
+	/*
+	 *	Overlay helper
+	 */
+
+	F.helpers.overlay = {
+		defaults : {
+			closeClick : true,      // if true, fancyBox will be closed when user clicks on the overlay
+			speedOut   : 200,       // duration of fadeOut animation
+			showEarly  : true,      // indicates if should be opened immediately or wait until the content is ready
+			css        : {},        // custom CSS properties
+			locked     : !isTouch,  // if true, the content will be locked into overlay
+			fixed      : true       // if false, the overlay CSS position property will not be set to "fixed"
+		},
+
+		overlay : null,      // current handle
+		fixed   : false,     // indicates if the overlay has position "fixed"
+		el      : $('html'), // element that contains "the lock"
+
+		// Public methods
+		create : function(opts) {
+			opts = $.extend({}, this.defaults, opts);
+
+			if (this.overlay) {
+				this.close();
+			}
+
+			this.overlay = $('<div class="fancybox-overlay"></div>').appendTo( F.coming ? F.coming.parent : opts.parent );
+			this.fixed   = false;
+
+			if (opts.fixed && F.defaults.fixed) {
+				this.overlay.addClass('fancybox-overlay-fixed');
+
+				this.fixed = true;
+			}
+		},
+
+		open : function(opts) {
+			var that = this;
+
+			opts = $.extend({}, this.defaults, opts);
+
+			if (this.overlay) {
+				this.overlay.unbind('.overlay').width('auto').height('auto');
+
+			} else {
+				this.create(opts);
+			}
+
+			if (!this.fixed) {
+				W.bind('resize.overlay', $.proxy( this.update, this) );
+
+				this.update();
+			}
+
+			if (opts.closeClick) {
+				this.overlay.bind('click.overlay', function(e) {
+					if ($(e.target).hasClass('fancybox-overlay')) {
+						if (F.isActive) {
+							F.close();
+						} else {
+							that.close();
+						}
+
+						return false;
+					}
+				});
+			}
+
+			this.overlay.css( opts.css ).show();
+		},
+
+		close : function() {
+			var scrollV, scrollH;
+
+			W.unbind('resize.overlay');
+
+			if (this.el.hasClass('fancybox-lock')) {
+				$('.fancybox-margin').removeClass('fancybox-margin');
+
+				scrollV = W.scrollTop();
+				scrollH = W.scrollLeft();
+
+				this.el.removeClass('fancybox-lock');
+
+				W.scrollTop( scrollV ).scrollLeft( scrollH );
+			}
+
+			$('.fancybox-overlay').remove().hide();
+
+			$.extend(this, {
+				overlay : null,
+				fixed   : false
+			});
+		},
+
+		// Private, callbacks
+
+		update : function () {
+			var width = '100%', offsetWidth;
+
+			// Reset width/height so it will not mess
+			this.overlay.width(width).height('100%');
+
+			// jQuery does not return reliable result for IE
+			if (IE) {
+				offsetWidth = Math.max(document.documentElement.offsetWidth, document.body.offsetWidth);
+
+				if (D.width() > offsetWidth) {
+					width = D.width();
+				}
+
+			} else if (D.width() > W.width()) {
+				width = D.width();
+			}
+
+			this.overlay.width(width).height(D.height());
+		},
+
+		// This is where we can manipulate DOM, because later it would cause iframes to reload
+		onReady : function (opts, obj) {
+			var overlay = this.overlay;
+
+			$('.fancybox-overlay').stop(true, true);
+
+			if (!overlay) {
+				this.create(opts);
+			}
+
+			if (opts.locked && this.fixed && obj.fixed) {
+				if (!overlay) {
+					this.margin = D.height() > W.height() ? $('html').css('margin-right').replace("px", "") : false;
+				}
+
+				obj.locked = this.overlay.append( obj.wrap );
+				obj.fixed  = false;
+			}
+
+			if (opts.showEarly === true) {
+				this.beforeShow.apply(this, arguments);
+			}
+		},
+
+		beforeShow : function(opts, obj) {
+			var scrollV, scrollH;
+
+			if (obj.locked) {
+				if (this.margin !== false) {
+					$('*').filter(function(){
+						return ($(this).css('position') === 'fixed' && !$(this).hasClass("fancybox-overlay") && !$(this).hasClass("fancybox-wrap") );
+					}).addClass('fancybox-margin');
+
+					this.el.addClass('fancybox-margin');
+				}
+
+				scrollV = W.scrollTop();
+				scrollH = W.scrollLeft();
+
+				this.el.addClass('fancybox-lock');
+
+				W.scrollTop( scrollV ).scrollLeft( scrollH );
+			}
+
+			this.open(opts);
+		},
+
+		onUpdate : function() {
+			if (!this.fixed) {
+				this.update();
+			}
+		},
+
+		afterClose: function (opts) {
+			// Remove overlay if exists and fancyBox is not opening
+			// (e.g., it is not being open using afterClose callback)
+			//if (this.overlay && !F.isActive) {
+			if (this.overlay && !F.coming) {
+				this.overlay.fadeOut(opts.speedOut, $.proxy( this.close, this ));
+			}
+		}
+	};
+
+	/*
+	 *	Title helper
+	 */
+
+	F.helpers.title = {
+		defaults : {
+			type     : 'float', // 'float', 'inside', 'outside' or 'over',
+			position : 'bottom' // 'top' or 'bottom'
+		},
+
+		beforeShow: function (opts) {
+			var current = F.current,
+				text    = current.title,
+				type    = opts.type,
+				title,
+				target;
+
+			if ($.isFunction(text)) {
+				text = text.call(current.element, current);
+			}
+
+			if (!isString(text) || $.trim(text) === '') {
+				return;
+			}
+
+			title = $('<div class="fancybox-title fancybox-title-' + type + '-wrap">' + text + '</div>');
+
+			switch (type) {
+				case 'inside':
+					target = F.skin;
+				break;
+
+				case 'outside':
+					target = F.wrap;
+				break;
+
+				case 'over':
+					target = F.inner;
+				break;
+
+				default: // 'float'
+					target = F.skin;
+
+					title.appendTo('body');
+
+					if (IE) {
+						title.width( title.width() );
+					}
+
+					title.wrapInner('<span class="child"></span>');
+
+					//Increase bottom margin so this title will also fit into viewport
+					F.current.margin[2] += Math.abs( getScalar(title.css('margin-bottom')) );
+				break;
+			}
+
+			title[ (opts.position === 'top' ? 'prependTo'  : 'appendTo') ](target);
+		}
+	};
+
+	// jQuery plugin initialization
+	$.fn.fancybox = function (options) {
+		var index,
+			that     = $(this),
+			selector = this.selector || '',
+			run      = function(e) {
+				var what = $(this).blur(), idx = index, relType, relVal;
+
+				if (!(e.ctrlKey || e.altKey || e.shiftKey || e.metaKey) && !what.is('.fancybox-wrap')) {
+					relType = options.groupAttr || 'data-fancybox-group';
+					relVal  = what.attr(relType);
+
+					if (!relVal) {
+						relType = 'rel';
+						relVal  = what.get(0)[ relType ];
+					}
+
+					if (relVal && relVal !== '' && relVal !== 'nofollow') {
+						what = selector.length ? $(selector) : that;
+						what = what.filter('[' + relType + '="' + relVal + '"]');
+						idx  = what.index(this);
+					}
+
+					options.index = idx;
+
+					// Stop an event from bubbling if everything is fine
+					if (F.open(what, options) !== false) {
+						e.preventDefault();
+					}
+				}
+			};
+
+		options = options || {};
+		index   = options.index || 0;
+
+		if (!selector || options.live === false) {
+			that.unbind('click.fb-start').bind('click.fb-start', run);
+
+		} else {
+			D.undelegate(selector, 'click.fb-start').delegate(selector + ":not('.fancybox-item, .fancybox-nav')", 'click.fb-start', run);
+		}
+
+		this.filter('[data-fancybox-start=1]').trigger('click');
+
+		return this;
+	};
+
+	// Tests that need a body at doc ready
+	D.ready(function() {
+		var w1, w2;
+
+		if ( $.scrollbarWidth === undefined ) {
+			// http://benalman.com/projects/jquery-misc-plugins/#scrollbarwidth
+			$.scrollbarWidth = function() {
+				var parent = $('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo('body'),
+					child  = parent.children(),
+					width  = child.innerWidth() - child.height( 99 ).innerWidth();
+
+				parent.remove();
+
+				return width;
+			};
+		}
+
+		if ( $.support.fixedPosition === undefined ) {
+			$.support.fixedPosition = (function() {
+				var elem  = $('<div style="position:fixed;top:20px;"></div>').appendTo('body'),
+					fixed = ( elem[0].offsetTop === 20 || elem[0].offsetTop === 15 );
+
+				elem.remove();
+
+				return fixed;
+			}());
+		}
+
+		$.extend(F.defaults, {
+			scrollbarWidth : $.scrollbarWidth(),
+			fixed  : $.support.fixedPosition,
+			parent : $('body')
+		});
+
+		//Get real width of page scroll-bar
+		w1 = $(window).width();
+
+		H.addClass('fancybox-lock-test');
+
+		w2 = $(window).width();
+
+		H.removeClass('fancybox-lock-test');
+
+		$("<style type='text/css'>.fancybox-margin{margin-right:" + (w2 - w1) + "px;}</style>").appendTo("head");
+	});
+
+}(window, document, jQuery));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+	if(Modernizr.history){
+		window.onpopstate = function(event) {
+			if(uri_changed){
+				var tmp_prs = Split(location.pathname, '/');
+				var parsed_url = '';
+					arr_lng = tmp_prs.length;
+					if(arr_lng > 2){
+						for(i=1; i<(arr_lng-1); i++){
+							parsed_url = parsed_url +tmp_prs[i]+'/';
+						}
+						parsed_url = parsed_url +'ajax/'+tmp_prs[arr_lng-1];
+					}else{
+						parsed_url = parsed_url +'ajax/'+location.pathname;
+					}
+				if(location.search != '' && location.search != undefined){
+					parsed_url = parsed_url+location.search;
+				}
+				ajax2 = true;
+				accjax(parsed_url,'ajaxwait','maincontent','GET', '');
+				ajax2 = false;
+			}
+		};
+	}
+/* $('#nav li').hover(
+function () {
+$('ul', this).slideDown(100);
+
+},
+function () {
+$('ul', this).hide();
+}
+);
+$('#nav li').click(
+function () {
+$('ul', this).slideUp(400);
+}
+);
+ */
+
+ $(document).ready(function(){
+
+	// Remove the class of child and grandchild
+	// This removes the CSS 'falback'
+	$("#nav ul.topmenu").removeClass("child");
+	$("#nav ul.grandchild").removeClass("grandchild");
+	
+	// When a list item that contains an unordered list
+	// is hovered on
+	$("#nav li").has("ul").hover(function(){
+
+		//Add a class of current and fade in the sub-menu
+		$(this).addClass("current").children("ul").slideDown(100);
+	}, function() {
+
+		// On mouse off remove the class of current
+		// Stop any sub-menu animation and set its display to none
+		$(this).removeClass("current").children("ul").stop(true, true).css("display", "none");
+	});
+
+});
+ 
+ 
+ 
+ 
+ 
+$('.fancybox').fancybox();
+$('input#menu_name').focus(function() {
+	if (this.value == lng_user) { this.value = '';}
+});
+$('input#menu_name').blur(function() {
+	if (this.value == '') { this.value = lng_user;}
+});
+$('input#menu_pass').focus(function() {
+	if (this.value == lng_pass) { this.value = '';this.setAttribute('type','password');}
+});
+$('input#menu_pass').blur(function() {
+	if (this.value == '') { this.value = lng_pass;this.setAttribute('type','text');}
+});
+});
+
+
+
+
+ticker();
+$(document).on('click', '.tkt_usr_pss', function () {
+	if(IsVisible('dv_tkt_usr_pss')){
+		$('#dv_tkt_usr_pss').slideUp('slow', function() {
+			hide_div('dv_tkt_usr_pss');
+		});
+	}else{
+		$('#dv_tkt_usr_pss').slideDown('slow', function() {
+			show_div('dv_tkt_usr_pss');
+		});
+	}
+});
+$(document).on('click', '.tkt_usr_pss2', function () {
+	if(IsVisible('dv_tkt_usr_pss')){
+		$('#dv_tkt_usr_pss').slideUp('slow', function() {
+			hide_div('dv_tkt_usr_pss');
+			hide_div('dv_tkt_usr_pss_exist');
+		});
+	}else{
+		if(IsVisible('dv_tkt_usr_pss_exist')){
+			$('#dv_tkt_usr_pss_exist').slideUp('slow', function() {
+				hide_div('dv_tkt_usr_pss_exist');
+			});
+		}else{
+			$('#dv_tkt_usr_pss_exist').slideDown('slow', function() {
+				show_div('dv_tkt_usr_pss_exist');
+			});
+		}
+	}
+});
+$(document).on('click', '.dv_tkt_usr_pss_exist_confirm', function () {
+	if(IsVisible('dv_tkt_usr_pss')){
+		$('#dv_tkt_usr_pss').slideUp('slow', function() {
+			hide_div('dv_tkt_usr_pss');
+		});
+	}else{
+		$('#dv_tkt_usr_pss').slideDown('slow', function() {
+			show_div('dv_tkt_usr_pss');
+		});
+	}
+});
+$(document).on('click', '.haghighi', function () {
+	disable('company');
+	hide_div('company_txt');
+	hide_div('company_txt_box');
+	hide_div('company_txt_star');
+	show_div('dv_invitedby');
+	show_div('dv_invitedby2');
+	show_div('dv_code_melii');
+	hide_div('dv_username');
+	hide_div('dv_passport');
+	hide_div('name2');
+	hide_div('family2');
+	$("#loginname").attr('maxlength','50');
+	$("#loginname").attr('placeholder','فقط حروف و اعداد لاتین');
+});
+$(document).on('click', '.khareji', function () {
+	disable('company');
+	hide_div('company_txt');
+	hide_div('company_txt_box');
+	hide_div('company_txt_star');
+	show_div('dv_invitedby');
+	show_div('dv_invitedby2');
+	show_div('dv_passport');
+	hide_div('dv_code_melii');
+	hide_div('dv_username');
+	hide_div('name2');
+	hide_div('family2');
+	$("#loginname").attr('maxlength','50');
+	$("#loginname").attr('placeholder','فقط حروف و اعداد لاتین');
+});
+$(document).on('click', '.hoghooghi', function () {
+	show_div('name2');
+	show_div('family2');
+	show_div('company_txt');
+	show_div('company_txt_box');
+	show_div('company_txt_star');
+	show_div('dv_username');
+	hide_div('dv_invitedby');
+	hide_div('dv_code_melii');
+	hide_div('dv_passport');
+	hide_div('dv_invitedby2');
+	enable('company');
+	$("#loginname").attr('maxlength','50');
+	$("#loginname").attr('placeholder','فقط حروف و اعداد لاتین');
+});
+
+
+
+$(document).on('click', '.invoice_haghighi', function () {
+	hide_div('name_sherkat');
+	hide_div('shenase_melli');
+	hide_div('shomare_sabt');
+	hide_div('eqtesadi_num_dv1');
+	hide_div('eqtesadi_num_dv2');
+	hide_div('eqtesadi_num_dv3');
+	show_div('name_name');
+	show_div('shomare_melli');
+	show_div('shomare_shenasname');
+});
+$(document).on('click', '.invoice_hoghooghi', function () {
+	show_div('name_sherkat');
+	show_div('shenase_melli');
+	show_div('shomare_sabt');
+	show_div('eqtesadi_num_dv1');
+	show_div('eqtesadi_num_dv2');
+	show_div('eqtesadi_num_dv3');
+	hide_div('name_name');
+	hide_div('shomare_melli');
+	hide_div('shomare_shenasname');
+});
+
+
+
+
+(function($){
+  
+    $.fn.extend({   
+
+        filter_input: function(options) {
+
+          var defaults = {  
+              regex:".",
+              negkey: false, // use "-" if you want to allow minus sign at the beginning of the string
+              live:false,
+              events:'keypress paste'
+          }  
+                
+          var options =  $.extend(defaults, options);  
+          
+          function filter_input_function(event) {
+
+            var input = (event.input) ? event.input : $(this);
+            if (event.ctrlKey || event.altKey) return;
+            if (event.type=='keypress') {
+
+              var key = event.charCode ? event.charCode : event.keyCode ? event.keyCode : 0;
+
+              // 8 = backspace, 9 = tab, 13 = enter, 35 = end, 36 = home, 37 = left, 39 = right, 46 = delete
+              if (key == 8 || key == 9 || key == 13 || key == 35 || key == 36|| key == 37 || key == 39 || key == 46) {
+
+                // if charCode = key & keyCode = 0
+                // 35 = #, 36 = $, 37 = %, 39 = ', 46 = .
+         
+                if (event.charCode == 0 && event.keyCode == key) {
+                  return true;                                             
+                }
+              }
+              var string = String.fromCharCode(key);
+              // if they pressed the defined negative key
+              if (options.negkey && string == options.negkey) {
+                // if there is already one at the beginning, remove it
+                if (input.val().substr(0, 1) == string) {
+                  input.val(input.val().substring(1, input.val().length)).change();
+                } else {
+                  // it isn't there so add it to the beginning of the string
+                  input.val(string + input.val()).change();
+                }
+                return false;
+              }
+              var regex = new RegExp(options.regex);
+            } else if (event.type=='paste') {
+              input.data('value_before_paste', event.target.value);
+              setTimeout(function(){
+                filter_input_function({type:'after_paste', input:input});
+              }, 1);
+              return true;
+            } else if (event.type=='after_paste') {
+              var string = input.val();
+              var regex = new RegExp('^('+options.regex+')+$');
+            } else {
+              return false;
+            }
+
+            if (regex.test(string)) {
+              return true;
+            } else if (typeof(options.feedback) == 'function') {
+              options.feedback.call(this, string);
+            }
+            if (event.type=='after_paste') input.val(input.data('value_before_paste'));
+            return false;
+          }
+          
+          var jquery_version = $.fn.jquery.split('.');
+          if (options.live) {
+            if (parseInt(jquery_version[0]) >= 1 && parseInt(jquery_version[1]) >= 7) {
+              $(this).on(options.events, filter_input_function); 
+            } else {
+              $(this).live(options.events, filter_input_function); 
+            }
+          } else {
+            return this.each(function() {  
+              var input = $(this);
+              if (parseInt(jquery_version[0]) >= 1 && parseInt(jquery_version[1]) >= 7) {
+                input.off(options.events).on(options.events, filter_input_function);
+              } else {
+                input.unbind(options.events).bind(options.events, filter_input_function);
+              }
+            });  
+          }
+          
+        }  
+    });  
+      
+})(jQuery); 
+
+
+$(document).ready(function() {
+	$('#loginname').filter_input({regex:'[a-zA-Z0-9\s]'});
+	$('#phone_number').filter_input({regex:'[0-9]'});
+	$('#mobile_number').filter_input({regex:'[0-9]'});
+	$('#postcode').filter_input({regex:'[0-9]'});
+	$('.submitregister1').keypress(function (e) {
+	  if (e.which == 13) {
+		check_register_form1();
+		return false;
+	  }
+	});
+	$('.submitregister2').keypress(function (e) {
+	  if (e.which == 13) {
+		check_register_form2();
+		return false;
+	  }
+	});
+	if ($(".chosen")[0]){
+		jQuery(".chosen").chosen();
+	}
+});
+
+function prepare_register_onlynum(){
+	$('#loginname').filter_input({regex:'[a-zA-Z0-9\s]'});
+	$('#phone_number').filter_input({regex:'[0-9]'});
+	$('#mobile_number').filter_input({regex:'[0-9]'});
+	$('#postcode').filter_input({regex:'[0-9]'});
+}
+
+function prepare_invoice_profile_onlynum(){
+	$('#melli_num').filter_input({regex:'[0-9]'});
+	$('#sabt_shenasname_num').filter_input({regex:'[0-9]'});
+	$('#eqtesadi_num').filter_input({regex:'[0-9]'});
+	$('#phone').filter_input({regex:'[0-9]'});
+	$('#zip').filter_input({regex:'[0-9]'});
+}
+
+$(document).on('click', '.rate_ticket a', function (e) {
+		// make sure the chosen star stays selected
+		var star = $(this);
+		var rating_hash = e.target.id;
+		a = Split(rating_hash, '_');
+		dv_hash = a[1];
+		var curr_score = $('#score_'+dv_hash).val();
+		if(curr_score > 0){
+			alert(already_rated);
+			return false;
+		}
+		star.closest('ul').find('.checked').removeClass('checked');
+		star.addClass('checked');
+		var dv_rate_result = 'rate_ticket_result_'+dv_hash
+		var rating_url = '?param=99100299&param2=rate_ticket&ajx=1&rating='+rating_hash;
+		accjax2(rating_url,'ajaxwait',dv_rate_result,'GET');
+		//return false;
+		//whatever else you want to do when something gets clicked
+});
+
+$(document).on('click', '.lnk_domain_curr_whois', function () {
+	if(IsVisible('tlh_whois_1')){
+		for(i=1; i<15;i++){
+			tgl1 = 'curr_whois_'+i;
+			tgl2 = 'tlh_whois_'+i;
+			toggle(tgl1, tgl2);
+		}
+		$('#tlh_curr_whois').val('curr');
+		$('.lnk_domain_curr_whois').css("font-weight","Bold");
+		$('.lnk_domain_tlh_whois').css("font-weight","Normal");
+	}
+});
+$(document).on('click', '.lnk_domain_tlh_whois', function () {
+	if(IsVisible('curr_whois_1')){
+		for(i=1; i<15;i++){
+			tgl1 = 'curr_whois_'+i;
+			tgl2 = 'tlh_whois_'+i;
+			toggle(tgl1, tgl2);
+		}
+		$('#tlh_curr_whois').val('tlh');
+		$('.lnk_domain_tlh_whois').css("font-weight","Bold");
+		$('.lnk_domain_curr_whois').css("font-weight","Normal");
+	}
+});
+
+$(document).on('click', '.add-ns-record', function(event)
+{
+	var rec_count = $('#record_count').val();
+	var domain_name = $('#domain_name').val();
+	var new_rec_id = Number(rec_count) + 1;
+	var newtr = '<tr><td>'+new_rec_id+'</td><td><select class="record_type_select" name="record_type_'+rec_count+'" id="record_type_'+rec_count+'"><option value="DEL">انتخاب کنید</option><option value="A">A</option><option value="AAAA">AAAA</option><option value="MX">MX</option><option value="TXT">TXT</option><option value="CNAME">CNAME</option><option value="URL">Forward</option></select></td><td><div dir="ltr"><input type="text" name="record_name_'+rec_count+'" id="record_name_'+rec_count+'" dir="ltr" style="width:50px" value="">.'+domain_name+'</div></td><td><input type="text" dir="ltr" style="width:150px" id="record_address_'+rec_count+'" name="record_address_'+rec_count+'" size=18" value=""></td><td><div style="display:none" id="dv_priority_'+rec_count+'"><input type="number" step="1" style="width:50px" name="record_priority_'+rec_count+'" value="0"></div></td></tr>';
+    $(this).closest('tr').before(newtr);
+	$('#record_count').val(new_rec_id);
+});
+
+$(document).on({
+  change: function() {
+	  var rec_type = this.value;
+	  var select_name = $(this).attr('name');
+	  var select_name_length = select_name.length;
+	  var this_rec_id = select_name.substr(12, select_name_length);
+	  if(rec_type == 'MX'){
+		  show_div('dv_priority_'+this_rec_id);
+	  }else{
+		  hide_div('dv_priority_'+this_rec_id);
+	  }
+  }
+}, '.record_type_select');
+
+function SelectRenewYear(ryear){
+	var domain_id_list = $('#domain_id_list').val();
+	var domain_id_count = $('#domain_id_count').val();
+	domain_id_arr = Split(domain_id_list, ':');
+	for(var i=0; i < domain_id_count; i++){
+		if ( $('#renew-'+domain_id_arr[i]+' option[value='+ryear+']').length > 0 ){
+			$('#renew-'+domain_id_arr[i]).val(ryear);
+		}
+	}
+}
+
+
+function scrollToID(id){
+    var aTag = $('#'+id);
+	var ofset_top = aTag.offset().top - 130;
+    $('html,body').animate({scrollTop: ofset_top},'slow');
+	$('#'+id).fadeIn(200).fadeOut(300).fadeIn(1500);
+}
+
+
+/* var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-5444276-3']);
+_gaq.push(['_setDomainName', 'www.talahost.com']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})(); */

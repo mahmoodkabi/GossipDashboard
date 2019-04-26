@@ -1,0 +1,228 @@
+﻿<div id="visitor-comment">
+    <ul class="comment-section">
+        <li class="write-new">
+            <form action="#" id="fromComment">
+                <input type="text" id="userName-comment" class="form-control" required placeholder="نام" style="margin-bottom:6px;" />
+                <textarea placeholder="نظر خودتون رو درباره این مطلب بنوسید" required name="comment" id="txtComment"></textarea>
+                <div>
+                    <button type="button" id="btnAddComment">ارسال</button>
+
+                    <br />
+                    <div class="alert alert-success" id="alertSuccess" style="display:none">
+                        <strong>موفق! </strong> نظر شما با موفقیت ثبت گردید
+                    </div>
+                    <div class="alert alert-danger" id="alertFailed" style="display:none">
+                        <strong>خطا !</strong> پوزش می خواهیم، مشکلی در ثبت نظر شما به وجود آمد. لطفا دوباره دکمه ارسال را کلیک کنید
+                    </div>
+                </div>
+            </form>
+        </li>
+    </ul>
+
+
+
+    <button type="button" id="moreComment" style="width: 100%;
+    padding: 10px;
+    display: block;
+    border: 1px solid #fff;
+    border-color: #fff;
+    background-color: #444;
+    background-image: none;
+    text-shadow: none;
+    color: #fff;
+    font-size: 14px;
+    line-height: normal;
+    box-sizing: border-box;
+    height: auto;
+    display:none;">
+        نظرات بیشتر
+    </button>
+
+
+</div>
+
+
+
+<script>
+    var comment = ""; postID = 0, skip = 0, take = 10;
+    jQuery(document).ready(function () {
+        postID = jQuery("#postIDHidden").val();
+        callComment();
+
+        //var writeNew = "<li class='write-new'>" +
+        //    "<form action='#' method='post'>" +
+        //        "<input type='text' id='userName-comment' class='form-control' placeholder='نام' style='margin-bottom:6px'/>" +
+        //        "<textarea placeholder='نظر خودتون رو درباره این مطلب بنوسید' name='comment'></textarea>" +
+        //        "<div>" +
+        //            "<button type='submit'>ارسال</button>" +
+        //        "</div>" +
+        //    "</form>" +
+        //"</li>";
+        //jQuery('#visitor-comment .comment-section').empty();
+        //jQuery('#visitor-comment .comment-section').append(writeNew);
+    });
+
+
+    jQuery('#moreComment').on('click', function () {
+        callComment();
+    });
+
+    jQuery('#btnAddComment').on('click', function (e) {
+        if (jQuery("#txtComment").val() == "" || jQuery("#userName-comment").val()=="") {
+            jQuery("#alertSuccess").css("display", "none");
+            jQuery("#alertFailed").css("display", "block");
+            return;
+        }
+
+        var commentUser = {
+            PostID_fk: postID,
+            Comment: jQuery("#txtComment").val(),
+            LikeComment: 0,
+            DislikeComment: 0,
+            FullName: jQuery("#userName-comment").val(),
+        };
+  
+        jQuery.ajax({
+            url: '@Url.Action("AddComment", "Comment")',
+            type: 'Post',
+            data: JSON.stringify( commentUser),
+                    contentType: "application/json; charset=utf-8",
+            success(res) {
+                jQuery("#alertSuccess").css("display", "block");
+                jQuery("#alertFailed").css("display", "none");
+
+                jQuery("#txtComment").val("");
+                jQuery("#userName-comment").val("");
+
+                comment = "<li class='comment user-comment'>" +
+                       "<div class='info'>" +
+                           "<a>" + commentUser.FullName + "</a>" +
+                           "<span> همین الان </span>" +
+                       "</div>" +
+                       "<a class='avatar' href='#'>" +
+                           "<img src='/Content/Image/avatar_author.jpg' width='35' alt='' title='" + commentUser.FullName + "' />" +
+                       "</a>" +
+                       "<p>" + commentUser.Comment + "</p>" +
+                   "</li>";
+                jQuery('#visitor-comment .comment-section').append(comment);
+            },
+            error(e) {
+                jQuery("#alertSuccess").css("display", "none");
+                jQuery("#alertFailed").css("display", "block");
+            }
+        });
+    });
+
+
+
+
+    function callComment() {
+        jQuery.ajax({
+            url: '@Url.Action("ReadComment", "Comment")',
+            type: 'Post',
+            data: JSON.stringify({ postID, skip, take}),
+                    contentType: "application/json; charset=utf-8",
+            success(res) {
+                if (res.length > 0 && res[0].TotalComment > 10)
+                    jQuery("#moreComment").css("display", "block");
+
+                skip += 10;
+                for (i = 0; i < res.length; i++) {
+                    if (i % 2 == 0) {
+                        comment = "<li class='comment user-comment'>" +
+                                            "<div class='info'>" +
+                                                "<a>" + (res[i].FullName == null ? 'ناشناس' : res[i].FullName) + "</a>" +
+                                                "<span>" + (res[i].JalaliDatetime == null ? '' : res[i].JalaliDatetime) + "</span>" +
+                                            "</div>" +
+                                            "<a class='avatar' href='#'>" +
+                                                "<img src='/Content/Image/avatar_author.jpg' width='35' alt='' title='" + (res[i].FullName == null ? 'ناشناس' : res[i].FullName) + "' />" +
+                                            "</a>" +
+                                            "<p>" + res[i].Comment + "</p>" +
+                                        "</li>";
+
+                    }
+                    else {
+                        comment = "<li class='comment author-comment'>" +
+                                        "<div class='info'>" +
+                                            "<a href='#'>" + (res[i].FullName == null ? 'ناشناس' : res[i].FullName) + "</a>" +
+                                            "<span>" + (res[i].JalaliDatetime == null ? '' : res[i].JalaliDatetime) + "</span>" +
+                                        "</div>" +
+                                        "<a class='avatar' href='#'>" +
+                                            "<img src='/Content/Image/avatar_user_1.jpg' width='35' alt='' title='" + (res[i].FullName == null ? 'ناشناس' : res[i].FullName) + "' />" +
+                                        "</a>" +
+                                        "<p>" + res[i].Comment + "</p>" +
+                                    "</li>";
+                    }
+
+                    jQuery('#visitor-comment .comment-section').append(comment);
+                }
+
+            },
+            error(e) {
+
+            }
+        });
+    }
+
+    @*var lastScrollTop = 0, skip = 0, take = 10;
+    jQuery(window).scroll(function (event) {
+        var st = jQuery(this).scrollTop();
+        // downscroll
+        if (st > lastScrollTop) {
+            //calculating the client's hidden bottom height of the document
+            var BottomHeight = jQuery(document).height() - jQuery(window).height() - jQuery(window).scrollTop();
+            //set the min value of the document's hidden bottom height
+            var minBHeight = jQuery(document).height() - jQuery('.author-box').offset().top;
+
+            if (BottomHeight < minBHeight) {
+                jQuery.ajax({
+                    url: '@Url.Action("ReadComment", "Comment")',
+                    type: 'Post',
+                    data: JSON.stringify({ postID, skip, take}),
+                    contentType: "application/json; charset=utf-8",
+                    success(res) {
+                        skip += 10;
+                        for (i = 0; i < res.length; i++) {
+                            if(i/2 == 0){
+                                comment = "<li class='comment user-comment'>" +
+                                                    "<div class='info'>" +
+                                                        "<p>" + res[i].FullName + "</p>" +
+                                                        "<span>" + res[i].Datetime + "</span>" +
+                                                    "</div>" +
+                                                    "<a class='avatar' href='#'>" +
+                                                        "<img src='~/Content/Image/avatar_author.jpg' width='35' alt='Profile Avatar' title='" + res[i].FullName + "' />" +
+                                                    "</a>" +
+                                                    "<p>" + res[i].Comment + "</p>" +
+                                                "</li>";
+
+                            }
+                            else {
+                                comment =  "<li class='comment author-comment'>"+
+                                                "<div class='info'>"+
+                                                    "<a href='#'>" + res[i].FullName + "</a>" +
+                                                    "<span>" + res[i].Datetime + "</span>" +
+                                                "</div>"+
+                                                "<a class='avatar' href='#'>"+
+                                                    "<img src='~/Content/Image/avatar_user_1.jpg' width='35' alt='Profile Avatar' title='" + res[i].FullName + "' />" +
+                                                "</a>"+
+                                                "<p>" + res[i].Comment + "</p>" +
+                                            "</li>";
+                            }
+
+                            jQuery('#visitor-comment .comment-section').append(comment);
+                        }
+
+                    },
+                    error(e) {
+
+                    }
+                });
+            }
+        }
+        // upscroll
+        else {
+
+        }
+        lastScrollTop = st;
+    })*@
+</script>

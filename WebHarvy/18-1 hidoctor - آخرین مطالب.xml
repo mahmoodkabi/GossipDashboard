@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>https://www.hidoctor.ir/</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[0][wrapper site-wrap]\DIV[3][latest-posts-box]\DIV[1][latest-posts-list container]\DIV[0][row]\DIV[0][col-xs-6 col-sm-4 col-lg-3 latest-post-item-wrap]\ARTICLE[0][latest-post-item ]\A[1][ ]\H2[0][entry-title]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SubSubject1_1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[0][wrapper site-wrap]\DIV[3][latest-posts-box]\DIV[1][latest-posts-list container]\DIV[0][row]\DIV[0][col-xs-6 col-sm-4 col-lg-3 latest-post-item-wrap]\ARTICLE[0][latest-post-item ]\A[1][ ]\P[1][excerpt]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Url</type>
+            <name>SourceSiteUrl</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[0][wrapper site-wrap]\DIV[3][latest-posts-box]\DIV[1][latest-posts-list container]\DIV[0][row]\DIV[0][col-xs-6 col-sm-4 col-lg-3 latest-post-item-wrap]\ARTICLE[0][latest-post-item ]\A[1][ ]\H2[0][entry-title]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Follow</type>
+            <xpath>HTML[0][ ]\BODY[1][rtl home blog]\DIV[0][wrapper site-wrap]\DIV[3][latest-posts-box]\DIV[1][latest-posts-list container]\DIV[0][row]\DIV[0][col-xs-6 col-sm-4 col-lg-3 latest-post-item-wrap]\ARTICLE[0][latest-post-item ]\A[1][ ]\H2[0][entry-title]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-328490 single-format-standard]\DIV[0][wrapper site-wrap]\DIV[1][site-main-block container single-page--main-block category-main-block]\DIV[1][row]\MAIN[1][col-md-8 col-lg-6 order-xs-1 order-md-2 single-page-main]\ARTICLE[0][single-post-item]\DIV[2][post-content typography single-post-body clearfix]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+		<DATAFIELD>
+            <type>HTML</type>
+            <name>HTML</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-328490 single-format-standard]\DIV[0][wrapper site-wrap]\DIV[1][site-main-block container single-page--main-block category-main-block]\DIV[1][row]\MAIN[1][col-md-8 col-lg-6 order-xs-1 order-md-2 single-page-main]\ARTICLE[0][single-post-item]\DIV[2][post-content typography single-post-body clearfix]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceDateTimePost</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl post-template-default single single-post postid-328490 single-format-standard]\DIV[0][wrapper site-wrap]\DIV[1][site-main-block container single-page--main-block category-main-block]\DIV[1][row]\MAIN[1][col-md-8 col-lg-6 order-xs-1 order-md-2 single-page-main]\ARTICLE[0][single-post-item]\DIV[1][single-post-heading]\DIV[0][post-detail]\DIV[0][others ]\SPAN[0][date hidden-xs]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Back</type>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

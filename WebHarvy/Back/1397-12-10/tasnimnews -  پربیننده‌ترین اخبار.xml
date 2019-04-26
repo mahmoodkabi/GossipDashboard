@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<MineParams
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StartURL>
+        <url>https://www.tasnimnews.com/</url>
+    </StartURL>
+    <FieldList>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Subject1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-xs-12]\DIV[0][row]\SECTION[1][main col-sm-4 col-xs-12 bordered]\SECTION[2][news-container news-box]\SECTION[1][content]\ARTICLE[0][box-item]\A[0][ ]\DIV[0][numbered-item col-xs-12 text-container]\DIV[0][row]\H5[1][title col-xs-10 vcenter]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Url</type>
+            <name>SourceSiteUrl</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-xs-12]\DIV[0][row]\SECTION[1][main col-sm-4 col-xs-12 bordered]\SECTION[2][news-container news-box]\SECTION[1][content]\ARTICLE[0][box-item]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Link_Follow</type>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-xs-12]\DIV[0][row]\SECTION[1][main col-sm-4 col-xs-12 bordered]\SECTION[2][news-container news-box]\SECTION[1][content]\ARTICLE[0][box-item]\A[0][ ]\</xpath>
+            <pattern>true</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Image_URL</type>
+            <name>Image1_1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-sm-8 col-xs-12]\ARTICLE[1][single-news]\DIV[4][ ]\FIGURE[0][ ]\A[0][ ]\IMG[0][img-responsive center_position ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>HTML</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-sm-8 col-xs-12]\ARTICLE[1][single-news]\DIV[5][story]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>HTML</type>
+            <name>ContentHTML</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-sm-8 col-xs-12]\ARTICLE[1][single-news]\DIV[5][story]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SourceDateTimePost</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-sm-8 col-xs-12]\ARTICLE[1][single-news]\UL[2][list-inline details]\LI[0][time]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>SubSubject1_1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-sm-8 col-xs-12]\ARTICLE[1][single-news]\H3[1][lead]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Tag1</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-sm-8 col-xs-12]\ARTICLE[1][single-news]\UL[2][list-inline details]\LI[1][service]\A[0][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Tag2</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-sm-8 col-xs-12]\ARTICLE[1][single-news]\UL[2][list-inline details]\LI[2][service]\A[0][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+        <DATAFIELD>
+            <type>Text</type>
+            <name>Tag3</name>
+            <xpath>HTML[0][ ]\BODY[1][rtl]\DIV[2][container]\MAIN[0][ ]\DIV[0][row]\SECTION[0][body col-md-9 col-sm-12 col-xs-12]\DIV[0][row]\SECTION[0][col-sm-8 col-xs-12]\ARTICLE[1][single-news]\UL[2][list-inline details]\LI[3][comments]\A[0][ ]\</xpath>
+            <pattern>false</pattern>
+            <regex />
+        </DATAFIELD>
+    </FieldList>
+    <KeywordList />
+    <KeywordFileList />
+    <FileAnchorKWList />
+</MineParams>

@@ -1,0 +1,9 @@
+﻿HtmlDocument doc = new HtmlDocument();
+doc.Load(yourStream);
+
+var itemList = doc.DocumentNode.SelectNodes("//div[@id='thumbs']")//this xpath selects all div with thubs id
+                  .Select(p => p.InnerText)
+                  .ToList();
+
+//itemList now contain all the div tags content having its id as thumbs
+------------------------------------------------------------------------------------------------------------------

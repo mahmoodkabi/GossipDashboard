@@ -1,0 +1,32 @@
+/**
+ * @package themeplaza_slider
+ * @version 1.0.0
+ * @since 1.0.0
+ * @author Grig <grigpage@gmail.com>
+ * @copyright Copyright (c) 2015, Themeplaza
+ */
+
+.themeplaza-error {
+	padding: 5px 15px;
+	border-radius: 4px;
+	background: #f2dede;
+	color: #a94442;
+}
+.flexslider {
+	margin:0 !important;
+}
+.flex-direction-nav a:before {
+	font-size: 25px !important;
+}
+.flex-direction-nav a {
+	border-bottom: none !important;
+}
+.flex-slider-caption {
+	margin: 30px !important;
+}
+.slide-text {
+	margin-top:-90px;
+}
+.slide-text h2 {
+	color:#fff;
+}
