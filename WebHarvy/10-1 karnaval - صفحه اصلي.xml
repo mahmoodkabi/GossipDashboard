@@ -61,7 +61,6 @@
             <pattern>false</pattern>
             <regex />
         </DATAFIELD>
-<<<<<<< HEAD
                <DATAFIELD>
             <type>Text</type>
             <name>ContentHTMLText</name>
@@ -69,8 +68,6 @@
             <pattern>false</pattern>
             <regex />
         </DATAFIELD>
-=======
->>>>>>> 9457575f... رفع ایراد صفحه عجیب و غریب . در یو آر ال نباید نقطه باشد
         <DATAFIELD>
             <type>Link_Back</type>
             <pattern>false</pattern>

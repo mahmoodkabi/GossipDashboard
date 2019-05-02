@@ -1649,6 +1649,14 @@ namespace GossipDashboard.Helper
                         }
                         res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
 
+                        helperPostManagement.ClearContentNode(nodes, "entry-header");
+                        if (nodes != null && nodes.FirstOrDefault() != null)
+                            res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
+
+                        helperPostManagement.ClearContentNode(nodes, "gridlove-ad");
+                        if (nodes != null && nodes.FirstOrDefault() != null)
+                            res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
+
                         break;
 
                     case "CINEMASCHOOLS":

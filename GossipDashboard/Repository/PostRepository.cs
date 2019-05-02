@@ -781,7 +781,8 @@ namespace GossipDashboard.Repository
 
                 if (isExist == null && item.Subject1 != null && item.Subject1.Trim().Length > 3
                     && item.HTML != null && item.HTML.Trim() != ""
-                    && item.ContentHTML != null && item.ContentHTML.Trim() != "")
+                    && item.ContentHTML != null && item.ContentHTML.Trim() != ""
+                    && item.SourceSiteUrl != null)
                 {
                     //حذف کارکترهايي که نیاز نیست
                     item.HTML = item.HTML.Replace("&nbsp;", "");
