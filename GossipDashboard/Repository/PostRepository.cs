@@ -988,6 +988,9 @@ namespace GossipDashboard.Repository
             }
 
             context.SaveChanges();
+
+            //حذف پست های تکراری
+            context.sp_DeleteDuplicatePost(true);
         }
 
 
