@@ -720,6 +720,12 @@ namespace GossipDashboard.Repository
             return res;
         }
 
+        public IQueryable<Post> SelectAll()
+        {
+            var res = context.Posts;
+            return res;
+        }
+
         public IQueryable<Post> SelectAll(string condition)
         {
             throw new NotImplementedException();
@@ -864,6 +870,10 @@ namespace GossipDashboard.Repository
                                     entityPost.SourceSiteNameFa = "یورونیوز فارسی";
                                     entityPost.ContentHTML = item.ContentHTML.Replace("اندازه متن", "");
                                     entityPost.ContentHTML = item.ContentHTML.Replace("Aa", "");
+
+                                    //عکس اول  با وب هاروی ست شده است
+                                    if (item.Image1_1 != null && item.Image1_1 != "")
+                                        entityPost.Image1_1 = item.Image1_1;
 
                                     //پست های تصویری سایت یورونیوز با محتوا همخوانی ندارد
                                     //وب هاروی درست عمل نمی کند
@@ -1240,7 +1250,7 @@ namespace GossipDashboard.Repository
             }
 
             //---------------------------------------------------------------------------
-            //به دست آوردن مقادیر تمامی ندهای اسپن
+            //به دست آوردن مقادیر تمامی ندهای ایمج
             nodes = doc.DocumentNode.SelectNodes("//img");
             bool isImage1_1Set = false;
             Uri uri = null;
@@ -1330,18 +1340,30 @@ namespace GossipDashboard.Repository
 
             //---------------------------------------------------------------------------
             //به دست آوردن یوآرال فایل ویدیویی
-            var regMatchHttpVideo = Regex.Matches(doc.DocumentNode.OuterHtml, "(http|https)://([\\w+?\\.\\w+])+([a-zA-Z0-9\\~\\!\\@\\#\\$\\%\\^\\&amp;\\*\\(\\)_\\-\\=\\+\\\\\\/\\?\\.\\:\\;\\'\\,]*)?.(?:mp4|mkv|webm|ogg)");
+            ExtractVideoURL(doc.DocumentNode.OuterHtml, entity);
+
+            //---------------------------------------------------------------------------
+            //به دست آوردن یوآرال فایل صوتی
+            var regMatchHttpMP3 = Regex.Matches(doc.DocumentNode.OuterHtml, "(http|https)://([\\w+?\\.\\w+])+([a-zA-Z0-9\\~\\!\\@\\#\\$\\%\\^\\&amp;\\*\\(\\)_\\-\\=\\+\\\\\\/\\?\\.\\:\\;\\'\\,]*)?.(?:mp3|mp0)");
+            if (regMatchHttpMP3 != null && regMatchHttpMP3.Count > 0)
+            {
+                entity.UrlMP3 = regMatchHttpMP3[0].Value;
+            }
+
+            return entity;
+        }
+
+
+        /// <summary>
+        /// به دست آوردن یوآرال فایل ویدیویی
+        /// </summary>
+        /// <param name="doc"></param>
+        /// <param name="entity"></param>
+        private void ExtractVideoURL(string outerHtml, Post entity)
+        {
+            var regMatchHttpVideo = Regex.Matches(outerHtml, "(http|https)://([\\w+?\\.\\w+])+([a-zA-Z0-9\\~\\!\\@\\#\\$\\%\\^\\&amp;\\*\\(\\)_\\-\\=\\+\\\\\\/\\?\\.\\:\\;\\'\\,]*)?.(?:mp4|mkv|webm|ogg)");
             if (regMatchHttpVideo != null && regMatchHttpVideo.Count > 0)
             {
-
-                //if (regMatchHttpVideo.Count == 1)
-                //{
-                //    entity.UrlVideo = regMatchHttpVideo[0].Value;
-                //}
-                ////در صورتی که چند فایل ویدیویی در پست وجود داشت
-                //else
-                //{
-
                 //در صورتی که یک یا چند فایل ویدیویی در پست وجود داشت، حجم کمتر را انتخاب کن
                 // بیشتر در سایت انتخاب رخ می دهد
                 List<Tuple<double, string>> lstDuration = new List<Tuple<double, string>>();
@@ -1367,19 +1389,7 @@ namespace GossipDashboard.Repository
                     if (resVideo1 != null)
                         entity.UrlVideo = resVideo1.Item2;
                 }
-
-                //}
             }
-
-            //---------------------------------------------------------------------------
-            //به دست آوردن یوآرال فایل صوتی
-            var regMatchHttpMP3 = Regex.Matches(doc.DocumentNode.OuterHtml, "(http|https)://([\\w+?\\.\\w+])+([a-zA-Z0-9\\~\\!\\@\\#\\$\\%\\^\\&amp;\\*\\(\\)_\\-\\=\\+\\\\\\/\\?\\.\\:\\;\\'\\,]*)?.(?:mp3|mp0)");
-            if (regMatchHttpMP3 != null && regMatchHttpMP3.Count > 0)
-            {
-                entity.UrlMP3 = regMatchHttpMP3[0].Value;
-            }
-
-            return entity;
         }
 
 
@@ -1443,6 +1453,24 @@ namespace GossipDashboard.Repository
 
             return finalRes;
         }
+
+
+        /// <summary>
+        /// پردازش های مورد نیاز دیگر
+        /// </summary>
+        public void ExtraProccess()
+        {
+            // گاهی یو آر ال ویدیویی در زمان پردازش اولیه تولید نمی شود
+            // برای همین در زمان های دیگر عملیات استخراج یو آر ال ویدیو را تکرار می کنیم
+            var res = SelectAll().Where(p => p.UrlVideo == null).OrderByDescending(p => p.PostID).Take(1000).ToList();
+            foreach (var item in res)
+            {
+                ExtractVideoURL(item.ContentHTML, item);
+                context.SaveChanges();
+            }
+
+        }
+
 
     }
 }

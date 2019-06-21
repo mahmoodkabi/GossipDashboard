@@ -54,6 +54,13 @@ namespace GossipDashboard.Controllers
             //return View("Dashboard/Index");
         }
 
+
+        /// پردازش های مورد نیاز دیگر
+        public void ExtraProccess()
+        {
+            repo.ExtraProccess();
+        }
+
         //ایجاد صفحه اصلی
         private void CreateIndexPage(string path, PostManagement postManagement)
         {
@@ -877,7 +884,7 @@ namespace GossipDashboard.Controllers
                 });
             }
 
-          
+
 
             return Json(true, JsonRequestBehavior.AllowGet);
 
