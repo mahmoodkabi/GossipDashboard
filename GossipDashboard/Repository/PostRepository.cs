@@ -742,6 +742,16 @@ namespace GossipDashboard.Repository
             //حذف پست های تکراری
             context.sp_DeleteDuplicatePost(true);
 
+            //تغییر به پست ایجاد شده برای پست هایی که با سکشن شروع می شوند
+            //این پست ها درست نمایش داده نمی شوند
+            var changeToIsCreatedPostList = context.PostTemperories.Where(p => p.IsCreatedPost != true && p.ContentHTML.StartsWith("<section")).ToList();
+            foreach (var item in changeToIsCreatedPostList)
+            {
+                item.IsCreatedPost = true;
+                context.SaveChanges();
+            }
+
+
             // فچ کردن لیست کلمات پرتکرار و غیر کلیدی در زبان فارسی
             var wordFrequency = context.FrequencyWords.Select(p => p.FrequencyWord1).ToList();
 
@@ -795,24 +805,26 @@ namespace GossipDashboard.Repository
                     //اصلاح لینک یو آر ال عکس ها
                     if (item.SourceSiteUrl != null && item.SourceSiteUrl.Contains("rangehonar"))
                     {
-                        //اصلاح لینک یو آر ال عکس ها
                         var url = "src=\"https://www.rangehonar.com";
                         tempContentHTML = item.ContentHTML.Replace("src=\"", url);
                         tempHTML = tempContentHTML;
                     }
-                    //اصلاح لینک یو آر ال عکس ها
                     if (item.SourceSiteUrl != null && item.SourceSiteUrl.Contains("iliadmag"))
                     {
-                        //اصلاح لینک یو آر ال عکس ها
                         var url = "src=\"https://iliadmag.com/";
                         tempContentHTML = item.ContentHTML.Replace("src=\"", url);
                         tempHTML = tempContentHTML;
                     }
-                    //اصلاح لینک یو آر ال عکس ها
                     if (item.SourceSiteUrl != null && item.SourceSiteUrl.Contains("setare"))
                     {
-                        //اصلاح لینک یو آر ال عکس ها
                         var url = "src=\"https://setare.com";
+                        tempContentHTML = item.ContentHTML.Replace("src=\"", url);
+                        tempHTML = tempContentHTML;
+                    }
+                    if (item.SourceSiteUrl != null && item.SourceSiteUrl.Contains("entekhab"))
+                    {
+                        //اصلاح لینک یو آر ال عکس ها
+                        var url = "src=\"https://www.entekhab.ir";
                         tempContentHTML = item.ContentHTML.Replace("src=\"", url);
                         tempHTML = tempContentHTML;
                     }
@@ -853,9 +865,10 @@ namespace GossipDashboard.Repository
                                     entityPost.ContentHTML = item.ContentHTML.Replace("اندازه متن", "");
                                     entityPost.ContentHTML = item.ContentHTML.Replace("Aa", "");
 
-                                    //عکس اول یورونیوز فارسی با وب هاروی ست شده است
-                                    if (item.Image1_1 != null && item.Image1_1 != "")
-                                        entityPost.Image1_1 = item.Image1_1;
+                                    //پست های تصویری سایت یورونیوز با محتوا همخوانی ندارد
+                                    //وب هاروی درست عمل نمی کند
+                                    entityPost.UrlVideo = null;
+
                                     break;
                                 case "IRANNAZ":
                                     entityPost.SourceSiteNameFa = "ایران ناز";

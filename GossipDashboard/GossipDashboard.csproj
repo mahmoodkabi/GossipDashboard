@@ -52,8 +52,8 @@
     <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\GossipSite\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.11.7.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.7\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Kendo.Mvc">
       <HintPath>..\..\Fava\HRMNew\lib\KENDOUIMVC\2018.2.516.545\Kendo.Mvc.dll</HintPath>
@@ -320,7 +320,6 @@
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="TestGit\Class1.cs" />
     <Compile Include="ViewModel\VM_SearchResult.cs" />
     <Compile Include="ViewModel\VM_Comment.cs" />
     <Compile Include="ViewModel\VM_Log.cs" />

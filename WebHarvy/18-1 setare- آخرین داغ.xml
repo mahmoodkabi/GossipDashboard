@@ -36,6 +36,7 @@
         <DATAFIELD>
             <type>HTML</type>
             <name>ContentHTML</name>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[4][container main_page news_container news-main-container]\DIV[0][row]\DIV[0][col-md-22 col-sm-30 col-xs-36 no-padd-r no-padd-l-sm news_center_col]\DIV[0][content_page_news]\DIV[0][ ]\DIV[3][news_body]\</xpath>
             <xpath>HTML[0][ ]\BODY[1][ ]\DIV[5][container main_page news_container]\DIV[0][row]\DIV[0][col-md-22 col-sm-30 col-xs-36 no-padd-r no-padd-l-sm news_center_col]\DIV[0][content_page_news]\DIV[0][ ]\DIV[3][news_body]\DIV[1][news_inner]\DIV[0][news_contents]\</xpath>
             <pattern>false</pattern>
             <regex />

@@ -33,6 +33,10 @@ namespace GossipDashboard.Helper
         /// <returns></returns>
         internal HtmlNode CreateBloglist(VM_Post post, string fromWhere, int rowID)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             string postClassArticle = "", postClassCategory = "", postCol = "col-md-4";
 
             //پست های مشابه به صورت ایجکس فراخوانی می شود و با سی اس اس نیز فرمت دهی میشود
@@ -65,7 +69,7 @@ namespace GossipDashboard.Helper
             {
                 //مربوط به صفحه CreateIndexPage
                 //در صورتی که در سه پست اولیه تعداد ستون چهارتا نبود به چهار تنظیم شود
-                if ((fromWhere == "CreateIndexPage" && rowID <= 2)  || (fromWhere == "CreatePostAjax") || (fromWhere == "MusicPage") || (fromWhere == "SearchPostAjax"))
+                if ((fromWhere == "CreateIndexPage" && rowID <= 2) || (fromWhere == "CreatePostAjax") || (fromWhere == "MusicPage") || (fromWhere == "SearchPostAjax"))
                 {
                     int val = 0;
                     var col = item.NameEn;
@@ -83,7 +87,7 @@ namespace GossipDashboard.Helper
                 //پست های مشابه به صورت ایجکس فراخوانی می شود و با سی اس اس نیز فرمت دهی میشود
                 //احتیاج ندارد col-md-4  برای همین به 
                 //کاشی
-                 else if ((fromWhere == "RelatedPost"))
+                else if ((fromWhere == "RelatedPost"))
                     postCol = "";
                 else
                     postCol = " " + item.ClassName + " ";
@@ -172,6 +176,10 @@ namespace GossipDashboard.Helper
         //private HtmlNode CreateHeadStandard(VM_Post post, string templateCategory)
         private HtmlNodeCollection CreateHeadStandard(VM_Post post, string categoryAboveClass, string categoryAboveName, string urlCategory, HtmlDocument docTemplates, string postUrl)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             var nodes = docTemplates.DocumentNode.SelectNodes("//div");
             foreach (var itemNode in nodes)
             {
@@ -240,6 +248,10 @@ namespace GossipDashboard.Helper
 
         private HtmlNodeCollection CreateHeadAudio(VM_Post post, string categoryAboveClass, string categoryAboveName, string urlCategory, HtmlDocument docTemplates, string postUrl)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             var nodes = docTemplates.DocumentNode.SelectNodes("//div");
             foreach (var itemNode in nodes)
             {
@@ -315,6 +327,10 @@ namespace GossipDashboard.Helper
 
         private HtmlNodeCollection CreateHeadGallery(VM_Post post, string categoryAboveClass, string categoryAboveName, string urlCategory, HtmlDocument docTemplates, string postUrl)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             var nodes = docTemplates.DocumentNode.SelectNodes("//div");
             foreach (var itemNode in nodes)
             {
@@ -403,6 +419,10 @@ namespace GossipDashboard.Helper
 
         private HtmlNodeCollection CreateHeadimage(VM_Post post, string categoryAboveClass, string categoryAboveName, string urlCategory, HtmlDocument docTemplates, string postUrl)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             var nodes = docTemplates.DocumentNode.SelectNodes("//div");
             foreach (var itemNode in nodes)
             {
@@ -457,6 +477,10 @@ namespace GossipDashboard.Helper
 
         private HtmlNodeCollection CreateHeadLink(VM_Post post, string categoryAboveClass, string categoryAboveName, string urlCategory, HtmlDocument docTemplates, string postUrl)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             var nodes = docTemplates.DocumentNode.SelectNodes("//div");
             foreach (var itemNode in nodes)
             {
@@ -488,6 +512,10 @@ namespace GossipDashboard.Helper
 
         private HtmlNodeCollection CreateHeadQuote(VM_Post post, string categoryAboveClass, string categoryAboveName, string urlCategory, HtmlDocument docTemplates, string postUrl)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             var nodes = docTemplates.DocumentNode.SelectNodes("//div");
             foreach (var itemNode in nodes)
             {
@@ -519,6 +547,10 @@ namespace GossipDashboard.Helper
 
         private HtmlNodeCollection CreateHeadStatus(VM_Post post, string categoryAboveClass, string categoryAboveName, string urlCategory, HtmlDocument docTemplates, string postUrl)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             var nodes = docTemplates.DocumentNode.SelectNodes("//div");
             foreach (var itemNode in nodes)
             {
@@ -544,6 +576,10 @@ namespace GossipDashboard.Helper
 
         private HtmlNodeCollection CreateHeadAparat(VM_Post post, string categoryAboveClass, string categoryAboveName, string urlCategory, HtmlDocument docTemplates, string postUrl)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             var nodes = docTemplates.DocumentNode.SelectNodes("//div");
             foreach (var itemNode in nodes)
             {
@@ -600,6 +636,10 @@ namespace GossipDashboard.Helper
 
         internal HtmlNode CreateStickerTop(VM_Post post)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             string categoryAboveClass = "", categoryAboveName = "";
 
 
@@ -620,12 +660,16 @@ namespace GossipDashboard.Helper
                 categoryAboveName += " " + item.NameFa + " ";
             }
 
-            HtmlNode newChild = HtmlNode.CreateNode("<a href='"+ postUrl + "'>"+ post.Subject1 + "</a>");
+            HtmlNode newChild = HtmlNode.CreateNode("<a href='" + postUrl + "'>" + post.Subject1 + "</a>");
             return newChild;
         }
 
         private HtmlNodeCollection CreateHeadVideo(VM_Post post, string categoryAboveClass, string categoryAboveName, string urlCategory, HtmlDocument docTemplates, string postUrl)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             var nodes = docTemplates.DocumentNode.SelectNodes("//div");
             foreach (var itemNode in nodes)
             {
@@ -858,6 +902,10 @@ namespace GossipDashboard.Helper
 
         public HtmlNode CreateCatListContent(VM_Post post)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             string catListClass = "";
 
             foreach (var item in post.PostCategory)
@@ -921,6 +969,9 @@ namespace GossipDashboard.Helper
 
         internal HtmlNode CreateBloglistContent(VM_Post post)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
 
             string categoryAboveClass = "", categoryAboveName = "";
 
@@ -971,9 +1022,12 @@ namespace GossipDashboard.Helper
             return null;
         }
 
-
         internal HtmlNode CreateBloglistDefault(VM_Post post)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             try
             {
                 string categoryAboveClass = "", categoryAboveName = "";
@@ -1059,10 +1113,12 @@ namespace GossipDashboard.Helper
             return null;
         }
 
-
-
         internal HtmlNode CreateSliderImageBottom(VM_Post post)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             string categoryAboveClass = "", categoryAboveName = "";
 
 
@@ -1110,12 +1166,13 @@ namespace GossipDashboard.Helper
             return null;
         }
 
-
-
         internal HtmlNode CreateSliderImageBottom_ImageBottom(VM_Post post)
         {
-            string categoryAboveClass = "", categoryAboveName = "";
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
 
+            string categoryAboveClass = "", categoryAboveName = "";
 
             foreach (var item in post.PostCategory)
             {
@@ -1149,6 +1206,10 @@ namespace GossipDashboard.Helper
 
         internal HtmlNode CreatePostMostViewed(VM_Post post, int rowID)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             string categoryAboveClass = "", categoryAboveName = "";
 
 
@@ -1209,6 +1270,10 @@ namespace GossipDashboard.Helper
 
         internal HtmlNode CreatePostPopular(VM_Post post, int rowID)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             string categoryAboveClass = "", categoryAboveName = "";
 
 
@@ -1266,10 +1331,12 @@ namespace GossipDashboard.Helper
             return null;
         }
 
-
-
         internal HtmlNode CreatePostSuperiorr(VM_Post post, int rowID)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             string categoryAboveClass = "", categoryAboveName = "";
 
 
@@ -1326,10 +1393,12 @@ namespace GossipDashboard.Helper
             return null;
         }
 
-
-
         internal HtmlNode CreateSliderTop(VM_Post post)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             string categoryAboveClass = "", categoryAboveName = "";
 
 
@@ -1378,10 +1447,12 @@ namespace GossipDashboard.Helper
             return null;
         }
 
-
-
         public HtmlNode CreateSliderTopThumbnails(VM_Post post)
         {
+            //ریزور در رندر کردن یو آر ال هایی که "ات ساین" دارند به مشکل بر می خورد
+            if (post.Image1_1 != null && post.Image1_1.Contains("@"))
+                return null;
+
             string categoryAboveClass = "", categoryAboveName = "";
 
 
@@ -1433,29 +1504,6 @@ namespace GossipDashboard.Helper
                 PostManagement helperPostManagement = new PostManagement();
                 var docTemplates = new HtmlDocument();
                 HtmlNodeCollection nodes = null;
-
-                docTemplates.LoadHtml(res.ContentHTML);
-
-                //حذف همه لینک های داخلی سایت های دیگر
-                var nodesAlla = docTemplates.DocumentNode.SelectNodes("//a");
-                nodes = docTemplates.DocumentNode.SelectNodes("/");
-                foreach (var item in nodesAlla)
-                {
-                    try
-                    {
-                        //لینک های دانلود از سایت آپارات حذف نشود
-                        if (!item.InnerHtml.Contains("آپارات"))
-                        {
-                            HtmlNode newChild = HtmlNode.CreateNode("" + item.InnerHtml + "");
-                            item.ParentNode.ReplaceChild(newChild, item);
-                            //item.Remove();
-                        }
-                    }
-                    catch (Exception)
-                    {
-                    }
-                }
-                res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
 
                 //حذف تگ های نامناسب درهنگام نمایش پست
                 switch (res.SourceSiteName.ToUpper())
@@ -1528,15 +1576,30 @@ namespace GossipDashboard.Helper
                         if (nodes != null && nodes.FirstOrDefault() != null)
                             res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
 
+                        //var nodesAll = docTemplates.DocumentNode.SelectNodes("//a[@href]");
+                        //var nodeA = RemoveRedundantTagByInnerHtml(nodesAll, "نقشه و مسیریابی");
+                        //if (nodeA != null)
+                        //    res.ContentHTML = nodeA.FirstOrDefault().OuterHtml;
+
+                        //nodeA = RemoveRedundantTagByInnerHtml(nodesAll, "عکاسخانه کارناوال");
+                        //if (nodeA != null)
+                        //    res.ContentHTML = nodeA.FirstOrDefault().OuterHtml;
+
                         break;
 
                     case "EURONEWS":
+                        res.ContentHTML = res.ContentHTML.Replace("section", "div");
                         res.ContentHTML = res.ContentHTML.Replace("اندازه متن", "");
+                        res.ContentHTML = res.ContentHTML.Replace("مطالب یورونیوز را در واتس‌اپ دریافت کنید", "");
 
                         docTemplates.LoadHtml(res.ContentHTML);
                         nodes = docTemplates.DocumentNode.SelectNodes("//div");
 
                         helperPostManagement.ClearContentNode(nodes, "c-font-size-switcher medium-order-4 js-font-size-switch u-float-end u-padding-top-0 t-font-size-switcher--blue");
+                        if (nodes != null && nodes.FirstOrDefault() != null)
+                            res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
+
+                        helperPostManagement.ClearContentNode(nodes, "widget__wrapper");
                         if (nodes != null && nodes.FirstOrDefault() != null)
                             res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
 
@@ -1587,9 +1650,9 @@ namespace GossipDashboard.Helper
                         var node = docTemplates.DocumentNode.SelectNodes("//blockquote").FirstOrDefault();
                         if (node != null)
                         {
-                            var nodesAll = docTemplates.DocumentNode.SelectNodes("/");
+                             var nodeC = docTemplates.DocumentNode.SelectNodes("/");
 
-                            var resNodesAll = RemoveSpecificNodeInAllChild(nodesAll, node);
+                            var resNodesAll = RemoveSpecificNodeInAllChild(nodeC, node);
                             if (resNodesAll != null && resNodesAll.FirstOrDefault() != null)
                                 res.ContentHTML = resNodesAll.FirstOrDefault().OuterHtml;
                         }
@@ -1634,10 +1697,10 @@ namespace GossipDashboard.Helper
                         break;
 
                     case "AJIBTARIN":
-             
-                        nodesAlla = docTemplates.DocumentNode.SelectNodes("//img");
+
+                        var nodeB = docTemplates.DocumentNode.SelectNodes("//img");
                         nodes = docTemplates.DocumentNode.SelectNodes("//div");
-                        foreach (var item in nodesAlla)
+                        foreach (var item in nodeB)
                         {
                             var attrLazySrc = item.Attributes.FirstOrDefault(p => p.Name == "data-lazy-src");
                             if (attrLazySrc != null)
@@ -1654,6 +1717,10 @@ namespace GossipDashboard.Helper
                             res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
 
                         helperPostManagement.ClearContentNode(nodes, "gridlove-ad");
+                        if (nodes != null && nodes.FirstOrDefault() != null)
+                            res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
+
+                        helperPostManagement.ClearContentNode(nodes, "gridlove-author");
                         if (nodes != null && nodes.FirstOrDefault() != null)
                             res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
 
@@ -1687,7 +1754,7 @@ namespace GossipDashboard.Helper
 
                         helperPostManagement.ClearContentNode(nodes, "Tags");
                         if (nodes != null && nodes.FirstOrDefault() != null)
-                            res.ContentHTML = nodes.FirstOrDefault().OuterHtml;                        
+                            res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
 
                         break;
 
@@ -1714,9 +1781,43 @@ namespace GossipDashboard.Helper
                             res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
 
                         break;
+
+                    case "ENTEKHAB":
+                        docTemplates.LoadHtml(res.ContentHTML);
+                        nodes = docTemplates.DocumentNode.SelectNodes("//div");
+
+                        helperPostManagement.ClearContentNode(nodes, "no-padd col-xs-36 link_content");
+                        if (nodes != null && nodes.FirstOrDefault() != null)
+                            res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
+
+                        break;
                     default:
                         break;
                 }
+
+
+                docTemplates.LoadHtml(res.ContentHTML);
+
+                //حذف همه لینک های داخلی سایت های دیگر
+                var nodesAlla = docTemplates.DocumentNode.SelectNodes("//a");
+                nodes = docTemplates.DocumentNode.SelectNodes("/");
+                foreach (var item in nodesAlla)
+                {
+                    try
+                    {
+                        //لینک های دانلود از سایت آپارات حذف نشود
+                        if (!item.InnerHtml.Contains("آپارات"))
+                        {
+                            HtmlNode newChild = HtmlNode.CreateNode("" + item.InnerHtml + "");
+                            item.ParentNode.ReplaceChild(newChild, item);
+                            //item.Remove();
+                        }
+                    }
+                    catch (Exception)
+                    {
+                    }
+                }
+                res.ContentHTML = nodes.FirstOrDefault().OuterHtml;
             }
             catch (Exception)
             {
@@ -1749,6 +1850,77 @@ namespace GossipDashboard.Helper
 
             return nodesAll;
         }
+
+
+        ///// <summary>
+        ///// پارامتر نود را در پارامتر نودآل و تمام فرزندان نودآل جستجو می کند و سپس حذف می کند
+        ///// </summary>
+        ///// <param name="nodesAll"></param>
+        ///// <param name="node"></param>
+        ///// <returns></returns>
+        //public HtmlNodeCollection RemoveRedundantTagByInnerHtml(HtmlNodeCollection nodesAll, string value)
+        //{
+        //    if (nodesAll == null || value == "")
+        //        return null;
+
+        //    foreach (var item in nodesAll)
+        //    {
+        //        if (item.InnerText.Contains(value))
+        //        {
+        //            nodesAll.Remove(item);
+        //            break;
+        //        }
+
+        //        if (item.ChildNodes.Count != 0)
+        //            RemoveRedundantTagByInnerHtml(item.ChildNodes, value);
+        //    }
+
+        //    return nodesAll;
+        //}
+
+        /// <summary>
+        /// حذف نود با با استفاده از یک متن
+        /// ابتدا نود حاوی متن را پیدا می کند و سپس اقدام به حذف آن می کند
+        /// </summary>
+        /// <param name="res">شی پست</param>
+        /// <param name="value">مقداری مورد جستجو در ندها</param>
+        //private HtmlNode RemoveRedundantTagByInnerHtml( VM_Post res, string value)
+        //{
+        //    var docTemplates = new HtmlDocument();
+        //    HtmlNodeCollection nodes = null;
+
+        //    docTemplates.LoadHtml(res.ContentHTML);
+        //    nodes = docTemplates.DocumentNode.SelectNodes("//div");
+        //    foreach (var item in nodes)
+        //    {
+        //        var InnerHtml = item.InnerHtml;
+        //        if (InnerHtml.Contains(value))
+        //        {
+        //            switch (res.SourceSiteName.ToUpper())
+        //            {
+        //                case "KARNAVAL":
+        //                    if (item.ParentNode != null && item.ParentNode.ParentNode != null && item.ParentNode.ParentNode.ParentNode != null)
+        //                        item.ParentNode.ParentNode.ParentNode.Remove();
+        //                    else if (item.ParentNode != null && item.ParentNode.ParentNode != null)
+        //                        item.ParentNode.ParentNode.Remove();
+        //                    else if (item.ParentNode != null)
+        //                        item.ParentNode.Remove();
+        //                    break;
+
+        //                default:
+        //                    break;
+        //            }
+        //        }
+        //    }
+
+        //    if (nodes != null)
+        //        return nodes.First();
+        //    else
+        //        return null;
+        //}
+
+
+        
 
         private string _Domain = "http://redfun.ir";
         public string Domain

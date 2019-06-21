@@ -40,11 +40,10 @@
             <pattern>true</pattern>
             <regex />
         </DATAFIELD>
-         
         <DATAFIELD>
-            <type>HTML</type>
+            <type>Text</type>
             <name>SubSubject1_1</name>
-            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[1][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-9 col-md-7 col-lg-7]\ARTICLE[1][ ]\Header[0][ ]\P[3][post-lead without-image gap-md-bottom]\</xpath>
+            <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[1][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-9 col-md-7 col-lg-7]\ARTICLE[0][ ]\HEADER[0][ ]\P[3][post-lead without-image gap-md-bottom]\</xpath>
             <pattern>false</pattern>
             <regex />
         </DATAFIELD>
@@ -55,7 +54,7 @@
             <pattern>false</pattern>
             <regex />
         </DATAFIELD>
-                <DATAFIELD>
+        <DATAFIELD>
             <type>Text</type>
             <name>ContentHTMLText</name>
             <xpath>HTML[0][ ]\BODY[1][ ]\DIV[1][container]\MAIN[1][ ]\DIV[0][row]\DIV[1][col-xs-12 col-sm-9 col-md-7 col-lg-7]\ARTICLE[1][ ]\DIV[1][post-content clearfix gap-lg-bottom]\</xpath>

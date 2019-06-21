@@ -23,7 +23,7 @@ namespace GossipDashboard.Controllers
         private UserRepository repoUser = new UserRepository();
         private string path = "", domain = "http://redfun.ir", ip = "";
 
-        [Authorize]
+        //[Authorize]
         public ActionResult Index()
         {
             return View();
